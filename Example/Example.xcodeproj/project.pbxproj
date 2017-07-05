@@ -26,6 +26,7 @@
 		F8CB54171F0C7CA60032DE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8CB542A1F0CE5400032DE46 /* SLNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLNetwork.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		F8CB53FF1F0C7CA60032DE46 = {
 			isa = PBXGroup;
 			children = (
+				F8CB54261F0CE4D80032DE46 /* SolarKit-OC */,
 				F8CB540A1F0C7CA60032DE46 /* Example */,
 				F8CB54091F0C7CA60032DE46 /* Products */,
 			);
@@ -77,6 +79,38 @@
 				F8CB540C1F0C7CA60032DE46 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8CB54261F0CE4D80032DE46 /* SolarKit-OC */ = {
+			isa = PBXGroup;
+			children = (
+				F8CB54271F0CE4D80032DE46 /* Category */,
+				F8CB54281F0CE4D80032DE46 /* DB */,
+				F8CB54291F0CE4D80032DE46 /* Network */,
+			);
+			path = "SolarKit-OC";
+			sourceTree = "<group>";
+		};
+		F8CB54271F0CE4D80032DE46 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8CB54281F0CE4D80032DE46 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		F8CB54291F0CE4D80032DE46 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8CB542A1F0CE5400032DE46 /* SLNetwork.h */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +345,7 @@
 				F8CB54211F0C7CA60032DE46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
