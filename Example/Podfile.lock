@@ -1,0 +1,16 @@
+PODS:
+  - SolarKit-OC (0.0.1)
+
+DEPENDENCIES:
+  - SolarKit-OC (from `../`)
+
+EXTERNAL SOURCES:
+  SolarKit-OC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SolarKit-OC: b186e5e9360af548ca8762bccd55a86a4e3bc096
+
+PODFILE CHECKSUM: 6755503be5ce647e9957a70f57e84b79a6286307
+
+COCOAPODS: 1.2.0
