@@ -4,5 +4,5 @@
 target 'Example' do
     pod 'SolarKit-OC', :path => '../'
 
-
+    pod 'AFNetworking'
 end

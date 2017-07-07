@@ -10,6 +10,9 @@
 #define SLKit_h
 
 #import "UIApplication+SLKit.h"
+
+#import "UINavigationBar+SLShadowImage.h"
+
 #import "UIViewController+SLKit.h"
 
 #endif /* SLKit_h */
