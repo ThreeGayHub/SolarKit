@@ -11,6 +11,8 @@
 
 #import "UIApplication+SLKit.h"
 
+#import "UIColor+SLHex.h"
+
 #import "UINavigationBar+SLShadowImage.h"
 
 #import "UIViewController+SLKit.h"
