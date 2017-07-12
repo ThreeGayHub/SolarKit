@@ -10,10 +10,17 @@
 
 @interface UICollectionView (SLKit)
 
-- (void)sl_registerNibforCellWithReuseIdentifier:(Class)y_class;
+- (void)sl_registerNibforCellWithReuseIdentifier:(Class)sl_class;
 
-- (void)sl_registerforCellWithReuseIdentifier:(Class)y_class;
+- (void)sl_registerforCellWithReuseIdentifier:(Class)sl_class;
 
-- (__kindof UICollectionViewCell *)sl_dequeueReusableCellWithReuseIdentifier:(Class)y_class forIndexPath:(NSIndexPath *)indexPath;
+- (__kindof UICollectionViewCell *)sl_dequeueReusableCellWithReuseIdentifier:(Class)sl_class forIndexPath:(NSIndexPath *)indexPath;
+
+
+- (void)sl_registerNibForSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(Class)sl_class;
+
+- (void)sl_registerClassForSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(Class)sl_class ;
+
+- (__kindof UICollectionReusableView *)sl_dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(Class)sl_class forIndexPath:(NSIndexPath *)indexPath;
 
 @end
