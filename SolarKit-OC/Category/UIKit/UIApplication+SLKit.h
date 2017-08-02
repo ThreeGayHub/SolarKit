@@ -34,8 +34,7 @@
 
 + (BOOL)openURL:(NSURL*)url;
 
-
-
+//TODO-开启和关闭推送
 
 
 //+ (void)changeRootViewControllerFade:(UIViewController *)viewController;
