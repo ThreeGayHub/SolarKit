@@ -17,8 +17,6 @@
 
 @implementation UIView (SLGesture)
 
-static char kSLTouchUpBlockKey;
-
 - (void)sl_touchUp:(SLUIViewGestureBlock)block {
     self.sl_block = block;
     self.userInteractionEnabled = YES;

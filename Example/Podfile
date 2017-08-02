@@ -2,7 +2,11 @@
 # platform :ios, '8.0'
 
 target 'Example' do
-    pod 'SolarKit-OC', :path => '../'
 
     pod 'AFNetworking'
+
+    pod 'SolarKit-OC', :path => '../'
+
+    pod 'ReactiveCocoa',          '~> 2.0'
+
 end

@@ -9,6 +9,8 @@
 #ifndef SLKit_h
 #define SLKit_h
 
+#import "UIAlertView+SLBlock.h"
+
 #import "UIApplication+SLKit.h"
 
 #import "UICollectionView+SLKit.h"
@@ -18,6 +20,8 @@
 #import "UIDevice+SLKit.h"
 
 #import "UINavigationBar+SLShadowImage.h"
+
+#import "UIView+SLGesture.h"
 
 #import "UIViewController+SLKit.h"
 

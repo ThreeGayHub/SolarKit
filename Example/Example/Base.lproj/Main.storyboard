@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,7 +41,7 @@
         <!--View Controller-->
         <scene sceneID="5Pu-Kw-yof">
             <objects>
-                <viewController id="ZTQ-TS-er1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="ZTQ-TS-er1" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K0V-Zc-h3S"/>
                         <viewControllerLayoutGuide type="bottom" id="xDi-0w-PFf"/>

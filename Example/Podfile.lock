@@ -14,10 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SolarKit-OC (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
+  - ReactiveCocoa (~> 2.0)
   - SolarKit-OC (from `../`)
 
 EXTERNAL SOURCES:
@@ -26,8 +34,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SolarKit-OC: b186e5e9360af548ca8762bccd55a86a4e3bc096
 
-PODFILE CHECKSUM: fcff4a8db9f5d05cda68a3736d7b27f36e76fe96
+PODFILE CHECKSUM: 5bd571526953d47cc458c315e2b58ffabe90e21d
 
 COCOAPODS: 1.2.0
