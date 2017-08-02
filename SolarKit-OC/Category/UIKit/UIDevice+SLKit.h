@@ -26,4 +26,10 @@
 
 @property (class, nonatomic, assign, readonly) UIDeviceOrientation orientation;
 
+// Whether the device is iPad/iPad mini.
+@property (nonatomic, readonly) BOOL isPad;
+
+// Whether the device is a simulator.
+@property (nonatomic, readonly) BOOL isSimulator;
+
 @end
