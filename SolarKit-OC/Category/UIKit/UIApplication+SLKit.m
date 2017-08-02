@@ -10,19 +10,19 @@
 
 @implementation UIApplication (SLKit)
 
-+ (UIWindow *)sl_keyWindow {
++ (UIWindow *)keyWindow {
     return [UIApplication sharedApplication].keyWindow;
 }
 
-+ (UIViewController *)sl_rootVC {
++ (UIViewController *)rootVC {
     return [UIApplication sharedApplication].delegate.window.rootViewController;
 }
 
-+ (UIViewController *)sl_topVC {
-    return [self _sl_visibleViewControllerFrom:[UIApplication sharedApplication].keyWindow.rootViewController];
++ (UIViewController *)topVC {
+    return [self _visibleViewControllerFrom:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
 
-+ (UIWindow *)sl_window {
++ (UIWindow *)window {
     return [UIApplication sharedApplication].delegate.window;
 }
 
@@ -30,15 +30,15 @@
 
 
 
-+ (void)sl_call:(NSString *)phoneNumber {
++ (void)call:(NSString *)phoneNumber {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNumber]]];
 }
 
-+ (BOOL)sl_canOpenURL:(NSURL *)url {
++ (BOOL)canOpenURL:(NSURL *)url {
     return [[UIApplication sharedApplication] canOpenURL:url];
 }
 
-+ (BOOL)sl_openURL:(NSURL *)url {
++ (BOOL)openURL:(NSURL *)url {
     return [[UIApplication sharedApplication] openURL:url];
 }
 
@@ -49,17 +49,17 @@
 
 #pragma mark - privete
 
-+ (UIViewController *)_sl_visibleViewControllerFrom:(UIViewController *)vc {
++ (UIViewController *)_visibleViewControllerFrom:(UIViewController *)vc {
     if ([vc isKindOfClass:[UINavigationController class]]) {
-        return [self _sl_visibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
+        return [self _visibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
     }
     
     if ([vc isKindOfClass:[UITabBarController class]]) {
-        return [self _sl_visibleViewControllerFrom:[((UITabBarController *) vc) selectedViewController]];
+        return [self _visibleViewControllerFrom:[((UITabBarController *) vc) selectedViewController]];
     }
     
     if (vc.presentedViewController) {
-        return [self _sl_visibleViewControllerFrom:vc.presentedViewController];
+        return [self _visibleViewControllerFrom:vc.presentedViewController];
     }
     return vc;
 }

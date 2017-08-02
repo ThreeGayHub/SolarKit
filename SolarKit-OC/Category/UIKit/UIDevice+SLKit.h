@@ -9,21 +9,21 @@
 #import <UIKit/UIKit.h>
 
 #ifndef iOSX
-#define iOSX    UIDevice.sl_systemVersion
+#define iOSX    UIDevice.systemVersion
 #endif
 
 @interface UIDevice (SLKit)
 
-@property (class, nonatomic, strong, readonly) NSString *sl_name;
+@property (class, nonatomic, strong, readonly) NSString *name;
 
-@property (class, nonatomic, strong, readonly) NSString *sl_model;
+@property (class, nonatomic, strong, readonly) NSString *model;
 
-@property (class, nonatomic, strong, readonly) NSString *sl_localizedModel;
+@property (class, nonatomic, strong, readonly) NSString *localizedModel;
 
-@property (class, nonatomic, strong, readonly) NSString *sl_systemName;
+@property (class, nonatomic, strong, readonly) NSString *systemName;
 
-@property (class, nonatomic, assign, readonly) float sl_systemVersion;
+@property (class, nonatomic, assign, readonly) float systemVersion;
 
-@property (class, nonatomic, assign, readonly) UIDeviceOrientation sl_orientation;
+@property (class, nonatomic, assign, readonly) UIDeviceOrientation orientation;
 
 @end

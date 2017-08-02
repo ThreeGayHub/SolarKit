@@ -10,27 +10,27 @@
 
 @implementation UIDevice (SLKit)
 
-+ (NSString *)sl_name {
++ (NSString *)name {
     return [UIDevice currentDevice].name;
 }
 
-+ (NSString *)sl_model {
++ (NSString *)model {
     return [UIDevice currentDevice].model;
 }
 
-+ (NSString *)sl_localizedModel {
++ (NSString *)localizedModel {
     return [UIDevice currentDevice].localizedModel;
 }
 
-+ (NSString *)sl_systemName {
++ (NSString *)systemName {
     return [UIDevice currentDevice].systemName;
 }
 
-+ (float)sl_systemVersion {
++ (float)systemVersion {
     return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
-+ (UIDeviceOrientation)sl_orientation {
++ (UIDeviceOrientation)orientation {
     return [UIDevice currentDevice].orientation;
 }
 

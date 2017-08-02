@@ -11,16 +11,16 @@
 @interface UIApplication (SLKit)
 
 
-@property (class, nonatomic, strong, readonly) UIWindow *sl_keyWindow;
+@property (class, nonatomic, strong, readonly) UIWindow *keyWindow;
 
-@property (class, nonatomic, strong, readonly) UIViewController *sl_rootVC;
+@property (class, nonatomic, strong, readonly) UIViewController *rootVC;
 
 /**
  @return the top viewcontroller of screen
  */
-@property (class, nonatomic, strong, readonly) UIViewController *sl_topVC;
+@property (class, nonatomic, strong, readonly) UIViewController *topVC;
 
-@property (class, nonatomic, strong, readonly) UIWindow *sl_window;
+@property (class, nonatomic, strong, readonly) UIWindow *window;
 
 
 
@@ -28,11 +28,11 @@
 /**
     make a phone call.
  */
-+ (void)sl_call:(NSString *)phoneNumber;
++ (void)call:(NSString *)phoneNumber;
 
-+ (BOOL)sl_canOpenURL:(NSURL *)url;
++ (BOOL)canOpenURL:(NSURL *)url;
 
-+ (BOOL)sl_openURL:(NSURL*)url;
++ (BOOL)openURL:(NSURL*)url;
 
 
 
