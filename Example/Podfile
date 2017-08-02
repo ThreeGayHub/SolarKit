@@ -1,12 +1,15 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
 
-target 'Example' do
-
+def pods
     pod 'AFNetworking'
 
-    pod 'SolarKit-OC', :path => '../'
+#    pod 'SolarKit-OC', :path => '../'
 
     pod 'ReactiveCocoa',          '~> 2.0'
+end
 
+target 'Example' do
+    pods
 end

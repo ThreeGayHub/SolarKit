@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86ECE44A5AC2E61A96D19142 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DE9FCF02CCDBB2B41485E8 /* libPods-Example.a */; };
+		0CD2C54B93D521B9B1DADDFC /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -15,11 +15,24 @@
 		F8CB54181F0C7CA60032DE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54171F0C7CA60032DE46 /* Assets.xcassets */; };
 		F8CB541B1F0C7CA60032DE46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54191F0C7CA60032DE46 /* LaunchScreen.storyboard */; };
 		F8CB54371F0E21020032DE46 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54361F0E21020032DE46 /* Podfile */; };
+		F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */; };
+		F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */; };
+		F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */; };
+		F8FCBEDD1F31BE83000C5DF5 /* UIAlertView+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */; };
+		F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */; };
+		F8FCBEDF1F31BE83000C5DF5 /* UICollectionView+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBECA1F31BE83000C5DF5 /* UICollectionView+SLKit.m */; };
+		F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */; };
+		F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */; };
+		F8FCBEE21F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED01F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m */; };
+		F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */; };
+		F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */; };
+		F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */; };
+		F8FCBEE81F31BEA9000C5DF5 /* NSString+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		45DE9FCF02CCDBB2B41485E8 /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646B9356CD92FBAA7B38C540 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +44,36 @@
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F8FCBEBA1F31BE82000C5DF5 /* SLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDefine.h; sourceTree = "<group>"; };
+		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
+		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
+		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
+		F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SLFoundation.m"; sourceTree = "<group>"; };
+		F8FCBEC01F31BE83000C5DF5 /* NSTimer+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SLBlock.h"; sourceTree = "<group>"; };
+		F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SLBlock.m"; sourceTree = "<group>"; };
+		F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFoundation.h; sourceTree = "<group>"; };
+		F8FCBEC41F31BE83000C5DF5 /* SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKit.h; sourceTree = "<group>"; };
+		F8FCBEC51F31BE83000C5DF5 /* UIAlertView+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+SLBlock.h"; sourceTree = "<group>"; };
+		F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+SLBlock.m"; sourceTree = "<group>"; };
+		F8FCBEC71F31BE83000C5DF5 /* UIApplication+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SLKit.h"; sourceTree = "<group>"; };
+		F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SLKit.m"; sourceTree = "<group>"; };
+		F8FCBEC91F31BE83000C5DF5 /* UICollectionView+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+SLKit.h"; sourceTree = "<group>"; };
+		F8FCBECA1F31BE83000C5DF5 /* UICollectionView+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+SLKit.m"; sourceTree = "<group>"; };
+		F8FCBECB1F31BE83000C5DF5 /* UIColor+SLHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SLHex.h"; sourceTree = "<group>"; };
+		F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SLHex.m"; sourceTree = "<group>"; };
+		F8FCBECD1F31BE83000C5DF5 /* UIDevice+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SLKit.h"; sourceTree = "<group>"; };
+		F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLKit.m"; sourceTree = "<group>"; };
+		F8FCBECF1F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SLShadowImage.h"; sourceTree = "<group>"; };
+		F8FCBED01F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SLShadowImage.m"; sourceTree = "<group>"; };
+		F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+SLNilTitleBackItem.h"; sourceTree = "<group>"; };
+		F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+SLNilTitleBackItem.m"; sourceTree = "<group>"; };
+		F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLGesture.h"; sourceTree = "<group>"; };
+		F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLGesture.m"; sourceTree = "<group>"; };
+		F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLKit.h"; sourceTree = "<group>"; };
+		F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLKit.m"; sourceTree = "<group>"; };
+		F8FCBED91F31BE83000C5DF5 /* SLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetwork.h; sourceTree = "<group>"; };
+		F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLFoundation.h"; sourceTree = "<group>"; };
+		F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLFoundation.m"; sourceTree = "<group>"; };
 		FD26416DBAEA85F95F654CBF /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86ECE44A5AC2E61A96D19142 /* libPods-Example.a in Frameworks */,
+				0CD2C54B93D521B9B1DADDFC /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +101,7 @@
 		30B3D8124C5DA2FE71B08CDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45DE9FCF02CCDBB2B41485E8 /* libPods-Example.a */,
+				DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F8CB54361F0E21020032DE46 /* Podfile */,
+				F8FCBEB71F31BE82000C5DF5 /* SolarKit-OC */,
 				F8CB540A1F0C7CA60032DE46 /* Example */,
 				F8CB54091F0C7CA60032DE46 /* Products */,
 				19449061B2A07D355623F1D5 /* Pods */,
@@ -104,6 +148,92 @@
 				F8CB540C1F0C7CA60032DE46 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8FCBEB71F31BE82000C5DF5 /* SolarKit-OC */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEB81F31BE82000C5DF5 /* Category */,
+				F8FCBED71F31BE83000C5DF5 /* DB */,
+				F8FCBED81F31BE83000C5DF5 /* Network */,
+			);
+			name = "SolarKit-OC";
+			path = "../SolarKit-OC";
+			sourceTree = "<group>";
+		};
+		F8FCBEB81F31BE82000C5DF5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEB91F31BE82000C5DF5 /* Base */,
+				F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */,
+				F8FCBEC31F31BE83000C5DF5 /* UIKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8FCBEB91F31BE82000C5DF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEBA1F31BE82000C5DF5 /* SLDefine.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */,
+				F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */,
+				F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */,
+				F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */,
+				F8FCBEC01F31BE83000C5DF5 /* NSTimer+SLBlock.h */,
+				F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */,
+				F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */,
+				F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */,
+				F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */,
+			);
+			path = NSFoundation;
+			sourceTree = "<group>";
+		};
+		F8FCBEC31F31BE83000C5DF5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEC41F31BE83000C5DF5 /* SLKit.h */,
+				F8FCBEC51F31BE83000C5DF5 /* UIAlertView+SLBlock.h */,
+				F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */,
+				F8FCBEC71F31BE83000C5DF5 /* UIApplication+SLKit.h */,
+				F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */,
+				F8FCBEC91F31BE83000C5DF5 /* UICollectionView+SLKit.h */,
+				F8FCBECA1F31BE83000C5DF5 /* UICollectionView+SLKit.m */,
+				F8FCBECB1F31BE83000C5DF5 /* UIColor+SLHex.h */,
+				F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */,
+				F8FCBECD1F31BE83000C5DF5 /* UIDevice+SLKit.h */,
+				F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */,
+				F8FCBECF1F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.h */,
+				F8FCBED01F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m */,
+				F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */,
+				F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */,
+				F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */,
+				F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */,
+				F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */,
+				F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F8FCBED71F31BE83000C5DF5 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		F8FCBED81F31BE83000C5DF5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBED91F31BE83000C5DF5 /* SLNetwork.h */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FCBEE21F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m in Sources */,
 				F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */,
 				F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */,
+				F8FCBEDD1F31BE83000C5DF5 /* UIAlertView+SLBlock.m in Sources */,
+				F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */,
+				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
+				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
+				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
+				F8FCBEDF1F31BE83000C5DF5 /* UICollectionView+SLKit.m in Sources */,
+				F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */,
 				F8CB540D1F0C7CA60032DE46 /* main.m in Sources */,
+				F8FCBEE81F31BEA9000C5DF5 /* NSString+SLFoundation.m in Sources */,
+				F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */,
+				F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */,
+				F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */,
+				F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

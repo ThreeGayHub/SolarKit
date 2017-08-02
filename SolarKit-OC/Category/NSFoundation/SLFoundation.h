@@ -9,6 +9,12 @@
 #ifndef SLFoundation_h
 #define SLFoundation_h
 
+#import "NSBundle+SLFoundation.h"
+
+#import "NSFileManager+SLFoundation.h"
+
+#import "NSString+SLFoundation.h"
+
 #import "NSTimer+SLBlock.h"
 
 #endif /* SLFoundation_h */

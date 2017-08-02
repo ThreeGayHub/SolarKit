@@ -21,22 +21,15 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SolarKit-OC (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
   - ReactiveCocoa (~> 2.0)
-  - SolarKit-OC (from `../`)
-
-EXTERNAL SOURCES:
-  SolarKit-OC:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SolarKit-OC: b186e5e9360af548ca8762bccd55a86a4e3bc096
 
-PODFILE CHECKSUM: 5bd571526953d47cc458c315e2b58ffabe90e21d
+PODFILE CHECKSUM: 409c167c65104ed8f81fb8dd737f1ba385599a26
 
 COCOAPODS: 1.2.0
