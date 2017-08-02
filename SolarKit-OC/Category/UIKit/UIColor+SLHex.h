@@ -10,6 +10,6 @@
 
 @interface UIColor (SLHex)
 
-+ (instancetype)sl_hexColor:(NSString *)hexString;
++ (instancetype)hexColor:(NSString *)hexString;
 
 @end

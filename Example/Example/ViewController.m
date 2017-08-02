@@ -28,7 +28,7 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 100, 100)];
     [self.view addSubview:view];
     view.backgroundColor = UIColor.greenColor;
-    [view sl_touchUp:^{
+    [view touchUp:^{
         UIAlertView *alertView = [UIAlertView alertWithTitle:@"Title" message:@"Message"];
         [alertView addButton:@"nil"];
         [alertView addButton:@"cancel" action:^{
@@ -44,7 +44,7 @@
     [self.view addSubview:label];
     label.backgroundColor = UIColor.orangeColor;
     @weakify(self);
-    [label sl_touchUp:^{
+    [label touchUp:^{
         @strongify(self);
 //        self.timer = [NSTimer singleTimerWithInterval:2 block:^{
 //            NSLog(@"singleTimer");

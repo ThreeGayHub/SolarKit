@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^SLUIViewGestureBlock)();
+typedef void (^SLGestureEmptyBlock)(void);
 
 @interface UIView (SLGesture)
 
-- (void)sl_touchUp:(SLUIViewGestureBlock)block;
+- (void)touchUp:(SLGestureEmptyBlock)block;
 
 @end

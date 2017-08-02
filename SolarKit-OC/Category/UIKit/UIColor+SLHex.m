@@ -10,7 +10,7 @@
 
 @implementation UIColor (SLHex)
 
-+ (instancetype)sl_hexColor:(NSString *)hexString {
++ (instancetype)hexColor:(NSString *)hexString {
     if (hexString) {
         unsigned rgbValue = 0;
         hexString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];

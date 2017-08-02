@@ -10,28 +10,28 @@
 
 @implementation UICollectionView (SLKit)
 
-- (void)sl_registerNibforCellWithReuseIdentifier:(Class)sl_class {
-    [self registerNib:[UINib nibWithNibName:NSStringFromClass(sl_class) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass(sl_class)];
+- (void)registerNibforCellWithClass:(Class)clazz {
+    [self registerNib:[UINib nibWithNibName:NSStringFromClass(clazz) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (void)sl_registerforCellWithReuseIdentifier:(Class)sl_class {
-    [self registerClass:sl_class forCellWithReuseIdentifier:NSStringFromClass(sl_class)];
+- (void)registerforCellWithClass:(Class)clazz {
+    [self registerClass:clazz forCellWithReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (UICollectionViewCell *)sl_dequeueReusableCellWithReuseIdentifier:(Class)sl_class forIndexPath:(NSIndexPath *)indexPath {
-    return [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass(sl_class) forIndexPath:indexPath];
+- (UICollectionViewCell *)dequeueReusableCellWithClass:(Class)clazz forIndexPath:(NSIndexPath *)indexPath {
+    return [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass(clazz) forIndexPath:indexPath];
 }
 
-- (void)sl_registerNibForSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(Class)sl_class {
-    [self registerNib:[UINib nibWithNibName:NSStringFromClass(sl_class) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(sl_class)];
+- (void)registerNibForSupplementaryViewOfKind:(NSString *)kind withClass:(Class)clazz {
+    [self registerNib:[UINib nibWithNibName:NSStringFromClass(clazz) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (void)sl_registerClassForSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(Class)sl_class {
-    [self registerClass:sl_class forSupplementaryViewOfKind:elementKind withReuseIdentifier:NSStringFromClass(sl_class)];
+- (void)registerClassForSupplementaryViewOfKind:(NSString *)elementKind withClass:(Class)clazz {
+    [self registerClass:clazz forSupplementaryViewOfKind:elementKind withReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (UICollectionReusableView *)sl_dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(Class)sl_class forIndexPath:(NSIndexPath *)indexPath {
-    return [self dequeueReusableSupplementaryViewOfKind:elementKind withReuseIdentifier:NSStringFromClass(sl_class) forIndexPath:indexPath];
+- (UICollectionReusableView *)dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withClass:(Class)clazz forIndexPath:(NSIndexPath *)indexPath {
+    return [self dequeueReusableSupplementaryViewOfKind:elementKind withReuseIdentifier:NSStringFromClass(clazz) forIndexPath:indexPath];
 }
 
 @end
