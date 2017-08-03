@@ -42,7 +42,13 @@
     return [[UIApplication sharedApplication] openURL:url];
 }
 
++ (void)startRemoteNotification {
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
 
++ (void)stopRemoteNotification {
+    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+}
 
 
 

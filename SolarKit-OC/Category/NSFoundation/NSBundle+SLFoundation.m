@@ -10,4 +10,13 @@
 
 @implementation NSBundle (SLFoundation)
 
++ (NSString *)mainBundlePath {
+    return [NSBundle mainBundle].bundlePath;
+}
+
++ (instancetype)bundleWithName:(NSString *)bundleName {
+    NSString *bundlePath = [[NSBundle bundleForClass:NSClassFromString(bundleName)] pathForResource:bundleName ofType:@"bundle"];
+    return [NSBundle bundleWithPath:bundlePath];
+}
+
 @end

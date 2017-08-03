@@ -11,16 +11,16 @@
 @interface UIApplication (SLKit)
 
 
-@property (class, nonatomic, strong, readonly) UIWindow *keyWindow;
++ (UIWindow *)keyWindow;
 
-@property (class, nonatomic, strong, readonly) UIViewController *rootVC;
++ (UIViewController *)rootVC;
 
 /**
  @return the top viewcontroller of screen
  */
-@property (class, nonatomic, strong, readonly) UIViewController *topVC;
++ (UIViewController *)topVC;
 
-@property (class, nonatomic, strong, readonly) UIWindow *window;
++ (UIWindow *)window;
 
 
 
@@ -34,7 +34,9 @@
 
 + (BOOL)openURL:(NSURL*)url;
 
-//TODO-开启和关闭推送
++ (void)startRemoteNotification;
+
++ (void)stopRemoteNotification;
 
 
 //+ (void)changeRootViewControllerFade:(UIViewController *)viewController;

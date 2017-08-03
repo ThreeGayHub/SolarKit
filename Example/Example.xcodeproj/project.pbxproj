@@ -44,7 +44,6 @@
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		F8FCBEBA1F31BE82000C5DF5 /* SLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDefine.h; sourceTree = "<group>"; };
 		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
 		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
@@ -74,6 +73,10 @@
 		F8FCBED91F31BE83000C5DF5 /* SLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetwork.h; sourceTree = "<group>"; };
 		F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLFoundation.h"; sourceTree = "<group>"; };
 		F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLFoundation.m"; sourceTree = "<group>"; };
+		F8FCBEEF1F32B804000C5DF5 /* SLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDefine.h; sourceTree = "<group>"; };
+		F8FCBEF01F32B837000C5DF5 /* SLLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLog.h; sourceTree = "<group>"; };
+		F8FCBEF11F32B84B000C5DF5 /* SLSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSingleton.h; sourceTree = "<group>"; };
+		F8FCBEF21F32B8FB000C5DF5 /* SLRacNew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRacNew.h; sourceTree = "<group>"; };
 		FD26416DBAEA85F95F654CBF /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +156,7 @@
 		F8FCBEB71F31BE82000C5DF5 /* SolarKit-OC */ = {
 			isa = PBXGroup;
 			children = (
+				F8FCBEEE1F32B7ED000C5DF5 /* Define */,
 				F8FCBEB81F31BE82000C5DF5 /* Category */,
 				F8FCBED71F31BE83000C5DF5 /* DB */,
 				F8FCBED81F31BE83000C5DF5 /* Network */,
@@ -164,19 +168,10 @@
 		F8FCBEB81F31BE82000C5DF5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				F8FCBEB91F31BE82000C5DF5 /* Base */,
 				F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */,
 				F8FCBEC31F31BE83000C5DF5 /* UIKit */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		F8FCBEB91F31BE82000C5DF5 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				F8FCBEBA1F31BE82000C5DF5 /* SLDefine.h */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */ = {
@@ -234,6 +229,17 @@
 				F8FCBED91F31BE83000C5DF5 /* SLNetwork.h */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F8FCBEEE1F32B7ED000C5DF5 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCBEEF1F32B804000C5DF5 /* SLDefine.h */,
+				F8FCBEF01F32B837000C5DF5 /* SLLog.h */,
+				F8FCBEF11F32B84B000C5DF5 /* SLSingleton.h */,
+				F8FCBEF21F32B8FB000C5DF5 /* SLRacNew.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

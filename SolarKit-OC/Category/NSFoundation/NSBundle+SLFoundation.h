@@ -10,4 +10,8 @@
 
 @interface NSBundle (SLFoundation)
 
++ (NSString *)mainBundlePath;
+
++ (instancetype)bundleWithName:(NSString *)bundleName;
+
 @end
