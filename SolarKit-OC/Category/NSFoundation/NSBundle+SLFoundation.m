@@ -19,4 +19,8 @@
     return [NSBundle bundleWithPath:bundlePath];
 }
 
++ (NSDictionary *)infoPlist {
+    return [[NSBundle mainBundle] infoDictionary];
+}
+
 @end
