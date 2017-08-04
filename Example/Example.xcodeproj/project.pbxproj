@@ -43,7 +43,7 @@
 		F8CB54171F0C7CA60032DE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
 		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
