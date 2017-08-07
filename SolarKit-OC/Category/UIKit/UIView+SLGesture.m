@@ -29,7 +29,7 @@
 }
 
 - (SLGestureEmptyBlock)emptyBlock {
-    return objc_getAssociatedObject(self, @selector(emptyBlock));
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)selfTap:(UITapGestureRecognizer *)tapGesture {

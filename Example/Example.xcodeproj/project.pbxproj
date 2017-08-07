@@ -16,6 +16,8 @@
 		F8CB541B1F0C7CA60032DE46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54191F0C7CA60032DE46 /* LaunchScreen.storyboard */; };
 		F8CB54371F0E21020032DE46 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54361F0E21020032DE46 /* Podfile */; };
 		F8D9037F1F346DAF00FF3BC8 /* NSData+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */; };
+		F8D903821F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */; };
+		F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */; };
 		F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */; };
 		F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */; };
 		F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */; };
@@ -47,6 +49,10 @@
 		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLFoundation.h"; sourceTree = "<group>"; };
 		F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLFoundation.m"; sourceTree = "<group>"; };
+		F8D903801F380ACC00FF3BC8 /* UIActionSheet+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+SLBlock.h"; sourceTree = "<group>"; };
+		F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+SLBlock.m"; sourceTree = "<group>"; };
+		F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLPopGesture.h"; sourceTree = "<group>"; };
+		F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLPopGesture.m"; sourceTree = "<group>"; };
 		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
 		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				F8FCBEC41F31BE83000C5DF5 /* SLKit.h */,
+				F8D903801F380ACC00FF3BC8 /* UIActionSheet+SLBlock.h */,
+				F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */,
 				F8FCBEC51F31BE83000C5DF5 /* UIAlertView+SLBlock.h */,
 				F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */,
 				F8FCBEC71F31BE83000C5DF5 /* UIApplication+SLKit.h */,
@@ -211,6 +219,8 @@
 				F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */,
 				F8FCBECF1F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.h */,
 				F8FCBED01F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m */,
+				F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */,
+				F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */,
 				F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */,
 				F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */,
 				F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */,
@@ -395,6 +405,7 @@
 				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
 				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
 				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
+				F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */,
 				F8FCBEDF1F31BE83000C5DF5 /* UICollectionView+SLKit.m in Sources */,
 				F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */,
 				F8CB540D1F0C7CA60032DE46 /* main.m in Sources */,
@@ -402,6 +413,7 @@
 				F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */,
 				F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */,
 				F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */,
+				F8D903821F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m in Sources */,
 				F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

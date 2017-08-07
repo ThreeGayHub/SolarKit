@@ -34,7 +34,7 @@
 }
 
 - (NSMutableDictionary *)sl_blockDict {
-    NSMutableDictionary *dict = objc_getAssociatedObject(self, @selector(sl_blockDict));
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, _cmd);
     if (dict) return dict;
     
     dict = [NSMutableDictionary dictionary];

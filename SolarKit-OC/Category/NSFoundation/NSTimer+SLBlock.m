@@ -63,7 +63,7 @@
 }
 
 - (NSTimeInterval)leftSeconds {
-    return [objc_getAssociatedObject(self, @selector(leftSeconds)) doubleValue];
+    return [objc_getAssociatedObject(self, _cmd) doubleValue];
 }
 
 @end

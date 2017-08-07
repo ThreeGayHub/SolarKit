@@ -9,6 +9,8 @@
 #ifndef SLKit_h
 #define SLKit_h
 
+#import "UIActionSheet+SLBlock.h"
+
 #import "UIAlertView+SLBlock.h"
 
 #import "UIApplication+SLKit.h"
@@ -22,6 +24,10 @@
 #import "UIDevice+SLKit.h"
 
 #import "UINavigationBar+SLShadowImage.h"
+
+#import "UINavigationController+SLPopGesture.h"
+
+#import "UINavigationItem+SLNilTitleBackItem.h"
 
 #import "UIView+SLGesture.h"
 
