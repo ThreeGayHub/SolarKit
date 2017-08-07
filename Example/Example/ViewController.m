@@ -27,7 +27,7 @@
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 100, 100)];
     [self.view addSubview:view];
-    view.backgroundColor = UIColor.greenColor;
+    view.backgroundColor = UIColor.redColor;
     [view touchUp:^{
         UIAlertView *alertView = [UIAlertView alertWithTitle:@"Title" message:@"Message"];
         [alertView addButton:@"nil"];
@@ -58,6 +58,27 @@
         [self.timer start];
         
     }];
+    
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(200, 64, 100, 100)];
+    [self.view addSubview:view1];
+    view1.backgroundColor = UIColor.yellowColor;
+    [view1 touchUp:^{
+//        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Title" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"destructive" otherButtonTitles:@"Other1", @"Other2", nil];
+//        [actionSheet showInView:self.view];
+        
+        UIActionSheet *actionSheet = [UIActionSheet actionSheetWithTitle:@"Title"];
+        [actionSheet addCancelButton:@"Cancel"];
+        [actionSheet addDestructiveButton:@"Destructive" action:^{
+            NSLog(@"Destructive");
+        }];
+        [actionSheet addButton:@"Other" action:^{
+            NSLog(@"Other");
+        }];
+
+        [actionSheet showInView:self.view];
+        
+    }];
+
     
     NSLog(@"%d", [UIDevice isSimulator]);
         

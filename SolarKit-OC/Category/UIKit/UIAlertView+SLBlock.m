@@ -9,44 +9,45 @@
 #import "UIAlertView+SLBlock.h"
 #import <objc/runtime.h>
 
-@interface UIAlertView (SLBlock_Privete)
+@interface UIAlertView (SLAlertView_Privete)
 
-@property (nonatomic, strong) NSMutableDictionary *sl_blockDict;
+@property (nonatomic, strong) NSMutableDictionary *blockDict;
 
 @end
 
 @implementation UIAlertView (SLBlock)
 
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message {
-    return [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    alertView.delegate = alertView;
+    return alertView;
 }
 
 - (void)addButton:(NSString *)title {
     [self addButtonWithTitle:title];
 }
 
-- (void)addButton:(NSString *)title action:(SLUIAlertViewBlock)action {
-    self.delegate = self;
+- (void)addButton:(NSString *)title action:(SLAlertViewBlock)action {
     NSInteger index = [self addButtonWithTitle:title];
     if (action) {
-        [self.sl_blockDict setObject:action forKey:@(index)];
+        [self.blockDict setObject:action forKey:@(index)];
     }
 }
 
-- (NSMutableDictionary *)sl_blockDict {
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([self.blockDict.allKeys containsObject:@(buttonIndex)]) {
+        SLAlertViewBlock block = self.blockDict[@(buttonIndex)];
+        block();
+    }
+}
+
+- (NSMutableDictionary *)blockDict {
     NSMutableDictionary *dict = objc_getAssociatedObject(self, _cmd);
     if (dict) return dict;
     
     dict = [NSMutableDictionary dictionary];
-    objc_setAssociatedObject(self, @selector(sl_blockDict), dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(blockDict), dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return dict;
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([self.sl_blockDict.allKeys containsObject:@(buttonIndex)]) {
-        SLUIAlertViewBlock block = self.sl_blockDict[@(buttonIndex)];
-        block();
-    }
 }
 
 @end

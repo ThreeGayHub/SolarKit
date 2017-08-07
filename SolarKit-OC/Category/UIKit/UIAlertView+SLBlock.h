@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^SLUIAlertViewBlock)(void);
+typedef void(^SLAlertViewBlock)(void);
 
 @interface UIAlertView (SLBlock) <UIAlertViewDelegate>
 
@@ -16,6 +16,6 @@ typedef void(^SLUIAlertViewBlock)(void);
 
 - (void)addButton:(NSString *)title;
 
-- (void)addButton:(NSString *)title action:(SLUIAlertViewBlock)action;
+- (void)addButton:(NSString *)title action:(SLAlertViewBlock)action;
 
 @end

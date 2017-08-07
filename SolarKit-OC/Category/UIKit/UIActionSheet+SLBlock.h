@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIActionSheet (SLBlock)
+typedef void(^SLActionSheetBlock)(void);
+
+@interface UIActionSheet (SLBlock) <UIActionSheetDelegate>
+
++ (instancetype)actionSheetWithTitle:(NSString *)title;
+
+- (void)addCancelButton:(NSString *)title;
+
+- (void)addCancelButton:(NSString *)title action:(SLActionSheetBlock)action;
+
+- (void)addDestructiveButton:(NSString *)title;
+
+- (void)addDestructiveButton:(NSString *)title action:(SLActionSheetBlock)action;
+
+- (void)addButton:(NSString *)title;
+
+- (void)addButton:(NSString *)title action:(SLActionSheetBlock)action;
 
 @end
