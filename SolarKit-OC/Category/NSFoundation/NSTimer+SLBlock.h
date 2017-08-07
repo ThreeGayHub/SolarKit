@@ -20,4 +20,6 @@
 
 - (void)stop;
 
++ (void)throttle:(NSTimeInterval)seconds block:(void (^)(void))block;
+
 @end

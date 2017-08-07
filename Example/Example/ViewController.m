@@ -52,19 +52,24 @@
 //        self.timer = [NSTimer repeaticTimerWithInterval:2 block:^{
 //            NSLog(@"repeaticTimer");
 //        }];
-        self.timer = [NSTimer countdownTimerWithInterval:1 times:10 block:^(NSTimeInterval leftSeconds) {
-            NSLog(@"%ld", (long)leftSeconds);
+//        self.timer = [NSTimer countdownTimerWithInterval:1 times:10 block:^(NSTimeInterval leftSeconds) {
+//            NSLog(@"%ld", (long)leftSeconds);
+//        }];
+//        [self.timer start];
+        
+        [NSTimer throttle:0.5 block:^{
+            NSLog(@"throttle");
         }];
-        [self.timer start];
         
     }];
     
     UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(200, 64, 100, 100)];
     [self.view addSubview:view1];
     view1.backgroundColor = UIColor.yellowColor;
+
     [view1 touchUp:^{
-//        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Title" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"destructive" otherButtonTitles:@"Other1", @"Other2", nil];
-//        [actionSheet showInView:self.view];
+        @strongify(self);
+
         
         UIActionSheet *actionSheet = [UIActionSheet actionSheetWithTitle:@"Title"];
         [actionSheet addCancelButton:@"Cancel"];
