@@ -15,6 +15,7 @@
 		F8CB54181F0C7CA60032DE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54171F0C7CA60032DE46 /* Assets.xcassets */; };
 		F8CB541B1F0C7CA60032DE46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54191F0C7CA60032DE46 /* LaunchScreen.storyboard */; };
 		F8CB54371F0E21020032DE46 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54361F0E21020032DE46 /* Podfile */; };
+		F8D9037F1F346DAF00FF3BC8 /* NSData+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */; };
 		F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */; };
 		F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */; };
 		F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */; };
@@ -44,6 +45,8 @@
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CB54361F0E21020032DE46 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLFoundation.h"; sourceTree = "<group>"; };
+		F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
 		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */,
 				F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */,
 				F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */,
+				F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */,
+				F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */,
 			);
 			path = NSFoundation;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */,
 				F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */,
 				F8FCBEDD1F31BE83000C5DF5 /* UIAlertView+SLBlock.m in Sources */,
+				F8D9037F1F346DAF00FF3BC8 /* NSData+SLFoundation.m in Sources */,
 				F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */,
 				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
 				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,

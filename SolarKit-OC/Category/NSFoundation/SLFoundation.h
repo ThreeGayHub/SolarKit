@@ -11,6 +11,8 @@
 
 #import "NSBundle+SLFoundation.h"
 
+#import "NSData+SLFoundation.h"
+
 #import "NSFileManager+SLFoundation.h"
 
 #import "NSString+SLFoundation.h"
