@@ -31,13 +31,27 @@
     return timer;
 }
 
++ (void)throttle:(NSTimeInterval)seconds block:(void (^)(void))block {
+    [self throttle:seconds key:@"SLThrottle" block:block];
+}
+
++ (void)throttle:(NSTimeInterval)seconds key:(NSString *)key block:(void (^)(void))block {
+    if ([self.throttleDictionary.allKeys containsObject:key]) {
+        NSTimer *timer = self.throttleDictionary[key];
+        if (timer) {
+            [self.throttleDictionary removeObjectForKey:key];
+            [timer invalidate];
+        }
+    }
+    NSTimer *timer = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(onThrottleTimer:) userInfo:@{@"block" : block, @"key" : key} repeats:NO];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    [self.throttleDictionary setObject:timer forKey:key];
+}
+
 + (void)onTimer:(NSTimer *)timer {
     if([timer userInfo]) {
         void (^block)(void) = (void (^)(void))[timer userInfo];
         block();
-    }
-    if ([self.throttleDictionary.allKeys containsObject:@"throttle"]) {
-        [self.throttleDictionary removeObjectForKey:@"throttle"];
     }
 }
 
@@ -45,6 +59,17 @@
     if([timer userInfo]) {
         void (^block)(NSTimeInterval) = (void (^)(NSTimeInterval))[timer userInfo];
         block(timer.leftSeconds--);
+    }
+}
+
++ (void)onThrottleTimer:(NSTimer *)timer {
+    NSDictionary *userInfoDict = [timer userInfo];
+    if(userInfoDict) {
+        void (^block)(void) = (void (^)(void))userInfoDict[@"block"];
+        block();
+    }
+    if ([self.throttleDictionary.allKeys containsObject:userInfoDict[@"key"]]) {
+        [self.throttleDictionary removeObjectForKey:userInfoDict[@"key"]];
     }
 }
 
@@ -62,19 +87,6 @@
 
 - (NSTimeInterval)leftSeconds {
     return [objc_getAssociatedObject(self, _cmd) doubleValue];
-}
-
-+ (void)throttle:(NSTimeInterval)seconds block:(void (^)(void))block {
-    if ([self.throttleDictionary.allKeys containsObject:@"throttle"]) {
-        NSTimer *timer = self.throttleDictionary[@"throttle"];
-        if (timer) {
-            [self.throttleDictionary removeObjectForKey:@"throttle"];
-            [timer invalidate];
-        }
-    }
-    NSTimer *timer = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(onTimer:) userInfo:block repeats:NO];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    [self.throttleDictionary setObject:timer forKey:@"throttle"];
 }
 
 + (NSMutableDictionary *)throttleDictionary {

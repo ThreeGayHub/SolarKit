@@ -16,10 +16,12 @@
 
 + (instancetype)countdownTimerWithInterval:(NSTimeInterval)seconds times:(NSTimeInterval)totalSeconds block:(void (^)(NSTimeInterval leftSeconds))block;
 
++ (void)throttle:(NSTimeInterval)seconds block:(void (^)(void))block;
+
++ (void)throttle:(NSTimeInterval)seconds key:(NSString *)key block:(void (^)(void))block;
+
 - (void)start;
 
 - (void)stop;
-
-+ (void)throttle:(NSTimeInterval)seconds block:(void (^)(void))block;
 
 @end
