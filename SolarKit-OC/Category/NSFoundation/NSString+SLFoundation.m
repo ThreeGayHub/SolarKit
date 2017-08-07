@@ -77,53 +77,23 @@ NSString *ToString(id obj) {
 }
 
 - (BOOL)isContainNumber {
-    BOOL result = NO;
-    if (self.length > 0) {
-        NSString *regex = @".*?\\d+.*?";
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-        result = [predicate evaluateWithObject:self];
-    }
-    return result;
+    return [self isMatchRegex:@".*?\\d+.*?"];
 }
 
 - (BOOL)isContainUpperLetters {
-    BOOL result = NO;
-    if (self.length > 0) {
-        NSString *regex = @".*?[A-Z]+.*?";
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-        result = [predicate evaluateWithObject:self];
-    }
-    return result;
+    return [self isMatchRegex:@".*?[A-Z]+.*?"];
 }
 
 - (BOOL)isContainLowerLetters {
-    BOOL result = NO;
-    if (self.length > 0) {
-        NSString *regex = @".*?[a-z]+.*?";
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-        result = [predicate evaluateWithObject:self];
-    }
-    return result;
+    return [self isMatchRegex:@".*?[a-z]+.*?"];
 }
 
 - (BOOL)isContainSpecialCharacters {
-    BOOL result = NO;
-    if (self.length > 0) {
-        NSString *regex = @".*?[^A-Za-z0-9]+.*?";
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-        result = [predicate evaluateWithObject:self];
-    }
-    return result;
+    return [self isMatchRegex:@".*?[^A-Za-z0-9]+.*?"];
 }
 
 - (BOOL)isContainChinese {
-    BOOL result = NO;
-    if (self.length > 0) {
-        NSString *regex = @"[\u4e00-\u9fa5]+";
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-        result = [predicate evaluateWithObject:self];
-    }
-    return result;
+    return [self isMatchRegex:@"[\u4e00-\u9fa5]+"];
 }
 
 - (NSDate *)dateWithFormat:(NSString *)format {
@@ -142,6 +112,15 @@ NSString *ToString(id obj) {
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     return [formatter dateFromString:self];
+}
+
+- (BOOL)isMatchRegex:(NSString *)regex {
+    BOOL result = NO;
+    if (self.length > 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        result = [predicate evaluateWithObject:self];
+    }
+    return result;
 }
 
 @end

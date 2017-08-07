@@ -50,4 +50,6 @@ NSString *ToString(id obj);
 //yyyy-MM-dd HH:mm:ss
 @property (nonatomic, readonly) NSDate *dateTime;
 
+- (BOOL)isMatchRegex:(NSString *)regex;
+
 @end
