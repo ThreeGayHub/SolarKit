@@ -17,6 +17,7 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIView *greenView;
 
 @end
 
@@ -103,6 +104,8 @@
     [textField editingChanged:^(UITextField *textField) {
         NSLog(@"%@", textField.text);
     }];
+    
+    self.greenView.multiCornerRadius = SLRectCornerMake(5, 0, 0, 5);
     
     NSLog(@"%d", [UIDevice isSimulator]);
         

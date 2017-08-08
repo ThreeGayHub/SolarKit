@@ -46,7 +46,7 @@
     if (dict) return dict;
     
     dict = [NSMutableDictionary dictionary];
-    objc_setAssociatedObject(self, @selector(blockDict), dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, _cmd, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return dict;
 }
 

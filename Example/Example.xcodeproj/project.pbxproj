@@ -216,13 +216,13 @@
 		F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */,
 				F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */,
 				F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */,
 				F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */,
 				F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */,
 				F8FCBEC01F31BE83000C5DF5 /* NSTimer+SLBlock.h */,
 				F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */,
-				F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */,
 				F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */,
 				F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */,
 				F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */,

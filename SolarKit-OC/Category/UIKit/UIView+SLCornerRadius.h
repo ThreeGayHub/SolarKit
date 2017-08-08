@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-struct SLRadius {
+struct SLRectCorner {
     CGFloat topLeft;
     CGFloat topRight;
     CGFloat bottomLeft;
     CGFloat bottomRight;
 };
-typedef struct SLRadius SLRadius;
+typedef struct SLRectCorner SLRectCorner;
 
-static inline SLRadius SLRadiusMake(CGFloat topLeft, CGFloat topRight, CGFloat bottomLeft, CGFloat bottomRight) {
-    SLRadius radius;
+static inline SLRectCorner SLRectCornerMake(CGFloat topLeft, CGFloat topRight, CGFloat bottomLeft, CGFloat bottomRight) {
+    SLRectCorner radius;
     radius.topLeft = topLeft;
     radius.topRight = topRight;
     radius.bottomLeft = bottomLeft;
@@ -27,6 +27,6 @@ static inline SLRadius SLRadiusMake(CGFloat topLeft, CGFloat topRight, CGFloat b
 
 @interface UIView (SLCornerRadius)
 
-@property (nonatomic, assign) SLRadius multiCornerRadius;
+@property (nonatomic, assign) SLRectCorner multiCornerRadius;
 
 @end
