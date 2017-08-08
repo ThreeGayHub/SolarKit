@@ -38,7 +38,6 @@
 
 + (void)stopRemoteNotification;
 
-
-//+ (void)changeRootViewControllerFade:(UIViewController *)viewController;
++ (void)changeRootViewControllerWithFadeAnimation:(UIViewController *)vc;
 
 @end

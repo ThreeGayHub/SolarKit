@@ -50,7 +50,11 @@
     [[UIApplication sharedApplication] unregisterForRemoteNotifications];
 }
 
-
++ (void)changeRootViewControllerWithFadeAnimation:(UIViewController *)vc {
+    CATransition *fadeTransition = [self _fadeTransation];
+    [UIApplication.window.layer addAnimation:fadeTransition forKey:kCATransition];
+    UIApplication.window.rootViewController = vc;
+}
 
 
 #pragma mark - privete
@@ -70,12 +74,14 @@
     return vc;
 }
 
++ (CATransition *)_fadeTransation {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.2;
+    transition.type = kCATransitionFade;
+    transition.subtype = kCATransitionFromTop;
+    return transition;
+}
 
 
-//+ (void)changeRootViewControllerFade:(UIViewController *)viewController {
-//    CATransition *fadeTransition = [CATransition fadeTransation];
-//    [UIApplication.yh_window.layer addAnimation:fadeTransition forKey:kCATransition];
-//    UIApplication.yh_window.rootViewController = viewController;
-//}
 
 @end
