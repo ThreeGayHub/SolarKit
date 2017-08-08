@@ -10,12 +10,12 @@
 
 @implementation UICollectionView (SLKit)
 
-- (void)registerNibforCellWithClass:(Class)clazz {
-    [self registerNib:[UINib nibWithNibName:NSStringFromClass(clazz) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass(clazz)];
+- (void)registerCellWithClass:(Class)clazz {
+    [self registerClass:clazz forCellWithReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (void)registerforCellWithClass:(Class)clazz {
-    [self registerClass:clazz forCellWithReuseIdentifier:NSStringFromClass(clazz)];
+- (void)registerNibCellWithClass:(Class)clazz {
+    [self registerNib:[UINib nibWithNibName:NSStringFromClass(clazz) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass(clazz)];
 }
 
 - (UICollectionViewCell *)dequeueReusableCellWithClass:(Class)clazz forIndexPath:(NSIndexPath *)indexPath {

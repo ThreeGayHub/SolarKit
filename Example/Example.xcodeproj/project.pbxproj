@@ -13,6 +13,7 @@
 		F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */; };
 		F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */; };
 		F8046BBD1F395F9700E5885A /* UITextField+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */; };
+		F8046BC01F39861800E5885A /* UITableView+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BBF1F39861800E5885A /* UITableView+SLKit.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SLPlaceholder.m"; sourceTree = "<group>"; };
 		F8046BBB1F395F9700E5885A /* UITextField+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SLBlock.h"; sourceTree = "<group>"; };
 		F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SLBlock.m"; sourceTree = "<group>"; };
+		F8046BBE1F39861800E5885A /* UITableView+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SLKit.h"; sourceTree = "<group>"; };
+		F8046BBF1F39861800E5885A /* UITableView+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SLKit.m"; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */,
 				F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */,
 				F8046BB01F39586900E5885A /* UIScreen+SLKit.m */,
+				F8046BBE1F39861800E5885A /* UITableView+SLKit.h */,
+				F8046BBF1F39861800E5885A /* UITableView+SLKit.m */,
 				F8046BBB1F395F9700E5885A /* UITextField+SLBlock.h */,
 				F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */,
 				F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */,
@@ -421,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8046BC01F39861800E5885A /* UITableView+SLKit.m in Sources */,
 				F8FCBEE21F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m in Sources */,
 				F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */,
 				F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */,

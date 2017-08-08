@@ -10,9 +10,9 @@
 
 @interface UICollectionView (SLKit)
 
-- (void)registerNibforCellWithClass:(Class)clazz;
+- (void)registerCellWithClass:(Class)clazz;
 
-- (void)registerforCellWithClass:(Class)clazz;
+- (void)registerNibCellWithClass:(Class)clazz;
 
 - (__kindof UICollectionViewCell *)dequeueReusableCellWithClass:(Class)clazz forIndexPath:(NSIndexPath *)indexPath;
 
