@@ -10,6 +10,8 @@
 		0CD2C54B93D521B9B1DADDFC /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */; };
 		F8046BAE1F394E4D00E5885A /* UIButton+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */; };
 		F8046BB11F39586900E5885A /* UIScreen+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB01F39586900E5885A /* UIScreen+SLKit.m */; };
+		F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */; };
+		F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -42,6 +44,10 @@
 		F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SLBlock.m"; sourceTree = "<group>"; };
 		F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SLKit.h"; sourceTree = "<group>"; };
 		F8046BB01F39586900E5885A /* UIScreen+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+SLKit.m"; sourceTree = "<group>"; };
+		F8046BB21F395DC300E5885A /* UILabel+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SLPlaceholder.h"; sourceTree = "<group>"; };
+		F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SLPlaceholder.m"; sourceTree = "<group>"; };
+		F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SLPlaceholder.h"; sourceTree = "<group>"; };
+		F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SLPlaceholder.m"; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +231,8 @@
 				F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */,
 				F8FCBECD1F31BE83000C5DF5 /* UIDevice+SLKit.h */,
 				F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */,
+				F8046BB21F395DC300E5885A /* UILabel+SLPlaceholder.h */,
+				F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */,
 				F8FCBECF1F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.h */,
 				F8FCBED01F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m */,
 				F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */,
@@ -233,6 +241,8 @@
 				F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */,
 				F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */,
 				F8046BB01F39586900E5885A /* UIScreen+SLKit.m */,
+				F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */,
+				F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */,
 				F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */,
 				F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */,
 				F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */,
@@ -416,6 +426,7 @@
 				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
 				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
 				F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */,
+				F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */,
 				F8FCBEDF1F31BE83000C5DF5 /* UICollectionView+SLKit.m in Sources */,
 				F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */,
 				F8CB540D1F0C7CA60032DE46 /* main.m in Sources */,
@@ -423,6 +434,7 @@
 				F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */,
 				F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */,
 				F8046BAE1F394E4D00E5885A /* UIButton+SLBlock.m in Sources */,
+				F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */,
 				F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */,
 				F8D903821F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m in Sources */,
 				F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */,
