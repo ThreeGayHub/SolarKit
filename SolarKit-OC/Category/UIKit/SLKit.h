@@ -21,19 +21,31 @@
 
 #import "UIColor+SLHex.h"
 
-//TODO-UIControl+Block
-
 #import "UIDevice+SLKit.h"
+
+#import "UILabel+SLPlaceholder.h"
 
 #import "UINavigationBar+SLShadowImage.h"
 
+#import "UINavigationController+SLHidesBottomBarWhenPushed.h"
+
 #import "UINavigationController+SLPopGesture.h"
+
+#import "UINavigationController+SLRemoveVC.h"
+
+#import "UINavigationController+SLTransition.h"
 
 #import "UINavigationItem+SLNilTitleBackItem.h"
 
 #import "UIScreen+SLKit.h"
 
+#import "UITableView+SLKit.h"
+
 #import "UITextField+SLBlock.h"
+
+#import "UITextView+SLPlaceholder.h"
+
+#import "UIView+SLCornerRadius.h"
 
 #import "UIView+SLGesture.h"
 
