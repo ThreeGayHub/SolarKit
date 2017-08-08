@@ -33,6 +33,8 @@
 
 #import "UIScreen+SLKit.h"
 
+#import "UITextField+SLBlock.h"
+
 #import "UIView+SLGesture.h"
 
 #import "UIViewController+SLKit.h"

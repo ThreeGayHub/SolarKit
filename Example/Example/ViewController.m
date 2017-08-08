@@ -97,6 +97,13 @@
         NSLog(@"touchUpInside");
     }];
     
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 64 + Length, Length, Length)];
+    textField.backgroundColor = UIColor.cyanColor;
+    [self.view addSubview:textField];
+    [textField editingChanged:^(UITextField *textField) {
+        NSLog(@"%@", textField.text);
+    }];
+    
     NSLog(@"%d", [UIDevice isSimulator]);
         
     // Do any additional setup after loading the view, typically from a nib.
