@@ -16,6 +16,7 @@
 		F8046BC01F39861800E5885A /* UITableView+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BBF1F39861800E5885A /* UITableView+SLKit.m */; };
 		F8046BC31F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC21F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m */; };
 		F8046BC61F398ECB00E5885A /* UINavigationController+SLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */; };
+		F8046BC91F398FDB00E5885A /* UINavigationController+SLRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -60,6 +61,8 @@
 		F8046BC21F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLHidesBottomBarWhenPushed.m"; sourceTree = "<group>"; };
 		F8046BC41F398ECB00E5885A /* UINavigationController+SLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLTransition.h"; sourceTree = "<group>"; };
 		F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLTransition.m"; sourceTree = "<group>"; };
+		F8046BC71F398FDB00E5885A /* UINavigationController+SLRemoveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLRemoveVC.h"; sourceTree = "<group>"; };
+		F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLRemoveVC.m"; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				F8046BC21F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m */,
 				F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */,
 				F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */,
+				F8046BC71F398FDB00E5885A /* UINavigationController+SLRemoveVC.h */,
+				F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */,
 				F8046BC41F398ECB00E5885A /* UINavigationController+SLTransition.h */,
 				F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */,
 				F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */,
@@ -437,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8046BC01F39861800E5885A /* UITableView+SLKit.m in Sources */,
+				F8046BC91F398FDB00E5885A /* UINavigationController+SLRemoveVC.m in Sources */,
 				F8FCBEE21F31BE83000C5DF5 /* UINavigationBar+SLShadowImage.m in Sources */,
 				F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */,
 				F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */,
