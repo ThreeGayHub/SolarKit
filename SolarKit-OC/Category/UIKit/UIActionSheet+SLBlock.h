@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^SLActionSheetBlock)(void);
+typedef void(^SLActionSheetAction)(void);
 
 @interface UIActionSheet (SLBlock) <UIActionSheetDelegate>
 
@@ -16,14 +16,14 @@ typedef void(^SLActionSheetBlock)(void);
 
 - (void)addCancelButton:(NSString *)title;
 
-- (void)addCancelButton:(NSString *)title action:(SLActionSheetBlock)action;
+- (void)addCancelButton:(NSString *)title action:(SLActionSheetAction)action;
 
 - (void)addDestructiveButton:(NSString *)title;
 
-- (void)addDestructiveButton:(NSString *)title action:(SLActionSheetBlock)action;
+- (void)addDestructiveButton:(NSString *)title action:(SLActionSheetAction)action;
 
 - (void)addButton:(NSString *)title;
 
-- (void)addButton:(NSString *)title action:(SLActionSheetBlock)action;
+- (void)addButton:(NSString *)title action:(SLActionSheetAction)action;
 
 @end

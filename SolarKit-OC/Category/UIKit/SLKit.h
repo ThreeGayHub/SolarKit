@@ -15,6 +15,8 @@
 
 #import "UIApplication+SLKit.h"
 
+#import "UIButton+SLBlock.h"
+
 #import "UICollectionView+SLKit.h"
 
 #import "UIColor+SLHex.h"
@@ -28,6 +30,8 @@
 #import "UINavigationController+SLPopGesture.h"
 
 #import "UINavigationItem+SLNilTitleBackItem.h"
+
+#import "UIScreen+SLKit.h"
 
 #import "UIView+SLGesture.h"
 

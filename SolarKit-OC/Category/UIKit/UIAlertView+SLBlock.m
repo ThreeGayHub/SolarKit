@@ -27,7 +27,7 @@
     [self addButtonWithTitle:title];
 }
 
-- (void)addButton:(NSString *)title action:(SLAlertViewBlock)action {
+- (void)addButton:(NSString *)title action:(SLAlertViewAction)action {
     NSInteger index = [self addButtonWithTitle:title];
     if (action) {
         [self.blockDict setObject:action forKey:@(index)];
@@ -36,7 +36,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ([self.blockDict.allKeys containsObject:@(buttonIndex)]) {
-        SLAlertViewBlock block = self.blockDict[@(buttonIndex)];
+        SLAlertViewAction block = self.blockDict[@(buttonIndex)];
         block();
     }
 }

@@ -11,31 +11,33 @@
 
 @interface UIView (SLGesture_Private)
 
-@property (nonatomic, copy) SLGestureEmptyBlock emptyBlock;
+@property (nonatomic, strong) NSMutableDictionary *blockDict;
 
 @end
 
 @implementation UIView (SLGesture)
 
-- (void)touchUp:(SLGestureEmptyBlock)block {
-    self.emptyBlock = block;
+- (void)touchUp:(SLGestureBlock)block {
+    [self.blockDict setObject:block forKey:@(UIGestureRecognizerStateEnded)];
     self.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfTap:)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touch:)];
     [self addGestureRecognizer:tapGesture];
 }
 
-- (void)setEmptyBlock:(SLGestureEmptyBlock)emptyBlock {
-    objc_setAssociatedObject(self, @selector(emptyBlock), emptyBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (SLGestureEmptyBlock)emptyBlock {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)selfTap:(UITapGestureRecognizer *)tapGesture {
+- (void)touch:(UITapGestureRecognizer *)tapGesture {
     if (tapGesture.state == UIGestureRecognizerStateEnded) {
-        if (self.emptyBlock) self.emptyBlock();
+        SLGestureBlock block = self.blockDict[@(UIGestureRecognizerStateEnded)];
+        if (block) block();
     }
+}
+
+- (NSMutableDictionary *)blockDict {
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, _cmd);
+    if (dict) return dict;
+    
+    dict = [NSMutableDictionary dictionary];
+    objc_setAssociatedObject(self, @selector(blockDict), dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return dict;
 }
 
 @end

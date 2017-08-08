@@ -27,7 +27,7 @@
     [self addCancelButton:title action:nil];
 }
 
-- (void)addCancelButton:(NSString *)title action:(SLActionSheetBlock)action {
+- (void)addCancelButton:(NSString *)title action:(SLActionSheetAction)action {
     NSInteger index = [self addButtonWithTitle:title];
     if (action) {
         [self.blockDict setObject:action forKey:@(index)];
@@ -39,7 +39,7 @@
     [self addDestructiveButton:title action:nil];
 }
 
-- (void)addDestructiveButton:(NSString *)title action:(SLActionSheetBlock)action {
+- (void)addDestructiveButton:(NSString *)title action:(SLActionSheetAction)action {
     NSInteger index = [self addButtonWithTitle:title];
     if (action) {
         [self.blockDict setObject:action forKey:@(index)];
@@ -51,7 +51,7 @@
     [self addButton:title action:nil];
 }
 
-- (void)addButton:(NSString *)title action:(SLActionSheetBlock)action {
+- (void)addButton:(NSString *)title action:(SLActionSheetAction)action {
     NSInteger index = [self addButtonWithTitle:title];
     if (action) {
         [self.blockDict setObject:action forKey:@(index)];
@@ -60,7 +60,7 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ([self.blockDict.allKeys containsObject:@(buttonIndex)]) {
-        SLActionSheetBlock block = self.blockDict[@(buttonIndex)];
+        SLActionSheetAction block = self.blockDict[@(buttonIndex)];
         block();
     }
 }

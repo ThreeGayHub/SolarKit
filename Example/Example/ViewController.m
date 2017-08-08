@@ -21,11 +21,16 @@
 @end
 
 @implementation ViewController
+{
+    CGFloat Length;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 100, 100)];
+    Length = ScreenWidth / 4;
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, Length, Length)];
     [self.view addSubview:view];
     view.backgroundColor = UIColor.redColor;
     [view touchUp:^{
@@ -40,7 +45,7 @@
         [alertView show];
     }];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 64, 100, 100)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(Length, 64, Length, Length)];
     [self.view addSubview:label];
     label.backgroundColor = UIColor.orangeColor;
     @weakify(self);
@@ -63,7 +68,7 @@
         
     }];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(200, 64, 100, 100)];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(Length * 2, 64, Length, Length)];
     [self.view addSubview:view1];
     view1.backgroundColor = UIColor.yellowColor;
 
@@ -83,7 +88,14 @@
         [actionSheet showInView:self.view];
         
     }];
-
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(Length * 3, 64, Length, Length);
+    button.backgroundColor = UIColor.greenColor;
+    [self.view addSubview:button];
+    [button touchUpInside:^(UIButton *button) {
+        NSLog(@"touchUpInside");
+    }];
     
     NSLog(@"%d", [UIDevice isSimulator]);
         

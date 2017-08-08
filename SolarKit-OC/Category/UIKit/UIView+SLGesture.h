@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^SLGestureEmptyBlock)(void);
+typedef void (^SLGestureBlock)(void);
 
 @interface UIView (SLGesture)
 
-- (void)touchUp:(SLGestureEmptyBlock)block;
+- (void)touchUp:(SLGestureBlock)block;
 
 @end
