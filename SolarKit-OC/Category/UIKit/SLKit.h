@@ -23,6 +23,8 @@
 
 #import "UIDevice+SLKit.h"
 
+#import "UIImage+SLLuban.h"
+
 #import "UILabel+SLPlaceholder.h"
 
 #import "UINavigationBar+SLShadowImage.h"
