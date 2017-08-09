@@ -10,7 +10,7 @@
 
 typedef void(^SLActionSheetAction)(void);
 
-@interface UIActionSheet (SLBlock) <UIActionSheetDelegate>
+@interface UIActionSheet (SLBlock)
 
 + (instancetype)actionSheetWithTitle:(NSString *)title;
 

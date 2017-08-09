@@ -73,12 +73,12 @@
         size = size < 100 ? 100 : size;
     }
 
-    return [self compressWithThumbW:thumbW thumbH:thumbH size:size];
+    return [self _compressWithThumbW:thumbW thumbH:thumbH size:size];
 }
 
-- (UIImage *)compressWithThumbW:(int)width thumbH:(int)height size:(double)size {
-    UIImage *thumbImage = [self fixOrientation];
-    thumbImage = [thumbImage resizeWithThumbWidth:width thumbHeight:height];
+- (UIImage *)_compressWithThumbW:(int)width thumbH:(int)height size:(double)size {
+    UIImage *thumbImage = [self _fixOrientation];
+    thumbImage = [thumbImage _resizeWithThumbWidth:width thumbHeight:height];
     
     int qualityCompress = 1.0;
     
@@ -95,7 +95,7 @@
     return thumbImage;
 }
 
-- (UIImage *)resizeWithThumbWidth:(int)width thumbHeight:(int)height {
+- (UIImage *)_resizeWithThumbWidth:(int)width thumbHeight:(int)height {
     
     int outW = (int)self.size.width;
     int outH = (int)self.size.height;
@@ -129,7 +129,7 @@
     return resultImage;
 }
 
-- (UIImage *)fixOrientation {
+- (UIImage *)_fixOrientation {
     
     // No-op if the orientation is already correct
     if (self.imageOrientation == UIImageOrientationUp) return self;
@@ -208,5 +208,35 @@
     CGImageRelease(cgimg);
     return img;
 }
+
+- (UIImage *)compressToScale:(float)scale {
+    if (scale >= 1) {
+        return self;
+    }
+    
+    CGSize imageSize = self.size;
+    CGSize scaleImageSize = CGSizeMake(imageSize.width * scale, imageSize.height * scale);
+    
+    UIGraphicsBeginImageContext(scaleImageSize);
+    [self drawInRect:CGRectMake(0, 0, scaleImageSize.width, scaleImageSize.height)];
+    UIImage* scaleImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaleImage;
+}
+
+- (UIImage *)compressToSize:(CGSize)newSize {
+    
+    CGSize imageSize = self.size;
+    
+    if (newSize.width > imageSize.width || newSize.height > imageSize.height) {
+        return self;
+    }
+    
+    CGFloat scale = newSize.width / imageSize.height;
+    
+    return [self compressToScale:scale];
+}
+
 
 @end

@@ -68,29 +68,55 @@
         
     }];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(Length * 2, 64, Length, Length)];
-    [self.view addSubview:view1];
-    view1.backgroundColor = UIColor.yellowColor;
-
-    [view1 touchUp:^{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(Length * 2, 64, Length, Length)];
+    imageView.backgroundColor = UIColor.yellowColor;
+    [self.view addSubview:imageView];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [imageView touchUp:^{
         @strongify(self);
-
         
         UIActionSheet *actionSheet = [UIActionSheet actionSheetWithTitle:@"Title"];
-        [actionSheet addCancelButton:@"Cancel"];
-        [actionSheet addDestructiveButton:@"Destructive" action:^{
-            NSLog(@"Destructive");
+        [actionSheet addCancelButton:@"取消"];
+        [actionSheet addDestructiveButton:@"录像" action:^{
+            @strongify(self);
+            UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeVideo];
+            [picker selectedVideo:^(NSData *mediaData, NSUInteger seconds) {
+                NSLog(@"Length:%lu\nSeconds:%lu", [mediaData length], seconds);
+            }];
+            [picker showInVC:self];
         }];
-        [actionSheet addButton:@"Other" action:^{
-            NSLog(@"Other");
+        [actionSheet addButton:@"照相" action:^{
+            @strongify(self);
+            UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeTakePhoto];
+            [picker selected:^(NSData *mediaData) {
+                imageView.image = [UIImage imageWithData:mediaData];
+                NSLog(@"Length:%lu", [mediaData length]);
+            }];
+            [picker showInVC:self];
         }];
-
+        [actionSheet addButton:@"相册列表" action:^{
+            @strongify(self);
+            UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeAlbumList];
+            [picker selected:^(NSData *mediaData) {
+                imageView.image = [UIImage imageWithData:mediaData];
+                NSLog(@"Length:%lu", [mediaData length]);
+            }];
+            [picker showInVC:self];
+        }];
+        [actionSheet addButton:@"相册时间线" action:^{
+            @strongify(self);
+            UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeAlbumTimeline];
+            [picker selected:^(NSData *mediaData) {
+                imageView.image = [UIImage imageWithData:mediaData];
+                NSLog(@"Length:%lu", [mediaData length]);
+            }];
+            [picker showInVC:self];
+        }];
         [actionSheet showInView:self.view];
-        
     }];
     
-    view1.borderColor = UIColor.blackColor;
-    view1.multiBorderWidth = SLBorderWidthMake(1, 0, 1, 0);
+    imageView.borderColor = UIColor.blackColor;
+    imageView.multiBorderWidth = SLBorderWidthMake(1, 0, 1, 0);
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(Length * 3, 64, Length, Length);
@@ -108,8 +134,8 @@
     }];
     textField.multiCornerRadius = SLRectCornerMake(5, 0, 0, 5);
     
-    NSLog(@"%d", [UIDevice isSimulator]);
-        
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

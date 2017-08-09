@@ -9,7 +9,7 @@
 #import "UIActionSheet+SLBlock.h"
 #import <objc/runtime.h>
 
-@interface UIActionSheet (SLActionSheet_Private)
+@interface UIActionSheet (SLActionSheet_Private) <UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *blockDict;
 

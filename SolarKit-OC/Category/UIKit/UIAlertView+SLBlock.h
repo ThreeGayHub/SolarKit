@@ -10,7 +10,7 @@
 
 typedef void(^SLAlertViewAction)(void);
 
-@interface UIAlertView (SLBlock) <UIAlertViewDelegate>
+@interface UIAlertView (SLBlock) 
 
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message;
 

@@ -9,7 +9,7 @@
 #import "UIAlertView+SLBlock.h"
 #import <objc/runtime.h>
 
-@interface UIAlertView (SLAlertView_Privete)
+@interface UIAlertView (SLAlertView_Privete) <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *blockDict;
 
