@@ -17,7 +17,7 @@
 		F8046BC31F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC21F398C5B00E5885A /* UINavigationController+SLHidesBottomBarWhenPushed.m */; };
 		F8046BC61F398ECB00E5885A /* UINavigationController+SLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */; };
 		F8046BC91F398FDB00E5885A /* UINavigationController+SLRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */; };
-		F8046BCC1F39925200E5885A /* UIView+SLCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BCB1F39925200E5885A /* UIView+SLCornerRadius.m */; };
+		F8046BD21F3AAF6100E5885A /* UIView+SLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -64,8 +64,8 @@
 		F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLTransition.m"; sourceTree = "<group>"; };
 		F8046BC71F398FDB00E5885A /* UINavigationController+SLRemoveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLRemoveVC.h"; sourceTree = "<group>"; };
 		F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLRemoveVC.m"; sourceTree = "<group>"; };
-		F8046BCA1F39925200E5885A /* UIView+SLCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLCornerRadius.h"; sourceTree = "<group>"; };
-		F8046BCB1F39925200E5885A /* UIView+SLCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLCornerRadius.m"; sourceTree = "<group>"; };
+		F8046BD01F3AAF6100E5885A /* UIView+SLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLLayer.h"; sourceTree = "<group>"; };
+		F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLLayer.m"; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 				F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */,
 				F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */,
 				F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */,
-				F8046BCA1F39925200E5885A /* UIView+SLCornerRadius.h */,
-				F8046BCB1F39925200E5885A /* UIView+SLCornerRadius.m */,
+				F8046BD01F3AAF6100E5885A /* UIView+SLLayer.h */,
+				F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */,
 				F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */,
 				F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */,
 				F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */,
@@ -457,7 +457,7 @@
 				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
 				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
 				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
-				F8046BCC1F39925200E5885A /* UIView+SLCornerRadius.m in Sources */,
+				F8046BD21F3AAF6100E5885A /* UIView+SLLayer.m in Sources */,
 				F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */,
 				F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */,
 				F8FCBEDF1F31BE83000C5DF5 /* UICollectionView+SLKit.m in Sources */,

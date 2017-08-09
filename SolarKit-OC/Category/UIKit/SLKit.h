@@ -45,7 +45,7 @@
 
 #import "UITextView+SLPlaceholder.h"
 
-#import "UIView+SLCornerRadius.h"
+#import "UIView+SLLayer.h"
 
 #import "UIView+SLGesture.h"
 

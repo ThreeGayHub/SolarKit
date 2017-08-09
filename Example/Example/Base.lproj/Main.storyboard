@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,24 +49,9 @@
                     <view key="view" contentMode="scaleToFill" id="6s8-Os-Mos">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2O-Pn-ird">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="d2O-Pn-ird" secondAttribute="trailing" constant="52" id="EqA-Ge-nc7"/>
-                            <constraint firstItem="d2O-Pn-ird" firstAttribute="top" secondItem="K0V-Zc-h3S" secondAttribute="bottom" constant="205" id="Qm5-Cq-pTH"/>
-                            <constraint firstItem="d2O-Pn-ird" firstAttribute="leading" secondItem="6s8-Os-Mos" secondAttribute="leadingMargin" constant="51" id="fBO-zT-R7U"/>
-                            <constraint firstItem="xDi-0w-PFf" firstAttribute="top" secondItem="d2O-Pn-ird" secondAttribute="bottom" constant="270" id="sYF-Xq-9Ga"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FDf-Dj-aOM"/>
-                    <connections>
-                        <outlet property="greenView" destination="d2O-Pn-ird" id="MmT-g5-V9V"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsQ-tk-fk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

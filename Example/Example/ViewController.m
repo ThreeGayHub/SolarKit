@@ -17,7 +17,6 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
-@property (weak, nonatomic) IBOutlet UIView *greenView;
 
 @end
 
@@ -90,6 +89,9 @@
         
     }];
     
+    view1.borderColor = UIColor.blackColor;
+    view1.multiBorderWidth = SLBorderWidthMake(1, 0, 1, 0);
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(Length * 3, 64, Length, Length);
     button.backgroundColor = UIColor.greenColor;
@@ -104,8 +106,7 @@
     [textField editingChanged:^(UITextField *textField) {
         NSLog(@"%@", textField.text);
     }];
-    
-    self.greenView.multiCornerRadius = SLRectCornerMake(5, 0, 0, 5);
+    textField.multiCornerRadius = SLRectCornerMake(5, 0, 0, 5);
     
     NSLog(@"%d", [UIDevice isSimulator]);
         
