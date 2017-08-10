@@ -119,12 +119,18 @@
     imageView.multiBorderWidth = SLBorderWidthMake(1, 0, 1, 0);
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.tintColor = [UIColor yellowColor];
     button.frame = CGRectMake(Length * 3, 64, Length, Length);
     button.backgroundColor = UIColor.greenColor;
     [self.view addSubview:button];
     [button touchUpInside:^(UIButton *button) {
         NSLog(@"touchUpInside");
     }];
+    
+    button.imageName = @"Solar";
+    button.title = @"title";
+    button.fontSize = 10;
+    button.titleColor = [UIColor redColor];
     
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 64 + Length, Length, Length)];
     textField.backgroundColor = UIColor.cyanColor;
