@@ -21,6 +21,7 @@
 		F8046BD51F3AB9EC00E5885A /* UIImage+SLLuban.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD41F3AB9EC00E5885A /* UIImage+SLLuban.m */; };
 		F8046BD81F3AC0F800E5885A /* UIImagePickerController+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD71F3AC0F800E5885A /* UIImagePickerController+SLKit.m */; };
 		F8046BDB1F3AD99100E5885A /* UIImage+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BDA1F3AD99100E5885A /* UIImage+SLKit.m */; };
+		274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274D6CF61F32CAA100BE3539 /* NSArray+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SLFoundation.h"; sourceTree = "<group>"; };
+		274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SLFoundation.m"; sourceTree = "<group>"; };
 		646B9356CD92FBAA7B38C540 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8046BAC1F394E4D00E5885A /* UIButton+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SLBlock.h"; sourceTree = "<group>"; };
@@ -133,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD2C54B93D521B9B1DADDFC /* Pods_Example.framework in Frameworks */,
+				694550DF1F1AE5774B2F36FE /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +155,7 @@
 		30B3D8124C5DA2FE71B08CDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */,
+				8C4B24821B8492DA7A7221E4 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +239,8 @@
 				F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */,
 				F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */,
 				F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */,
+				274D6CF61F32CAA100BE3539 /* NSArray+SLFoundation.h */,
+				274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */,
 			);
 			path = NSFoundation;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */,
 				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
 				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
+				274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */,
 				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
 				F8046BD21F3AAF6100E5885A /* UIView+SLLayer.m in Sources */,
 				F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */,
