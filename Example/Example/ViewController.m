@@ -89,7 +89,7 @@
             @strongify(self);
             UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeTakePhoto];
             [picker selected:^(NSData *mediaData) {
-                imageView.image = [UIImage imageWithData:mediaData];
+                imageView.image = [UIImage imageWithData:mediaData].compressImage;
                 NSLog(@"Length:%lu", [mediaData length]);
             }];
             [picker showInVC:self];

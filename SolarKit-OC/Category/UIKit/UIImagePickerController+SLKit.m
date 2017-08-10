@@ -110,6 +110,10 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
         AVURLAsset *avUrl = [AVURLAsset assetWithURL:url];
         CMTime time = [avUrl duration];
         seconds = time.value / time.timescale;
+        
+        if (self.saveToAlbum) {
+            UISaveVideoAtPathToSavedPhotosAlbum(url.absoluteString, self, @selector(video:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+        }
     }
     else {
         UIImage *image;
@@ -134,6 +138,12 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
     }
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
+    if (error) {
+        NSLog(@"videoPath = %@, error = %@, contextInfo = %@", videoPath, error, contextInfo);
+    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
