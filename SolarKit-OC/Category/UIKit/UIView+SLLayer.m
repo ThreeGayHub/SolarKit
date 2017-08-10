@@ -18,10 +18,7 @@
 @end
 
 @implementation UIView (SLLayer)
-@dynamic borderColor;
-@dynamic multiBorderWidth;
-@dynamic multiCornerRadius;
-@dynamic cornerRadius;
+@dynamic borderColor, multiBorderWidth, multiCornerRadius, cornerRadius;
 
 + (void)load {
     static dispatch_once_t onceToken;
