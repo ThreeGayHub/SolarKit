@@ -40,4 +40,6 @@
 
 + (void)changeRootViewControllerWithFadeAnimation:(UIViewController *)vc;
 
++ (void)startWebThread;
+
 @end

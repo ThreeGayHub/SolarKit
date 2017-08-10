@@ -56,6 +56,10 @@
     UIApplication.window.rootViewController = vc;
 }
 
++ (void)startWebThread {
+    UIWebView *webPool = [[UIWebView alloc]initWithFrame:CGRectZero];
+    [webPool loadHTMLString:@"" baseURL:nil];
+}
 
 #pragma mark - privete
 
