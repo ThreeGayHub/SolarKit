@@ -9,6 +9,8 @@
 #ifndef SLFoundation_h
 #define SLFoundation_h
 
+#import "NSArray+SLFoundation.h"
+
 #import "NSBundle+SLFoundation.h"
 
 #import "NSData+SLFoundation.h"
