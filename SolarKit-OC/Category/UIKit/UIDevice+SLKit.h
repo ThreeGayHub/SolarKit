@@ -32,4 +32,6 @@
 // Whether the device is a simulator.
 + (BOOL)isSimulator;
 
++ (NSString *)deviceName;
+
 @end

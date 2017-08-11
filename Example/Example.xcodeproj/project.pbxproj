@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CD2C54B93D521B9B1DADDFC /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */; };
+		274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */; };
 		F8046BAE1F394E4D00E5885A /* UIButton+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */; };
 		F8046BB11F39586900E5885A /* UIScreen+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB01F39586900E5885A /* UIScreen+SLKit.m */; };
 		F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */; };
@@ -21,7 +21,6 @@
 		F8046BD51F3AB9EC00E5885A /* UIImage+SLLuban.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD41F3AB9EC00E5885A /* UIImage+SLLuban.m */; };
 		F8046BD81F3AC0F800E5885A /* UIImagePickerController+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD71F3AC0F800E5885A /* UIImagePickerController+SLKit.m */; };
 		F8046BDB1F3AD99100E5885A /* UIImage+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BDA1F3AD99100E5885A /* UIImage+SLKit.m */; };
-		274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */; };
 		F8B9F4691F3C4DA700BE897D /* UIButton+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9F4681F3C4DA700BE897D /* UIButton+SLKit.m */; };
 		F8B9F46C1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9F46B1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
@@ -53,7 +52,6 @@
 		274D6CF61F32CAA100BE3539 /* NSArray+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SLFoundation.h"; sourceTree = "<group>"; };
 		274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SLFoundation.m"; sourceTree = "<group>"; };
 		646B9356CD92FBAA7B38C540 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DFFBAD6A572DD24D4B532F74 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8046BAC1F394E4D00E5885A /* UIButton+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SLBlock.h"; sourceTree = "<group>"; };
 		F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SLBlock.m"; sourceTree = "<group>"; };
 		F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SLKit.h"; sourceTree = "<group>"; };
@@ -84,6 +82,7 @@
 		F8B9F4681F3C4DA700BE897D /* UIButton+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SLKit.m"; sourceTree = "<group>"; };
 		F8B9F46A1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+SLHighlighted.h"; sourceTree = "<group>"; };
 		F8B9F46B1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+SLHighlighted.m"; sourceTree = "<group>"; };
+		F8B9F46E1F3D3F1F00BE897D /* SLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUtils.h; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CB540E1F0C7CA60032DE46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				694550DF1F1AE5774B2F36FE /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +159,16 @@
 		30B3D8124C5DA2FE71B08CDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C4B24821B8492DA7A7221E4 /* Pods_Example.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B9F46D1F3D3F1300BE897D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9F46E1F3D3F1F00BE897D /* SLUtils.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F8CB53FF1F0C7CA60032DE46 = {
@@ -213,6 +218,7 @@
 		F8FCBEB71F31BE82000C5DF5 /* SolarKit-OC */ = {
 			isa = PBXGroup;
 			children = (
+				F8B9F46D1F3D3F1300BE897D /* Utils */,
 				F8FCBEEE1F32B7ED000C5DF5 /* Define */,
 				F8FCBEB81F31BE82000C5DF5 /* Category */,
 				F8FCBED71F31BE83000C5DF5 /* DB */,
