@@ -40,7 +40,7 @@
 
 #import "UILabel+SLPlaceholder.h"
 
-#import "UINavigationBar+SLShadowImage.h"
+#import "UINavigationBar+SLKit.h"
 
 #import "UINavigationController+SLHidesBottomBarWhenPushed.h"
 

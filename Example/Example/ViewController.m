@@ -32,6 +32,7 @@
     
     self.title = @"title";
     
+    self.navigationController.barBackgroundColor = [UIColor orangeColor];
     self.navigationController.barTintColor = [UIColor orangeColor];
     self.navigationController.titleColor = [UIColor orangeColor];
     
@@ -150,6 +151,11 @@
     
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.navigationController.barBackgroundColor = [UIColor orangeColor];
 }
 
 

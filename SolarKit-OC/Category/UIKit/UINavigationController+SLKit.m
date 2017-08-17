@@ -13,6 +13,7 @@
 
 - (void)setBarBackgroundColor:(UIColor *)barBackgroundColor {
     self.navigationBar.translucent = NO;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationBar.barTintColor = barBackgroundColor;
 }
 
