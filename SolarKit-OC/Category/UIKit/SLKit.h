@@ -44,6 +44,8 @@
 
 #import "UINavigationController+SLHidesBottomBarWhenPushed.h"
 
+#import "UINavigationController+SLKit.h"
+
 #import "UINavigationController+SLPopGesture.h"
 
 #import "UINavigationController+SLRemoveVC.h"

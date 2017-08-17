@@ -30,8 +30,10 @@
     
     [self setRightItemWithTitle:@"🐶"];
     
-//    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:nil];
-//    [self.navigationItem setBackBarButtonItem:backButtonItem];
+    self.title = @"title";
+    
+    self.navigationController.barTintColor = [UIColor orangeColor];
+    self.navigationController.titleColor = [UIColor orangeColor];
     
     Length = ScreenWidth / 4;
     
