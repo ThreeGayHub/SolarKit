@@ -28,6 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setRightItemWithTitle:@"🐶"];
+    
+//    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+//    [self.navigationItem setBackBarButtonItem:backButtonItem];
+    
     Length = ScreenWidth / 4;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, Length, Length)];
@@ -128,7 +133,7 @@
     }];
     
     button.imageName = @"Solar";
-    button.title = @"title";
+    button.title = @"🐷";
     button.fontSize = 10;
     button.titleColor = [UIColor redColor];
     

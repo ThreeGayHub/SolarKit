@@ -16,6 +16,8 @@
 //TODO-5.ShareView
 //TODO-6.PayView
 //TODO-7.ScaleAdaptor
+//TODO-8.键盘完成按钮，点击键盘外收起
+//TODO-9.自定义键盘
 
 
 

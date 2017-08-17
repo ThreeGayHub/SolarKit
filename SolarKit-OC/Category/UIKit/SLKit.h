@@ -66,4 +66,6 @@
 
 #import "UIViewController+SLKit.h"
 
+#import "UIViewController+SLNavigationItem.h"
+
 #endif /* SLKit_h */
