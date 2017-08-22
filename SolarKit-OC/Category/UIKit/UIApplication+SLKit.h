@@ -11,32 +11,15 @@
 @interface UIApplication (SLKit)
 
 
-+ (UIWindow *)keyWindow;
-
-+ (UIViewController *)rootVC;
-
 /**
  @return the top viewcontroller of screen
  */
 + (UIViewController *)topVC;
 
-+ (UIWindow *)window;
-
-
-
-
 /**
     make a phone call.
  */
 + (void)call:(NSString *)phoneNumber;
-
-+ (BOOL)canOpenURL:(NSURL *)url;
-
-+ (BOOL)openURL:(NSURL*)url;
-
-+ (void)startRemoteNotification;
-
-+ (void)stopRemoteNotification;
 
 + (void)changeRootViewControllerWithFadeAnimation:(UIViewController *)vc;
 

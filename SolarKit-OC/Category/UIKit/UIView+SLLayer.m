@@ -18,7 +18,7 @@
 @end
 
 @implementation UIView (SLLayer)
-@dynamic borderColor, multiBorderWidth, multiCornerRadius, cornerRadius;
+@dynamic multiBorderWidth, multiCornerRadius;
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -102,10 +102,6 @@
     }
 }
 
-- (void)setBorderColor:(UIColor *)borderColor {
-    self.layer.borderColor = borderColor.CGColor;
-}
-
 - (void)setMultiBorderWidth:(SLBorderWidth)multiBorderWidth {
     [self.borderWidthDict setObject:@(multiBorderWidth.top) forKey:@"top"];
     [self.borderWidthDict setObject:@(multiBorderWidth.left) forKey:@"left"];
@@ -118,10 +114,6 @@
     [self.cornerRadiusDict setObject:@(multiCornerRadius.topRight) forKey:@"topRight"];
     [self.cornerRadiusDict setObject:@(multiCornerRadius.bottomLeft) forKey:@"bottomLeft"];
     [self.cornerRadiusDict setObject:@(multiCornerRadius.bottomRight) forKey:@"bottomRight"];
-}
-
-- (void)setCornerRadius:(CGFloat)cornerRadius {
-    self.layer.cornerRadius = cornerRadius;
 }
 
 - (NSMutableDictionary *)borderWidthDict {

@@ -44,12 +44,8 @@ static inline SLBorderWidth SLBorderWidthMake(CGFloat top, CGFloat left, CGFloat
 
 @interface UIView (SLLayer)
 
-@property (nonatomic, strong) UIColor *borderColor;
-
 @property (nonatomic, assign) SLBorderWidth multiBorderWidth;
 
 @property (nonatomic, assign) SLRectCorner multiCornerRadius;
-
-@property (nonatomic, assign) CGFloat cornerRadius;
 
 @end

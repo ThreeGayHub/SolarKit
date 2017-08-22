@@ -12,10 +12,4 @@
 
 @property (nonatomic, assign) BOOL shadowImageHidden;
 
-+ (void)setBackgroundColor:(UIColor *)backgroundColor;
-
-+ (void)setTintColor:(UIColor *)tintColor;
-
-+ (void)setTitleColor:(UIColor *)titleColor;
-
 @end

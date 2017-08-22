@@ -1,12 +1,12 @@
 //
-//  UIImagePickerController+SLKit.m
+//  UIImagePickerController+SLBlock.m
 //  Example
 //
 //  Created by wyh on 2017/8/9.
 //  Copyright © 2017年 SolarKit. All rights reserved.
 //
 
-#import "UIImagePickerController+SLKit.h"
+#import "UIImagePickerController+SLBlock.h"
 #import <objc/runtime.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AVFoundation/AVFoundation.h>
@@ -30,7 +30,7 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
 
 @end
 
-@implementation UIImagePickerController (SLKit)
+@implementation UIImagePickerController (SLBlock)
 
 + (instancetype)pickerWithType:(SLImagePickerType)type {
     if ([UIImagePickerController isSourceTypeAvailable:[UIImagePickerController getSourceTypeWithType:type]]) {

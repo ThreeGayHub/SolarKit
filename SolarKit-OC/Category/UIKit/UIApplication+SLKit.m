@@ -10,50 +10,18 @@
 
 @implementation UIApplication (SLKit)
 
-+ (UIWindow *)keyWindow {
-    return [UIApplication sharedApplication].keyWindow;
-}
-
-+ (UIViewController *)rootVC {
-    return [UIApplication sharedApplication].delegate.window.rootViewController;
-}
-
 + (UIViewController *)topVC {
     return [self _visibleViewControllerFrom:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
-
-+ (UIWindow *)window {
-    return [UIApplication sharedApplication].delegate.window;
-}
-
-
-
-
 
 + (void)call:(NSString *)phoneNumber {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNumber]]];
 }
 
-+ (BOOL)canOpenURL:(NSURL *)url {
-    return [[UIApplication sharedApplication] canOpenURL:url];
-}
-
-+ (BOOL)openURL:(NSURL *)url {
-    return [[UIApplication sharedApplication] openURL:url];
-}
-
-+ (void)startRemoteNotification {
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-}
-
-+ (void)stopRemoteNotification {
-    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
-}
-
 + (void)changeRootViewControllerWithFadeAnimation:(UIViewController *)vc {
     CATransition *fadeTransition = [self _fadeTransation];
-    [UIApplication.window.layer addAnimation:fadeTransition forKey:kCATransition];
-    UIApplication.window.rootViewController = vc;
+    [[UIApplication sharedApplication].delegate.window.layer addAnimation:fadeTransition forKey:kCATransition];
+    [UIApplication sharedApplication].delegate.window.rootViewController = vc;
 }
 
 + (void)startWebThread {

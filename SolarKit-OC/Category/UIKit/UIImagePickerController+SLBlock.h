@@ -1,5 +1,5 @@
 //
-//  UIImagePickerController+SLKit.h
+//  UIImagePickerController+SLBlock.h
 //  Example
 //
 //  Created by wyh on 2017/8/9.
@@ -19,7 +19,7 @@ typedef void(^SLImagePickerControllerBlock)(NSData *mediaData);
 
 typedef void(^SLImagePickerControllerVideoBlock)(NSData *mediaData, NSUInteger seconds);
 
-@interface UIImagePickerController (SLKit)
+@interface UIImagePickerController (SLBlock)
 
 @property (nonatomic, assign) BOOL saveToAlbum;
 

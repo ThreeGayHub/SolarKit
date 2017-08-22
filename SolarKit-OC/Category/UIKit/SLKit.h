@@ -24,27 +24,19 @@
 
 #import "UIButton+SLBlock.h"
 
-#import "UIButton+SLKit.h"
-
-#import "UICollectionView+SLKit.h"
-
 #import "UIColor+SLHex.h"
 
 #import "UIDevice+SLKit.h"
 
-#import "UIImage+SLKit.h"
-
 #import "UIImage+SLLuban.h"
 
-#import "UIImagePickerController+SLKit.h"
+#import "UIImagePickerController+SLBlock.h"
 
 #import "UILabel+SLPlaceholder.h"
 
 #import "UINavigationBar+SLKit.h"
 
 #import "UINavigationController+SLHidesBottomBarWhenPushed.h"
-
-#import "UINavigationController+SLKit.h"
 
 #import "UINavigationController+SLPopGesture.h"
 
@@ -55,8 +47,6 @@
 #import "UINavigationItem+SLNilTitleBackItem.h"
 
 #import "UIScreen+SLKit.h"
-
-#import "UITableView+SLKit.h"
 
 #import "UITextField+SLBlock.h"
 

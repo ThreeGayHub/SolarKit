@@ -14,17 +14,7 @@
 
 @interface UIDevice (SLKit)
 
-+ (NSString *)name;
-
-+ (NSString *)model;
-
-+ (NSString *)localizedModel;
-
-+ (NSString *)systemName;
-
 + (float)systemVersion;
-
-+ (UIDeviceOrientation)orientation;
 
 // Whether the device is iPad/iPad mini.
 + (BOOL)isPad;

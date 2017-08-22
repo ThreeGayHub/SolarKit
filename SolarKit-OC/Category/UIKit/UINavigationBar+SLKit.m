@@ -19,21 +19,6 @@
     return [self _shadowImageView:self].hidden;
 }
 
-+ (void)setBackgroundColor:(UIColor *)backgroundColor {
-    [UINavigationBar appearance].translucent = NO;
-    [UINavigationBar appearance].barTintColor = backgroundColor;
-}
-
-+ (void)setTintColor:(UIColor *)tintColor {
-    [UINavigationBar appearance].tintColor = tintColor;
-}
-
-+ (void)setTitleColor:(UIColor *)titleColor {
-    NSMutableDictionary *titleTextAttributes = [NSMutableDictionary dictionary];
-    [titleTextAttributes setObject:titleColor forKey:NSForegroundColorAttributeName];
-    [UINavigationBar appearance].titleTextAttributes = titleTextAttributes;
-}
-
 #pragma mark - Private
 
 - (UIImageView *)_shadowImageView:(UIView *)view {

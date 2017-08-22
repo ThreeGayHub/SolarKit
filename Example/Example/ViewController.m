@@ -32,10 +32,6 @@
     
     self.title = @"title";
     
-    self.navigationController.barBackgroundColor = [UIColor orangeColor];
-    self.navigationController.barTintColor = [UIColor orangeColor];
-    self.navigationController.titleColor = [UIColor orangeColor];
-    
     Length = ScreenWidth / 4;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, Length, Length)];
@@ -123,7 +119,7 @@
         [actionSheet showInView:self.view];
     }];
     
-    imageView.borderColor = UIColor.blackColor;
+    imageView.layer.borderColor = UIColor.blackColor.CGColor;
     imageView.multiBorderWidth = SLBorderWidthMake(1, 0, 1, 0);
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -135,10 +131,10 @@
         NSLog(@"touchUpInside");
     }];
     
-    button.imageName = @"Solar";
-    button.title = @"🐷";
-    button.fontSize = 10;
-    button.titleColor = [UIColor redColor];
+//    button.imageName = @"Solar";
+//    button.title = @"🐷";
+//    button.fontSize = 10;
+//    button.titleColor = [UIColor redColor];
     
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 64 + Length, Length, Length)];
     textField.backgroundColor = UIColor.cyanColor;
@@ -155,7 +151,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.navigationController.barBackgroundColor = [UIColor orangeColor];
 }
 
 
