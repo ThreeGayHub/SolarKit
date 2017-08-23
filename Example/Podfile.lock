@@ -21,15 +21,18 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
   - ReactiveCocoa (~> 2.0)
+  - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 409c167c65104ed8f81fb8dd737f1ba385599a26
+PODFILE CHECKSUM: fe7cf25e78a464b2eba1f84c38e22f0302e8ab0d
 
 COCOAPODS: 1.2.0

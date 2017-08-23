@@ -6,7 +6,7 @@ def pods
     pod 'AFNetworking'
 
 #    pod 'SolarKit-OC', :path => '../'
-
+    pod 'YYModel'
     pod 'ReactiveCocoa',          '~> 2.0'
 end
 
