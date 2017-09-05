@@ -52,4 +52,6 @@ NSString *ToString(id obj);
 
 - (BOOL)isMatchRegex:(NSString *)regex;
 
+//TODO-时间戳
+
 @end
