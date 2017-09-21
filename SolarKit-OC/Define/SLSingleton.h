@@ -28,10 +28,9 @@ return instance; \
 \
 + (id)allocWithZone:(NSZone *)zone \
 { \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
+if (instance == nil) { \
 instance = [super allocWithZone:zone]; \
-}); \
+} \
 return instance; \
 }
 

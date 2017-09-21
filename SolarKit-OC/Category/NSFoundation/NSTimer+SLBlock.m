@@ -41,6 +41,7 @@
         if (timer) {
             [self.throttleDictionary removeObjectForKey:key];
             [timer invalidate];
+            timer = nil;
         }
     }
     NSTimer *timer = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(onThrottleTimer:) userInfo:@{@"block" : block, @"key" : key} repeats:NO];
