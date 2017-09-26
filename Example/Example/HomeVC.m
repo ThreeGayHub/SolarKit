@@ -11,6 +11,7 @@
 #import "SLKit.h"
 #import "SLFoundation.h"
 #import "SLDefine.h"
+#import "SLMediator.h"
 
 @interface HomeVC ()
 
@@ -31,6 +32,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)loginAction:(UIButton *)sender {
+    
+    UIViewController *vc = [[SLMediator shared] call:@"SLAccount/login" parameters:nil completion:^(NSDictionary *response) {
+        NSLog(@"%@", response);
+    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*

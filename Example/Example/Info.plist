@@ -18,10 +18,29 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>solar</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>solar</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>使用相机</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>使用麦克风</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>使用相册</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -43,11 +62,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>使用相册</string>
-	<key>NSCameraUsageDescription</key>
-	<string>使用相机</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>使用麦克风</string>
 </dict>
 </plist>

@@ -56,6 +56,8 @@
 
 #import "UIView+SLGesture.h"
 
+#import "UIView+SLRect.h"
+
 #import "UIViewController+SLKit.h"
 
 #import "UIViewController+SLNavigationItem.h"

@@ -10,4 +10,6 @@
 
 @interface UIViewController (SLKit)
 
+@property (nonatomic, copy) NSDictionary *parameters;
+
 @end
