@@ -83,7 +83,7 @@
 }
 
 - (void)setLeftSeconds:(NSTimeInterval)leftSeconds {
-    objc_setAssociatedObject(self, @selector(leftSeconds), @(leftSeconds), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(leftSeconds), @(leftSeconds), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSTimeInterval)leftSeconds {
