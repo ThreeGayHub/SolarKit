@@ -10,12 +10,6 @@
 #import "SLTarget.h"
 #import "SLRequest.h"
 
-@interface SLRequest (SLNetwork_Private)
-
-- (void)configTarget:(SLTarget *)target;
-
-@end
-
 @interface SLManager ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, SLManager *> *managers;
@@ -33,9 +27,9 @@
 #pragma mark - Data
 
 - (NSURLSessionDataTask *)send:(SLRequest *)request complete:(SLManagerComplete)complete fail:(SLManagerFail)fail success:(SLManagerSuccess)success failure:(SLManagerFailure)failure {
-    [request configTarget:self.target];
+    request.target = self.target;
     
-    //prepareRequest
+    //prepareRequest:showHUD, RequestToDictionary, RequestLog, Encryption of parameters
     [self.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj respondsToSelector:@selector(prepareRequest:)]) {
             [obj prepareRequest:request];
@@ -49,13 +43,34 @@
 //    if ([YHResponse responseSerializationError:serializationError failure:failure]) {//这是不对的，还有一个failblock没回调
 //        return nil;
 //    }
+    [request.headerField enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [mutableRequest setValue:obj forHTTPHeaderField:key];
+    }];
+    
+    //willSendRequest
+    [self.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj respondsToSelector:@selector(willSendRequest:)]) {
+            [obj willSendRequest:mutableRequest];
+        }
+    }];
     
     __block NSURLSessionDataTask *dataTask = nil;
+    __weak __typeof(self)weakSelf = self;
     dataTask = [self dataTaskWithRequest:mutableRequest
                           uploadProgress:nil
                         downloadProgress:nil
                        completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
-//                           [YHResponse responseWithTask:dataTask request:request complete:complete fail:fail success:success failure:failure response:response responseObject:responseObject error:error];
+                           __strong __typeof(weakSelf)strongSelf = weakSelf;
+                           SLResponse *slResponse = [SLResponse responseWithSessionDataTask:dataTask target:strongSelf.target request:request response:response responseObject:responseObject error:error];
+                           
+                           //didReceiveResponse
+                           [strongSelf.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                               if ([obj respondsToSelector:@selector(didReceiveResponse:)]) {
+                                   [obj didReceiveResponse:slResponse];
+                               }
+                           }];
+                           
+                           
                        }];
     [dataTask resume];
     return dataTask;

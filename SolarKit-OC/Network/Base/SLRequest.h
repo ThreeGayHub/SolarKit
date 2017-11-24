@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SLNetworkConstant.h"
 @class SLFormData;
-
+@class SLTarget;
 
 @interface SLRequest : NSObject
 
@@ -87,6 +87,8 @@
  
  */
 @property (nonatomic, copy, nullable) NSDictionary *headerField;
+
+@property (nonatomic, weak, nullable) SLTarget *target;
 
 /**
  showLoadingHUD
