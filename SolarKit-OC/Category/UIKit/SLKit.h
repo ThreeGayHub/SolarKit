@@ -11,6 +11,7 @@
 //TODO-2.NSLayoutConstraint
 //TODO-3.UIColor
 //TODO-4.UIDatePicker
+//TODO-5.UITextField 隐藏复制粘贴等
 
 
 #ifndef SLKit_h
@@ -35,8 +36,6 @@
 #import "UILabel+SLPlaceholder.h"
 
 #import "UINavigationBar+SLKit.h"
-
-#import "UINavigationController+SLHidesBottomBarWhenPushed.h"
 
 #import "UINavigationController+SLPopGesture.h"
 

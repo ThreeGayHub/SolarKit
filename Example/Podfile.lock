@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CocoaSecurity (1.2.4)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -25,14 +26,16 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CocoaSecurity
   - ReactiveCocoa (~> 2.0)
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: fe7cf25e78a464b2eba1f84c38e22f0302e8ab0d
+PODFILE CHECKSUM: e0914c3a600acd561bde300041d07e75913e4393
 
 COCOAPODS: 1.2.0

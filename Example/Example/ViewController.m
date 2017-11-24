@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self setRightItemWithTitle:@"🐶"];
     
     self.title = @"title";
@@ -147,6 +149,12 @@
     
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {

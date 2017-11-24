@@ -14,4 +14,6 @@ typedef void (^SLGestureBlock)(void);
 
 - (void)touchUp:(SLGestureBlock)block;
 
+- (void)addTarget:(id)target action:(SEL)action;
+
 @end

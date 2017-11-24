@@ -40,4 +40,9 @@
     return dict;
 }
 
+- (void)addTarget:(id)target action:(SEL)action {
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
+    [self addGestureRecognizer:tapGesture];
+}
+
 @end

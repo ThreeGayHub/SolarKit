@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SLNetwork.h"
 
 @interface AppDelegate ()
 
