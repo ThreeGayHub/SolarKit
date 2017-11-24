@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
-//#if DEBUG
-//#define SLNLog(format, ...) printf("\n[%s]\n------------------- SLNetwork ------------------ \n%s\n------------------------------------------------\n", __TIME__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
-//#else
-//#define SLNLog(format, ...)
-//#endif
+#if DEBUG
+#define SLNLog(format, ...) printf("\n[%s]\n------------------- SLNetwork ------------------ \n%s\n------------------------------------------------\n", __TIME__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define SLNLog(format, ...)
+#endif
 
 extern NSString * _Nonnull const SLNetworkDefaultManagerKey;
 extern const char * _Nonnull SLNetworkDefaultCompletionQueueKey;
@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, SLHTTPMethod) {
     SLHTTPMethodPATCH,
 };
 
-NSDictionary * _Nonnull SLHttpMethodDictionary();
+NSDictionary * _Nonnull SLHTTPMethodDictionary();
 
 @interface SLNetworkConstant : NSObject
 

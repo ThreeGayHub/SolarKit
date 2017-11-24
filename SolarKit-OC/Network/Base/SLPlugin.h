@@ -22,7 +22,7 @@
 
 @protocol SLPlugin <NSObject>
 
-@required
+@optional
 - (void)prepareRequest:(SLRequest *)request;
 
 - (void)willSendRequest:(NSMutableURLRequest *)request;

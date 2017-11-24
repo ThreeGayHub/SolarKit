@@ -61,6 +61,17 @@
     }
 }
 
+- (void)setParameters:(id)parameters {
+    if ([parameters isKindOfClass:[NSDictionary class]]) {
+        NSMutableDictionary *mParameters = [parameters mutableCopy];
+        [mParameters removeObjectsForKeys:[self modelPropertyBlacklist]];
+        _parameters = [mParameters copy];
+    }
+    else {
+        _parameters = parameters;
+    }
+}
+
 #pragma mark - Get
 
 - (NSString *)requestID {
@@ -89,16 +100,16 @@
              @"showFailHUD",
              @"showLoadingHUD",
              
-//             @"formDataDict",
-//             @"fileName",
-//             @"mimeType",
-//             @"customResponseStatusKey",
-//             @"customResponseStatusSuccess",
-//             @"customResponseMessageKey",
-//             @"customResponseBodyKey",
-//             @"customDownloadPath",
-//             @"currentSize",
-//             @"fileSize",
+             //             @"formDataDict",
+             //             @"fileName",
+             //             @"mimeType",
+             //             @"customResponseStatusKey",
+             //             @"customResponseStatusSuccess",
+             //             @"customResponseMessageKey",
+             //             @"customResponseBodyKey",
+             //             @"customDownloadPath",
+             //             @"currentSize",
+             //             @"fileSize",
              ];
 }
 
@@ -123,3 +134,4 @@
 }
 
 @end
+

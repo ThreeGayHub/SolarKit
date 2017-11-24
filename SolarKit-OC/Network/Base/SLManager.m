@@ -42,15 +42,10 @@
         }
     }];
     
-    
-//    if ([YHNetworkConfig shared].globalLoading)
-//        [YHNetworkConfig shared].globalLoading(request.isShowLoadingHUD);
-//
-//    [self setHeaderField:request.headerField];
-    
     NSError *serializationError = nil;
-    NSMutableURLRequest *mutableRequest;
-//    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:request.httpMethod URLString:request.urlString parameters:request.parameters error:&serializationError];
+    SLHTTPMethod httpMethod = request.httpMethod ?: self.target.httpMethod;
+    NSDictionary *methodDict = SLHTTPMethodDictionary();
+    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:methodDict[@(httpMethod)] URLString:request.urlString parameters:request.parameters error:&serializationError];
 //    if ([YHResponse responseSerializationError:serializationError failure:failure]) {//这是不对的，还有一个failblock没回调
 //        return nil;
 //    }

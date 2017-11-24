@@ -12,7 +12,7 @@ NSString * const SLNetworkDefaultManagerKey = @"SLNetworkDefaultManager";
 const char * SLNetworkDefaultCompletionQueueKey = "com.solar.SLNetwork.default.completionQueue";
 const char * SLNetworkCustomCompletionQueueKey = "com.solar.SLNetwork.custom.completionQueue";
 
-NSDictionary * SLHttpMethodDictionary() {
+NSDictionary * SLHTTPMethodDictionary() {
     static NSDictionary *httpMethodDictionary;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
