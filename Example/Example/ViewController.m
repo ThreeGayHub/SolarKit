@@ -14,6 +14,8 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+#import "SLWebViewController.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
@@ -131,6 +133,12 @@
     [self.view addSubview:button];
     [button touchUpInside:^(UIButton *button) {
         NSLog(@"touchUpInside");
+        
+        NSString *URI = @"xnph://xnph66.com/rexxar/forgotpwd";
+//        NSString *URI = @"https:www.baidu.com";
+        SLWebViewController *webVC = [[SLWebViewController alloc] initWithURIString:URI];
+        [self.navigationController pushVCWithFadeAnimation:webVC];
+        
     }];
     
 //    button.imageName = @"Solar";

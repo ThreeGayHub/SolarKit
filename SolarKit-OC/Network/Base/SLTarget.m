@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         _baseURLString = baseURLString;
+        _jsonReadingOptions = NSJSONReadingMutableContainers;
     }
     return self;
 }

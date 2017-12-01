@@ -42,7 +42,7 @@
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    BOOL result = self.popGestureEnable && self.viewControllers.count > 1;
+    BOOL result = self.interactivePopGestureRecognizer.enabled && self.viewControllers.count > 1;
     return result;
 }
 
@@ -58,11 +58,11 @@
 }
 
 - (void)setPopGestureEnable:(BOOL)popGestureEnable {
-    objc_setAssociatedObject(self, @selector(popGestureEnable), @(popGestureEnable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    self.interactivePopGestureRecognizer.enabled = popGestureEnable;
 }
 
 - (BOOL)popGestureEnable {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
+    return self.interactivePopGestureRecognizer.enabled;
 }
 
 @end

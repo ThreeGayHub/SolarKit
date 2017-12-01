@@ -6,6 +6,8 @@ def pods
     pod 'AFNetworking'
     pod 'CocoaSecurity'
 #    pod 'SolarKit-OC', :path => '../'
+
+    pod 'SSZipArchive'
     pod 'YYModel'
     pod 'ReactiveCocoa',          '~> 2.0'
 end

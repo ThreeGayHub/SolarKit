@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "SLNetwork.h"
+#import "SLWebCache.h"
+#import "SLWebRoute.h"
+#import "SLWebCacheCategory.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +20,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     // Override point for customization after application launch.
+    
+//    NSString *URLString = @"http://neptune.xnph66.com/update.json";
+    NSString *URLString = @"http://ounl8txt0.bkt.clouddn.com/update.json";
+
+    [SLWebCache shared].debug = YES;
+    [[SLWebCache shared] updateWithURLString:URLString success:^{
+        [SLWebRoute updateRoute];
+    } fail:^(NSError *error) {
+        
+    }];
+    
+    
+    
+    SLWebRoute *route = [SLWebRoute routeWithURIString:@"xnph://xnph66.com/rexxar/forgotpwd/sendcode" parameters:@{@":userAccount" : @"caojiba71493847983"} ];
+    
+    NSLog(@"%@", route.URL);
+    
+    
+    UIWebView *webPool = [[UIWebView alloc]initWithFrame:CGRectZero];
+    [webPool loadHTMLString:@"" baseURL:nil];
+    
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

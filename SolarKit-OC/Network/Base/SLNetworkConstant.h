@@ -21,7 +21,7 @@ extern const char * _Nonnull SLNetworkCustomCompletionQueueKey;
 
 typedef void(^SLManagerReachability)(AFNetworkReachabilityStatus status);
 typedef void(^SLManagerComplete)(id _Nullable response);
-typedef void(^SLManagerFail)(NSInteger code, NSString * _Nullable message);
+typedef void(^SLManagerFail)(NSError * _Nullable error);
 typedef void(^SLManagerProgress)(float progress);
 //return what afnet return
 typedef void(^SLManagerSuccess)(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject);

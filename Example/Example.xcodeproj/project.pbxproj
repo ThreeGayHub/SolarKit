@@ -7,29 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */; };
 		AB081C5D3BD84BC44AF0617F /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44125AF57A8CFEB57B353E8E /* Pods_Example.framework */; };
-		F8046BAE1F394E4D00E5885A /* UIButton+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */; };
-		F8046BB11F39586900E5885A /* UIScreen+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB01F39586900E5885A /* UIScreen+SLKit.m */; };
-		F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */; };
-		F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */; };
-		F8046BBD1F395F9700E5885A /* UITextField+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */; };
-		F8046BC61F398ECB00E5885A /* UINavigationController+SLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */; };
-		F8046BC91F398FDB00E5885A /* UINavigationController+SLRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */; };
-		F8046BD21F3AAF6100E5885A /* UIView+SLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */; };
-		F8046BD51F3AB9EC00E5885A /* UIImage+SLLuban.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD41F3AB9EC00E5885A /* UIImage+SLLuban.m */; };
-		F8046BD81F3AC0F800E5885A /* UIImagePickerController+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8046BD71F3AC0F800E5885A /* UIImagePickerController+SLBlock.m */; };
-		F82099851FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099841FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.m */; };
-		F82099881FC7FD2000D2F549 /* SLRequestLogPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099871FC7FD2000D2F549 /* SLRequestLogPlugin.m */; };
-		F82099BD1FC80FEE00D2F549 /* SLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099B21FC80FEE00D2F549 /* SLManager.m */; };
-		F82099BE1FC80FEE00D2F549 /* SLNetworkConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099B51FC80FEE00D2F549 /* SLNetworkConstant.m */; };
-		F82099BF1FC80FEE00D2F549 /* SLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099B81FC80FEE00D2F549 /* SLRequest.m */; };
-		F82099C01FC80FEE00D2F549 /* SLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099BA1FC80FEE00D2F549 /* SLResponse.m */; };
-		F82099C11FC80FEE00D2F549 /* SLTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099BC1FC80FEE00D2F549 /* SLTarget.m */; };
-		F85E5F3B1F4D73A6004E4271 /* UIView+SLRect.m in Sources */ = {isa = PBXBuildFile; fileRef = F85E5F3A1F4D73A6004E4271 /* UIView+SLRect.m */; };
-		F8682D2E1F4527020065DA3E /* UIViewController+SLNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8682D2D1F4527020065DA3E /* UIViewController+SLNavigationItem.m */; };
-		F8682D341F456FD60065DA3E /* UINavigationBar+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8682D331F456FD60065DA3E /* UINavigationBar+SLKit.m */; };
+		F82099F11FCE568700D2F549 /* SLWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099E51FCE568700D2F549 /* SLWebCache.m */; };
+		F82099F21FCE568700D2F549 /* SLWebCacheCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099E71FCE568700D2F549 /* SLWebCacheCategory.m */; };
+		F82099F31FCE568700D2F549 /* SLWebRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099ED1FCE568700D2F549 /* SLWebRoute.m */; };
+		F82099F41FCE568700D2F549 /* SLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099F01FCE568700D2F549 /* SLWebViewController.m */; };
+		F82099F71FCE5FC500D2F549 /* NSString+SLWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099F61FCE5FC500D2F549 /* NSString+SLWeb.m */; };
+		F82099FA1FCEB5AE00D2F549 /* NSDictionary+SLWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099F91FCEB5AE00D2F549 /* NSDictionary+SLWeb.m */; };
+		F82099FD1FCF942C00D2F549 /* NSBundle+SLWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = F82099FC1FCF942C00D2F549 /* NSBundle+SLWeb.m */; };
+		F8209A001FCF9AD600D2F549 /* SLWeb.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F82099FF1FCF9AD600D2F549 /* SLWeb.bundle */; };
+		F8209A141FCFA30D00D2F549 /* SLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A041FCFA30D00D2F549 /* SLManager.m */; };
+		F8209A151FCFA30D00D2F549 /* SLNetworkConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A071FCFA30D00D2F549 /* SLNetworkConstant.m */; };
+		F8209A161FCFA30E00D2F549 /* SLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A0A1FCFA30D00D2F549 /* SLRequest.m */; };
+		F8209A171FCFA30E00D2F549 /* SLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A0C1FCFA30D00D2F549 /* SLResponse.m */; };
+		F8209A181FCFA30E00D2F549 /* SLTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A0E1FCFA30D00D2F549 /* SLTarget.m */; };
+		F8209A191FCFA30E00D2F549 /* SLRequestLogPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A111FCFA30D00D2F549 /* SLRequestLogPlugin.m */; };
+		F8209A1A1FCFA30E00D2F549 /* SLRequestToDictionaryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A131FCFA30D00D2F549 /* SLRequestToDictionaryPlugin.m */; };
+		F8209A5A1FCFA32000D2F549 /* NSArray+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A1E1FCFA32000D2F549 /* NSArray+SLFoundation.m */; };
+		F8209A5B1FCFA32000D2F549 /* NSBundle+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A201FCFA32000D2F549 /* NSBundle+SLFoundation.m */; };
+		F8209A5C1FCFA32000D2F549 /* NSData+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A221FCFA32000D2F549 /* NSData+SLFoundation.m */; };
+		F8209A5D1FCFA32000D2F549 /* NSFileManager+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A241FCFA32000D2F549 /* NSFileManager+SLFoundation.m */; };
+		F8209A5E1FCFA32000D2F549 /* NSString+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A261FCFA32000D2F549 /* NSString+SLFoundation.m */; };
+		F8209A5F1FCFA32000D2F549 /* NSTimer+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A281FCFA32000D2F549 /* NSTimer+SLBlock.m */; };
+		F8209A601FCFA32000D2F549 /* UIActionSheet+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A2D1FCFA32000D2F549 /* UIActionSheet+SLBlock.m */; };
+		F8209A611FCFA32000D2F549 /* UIAlertView+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A2F1FCFA32000D2F549 /* UIAlertView+SLBlock.m */; };
+		F8209A621FCFA32000D2F549 /* UIApplication+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A311FCFA32000D2F549 /* UIApplication+SLKit.m */; };
+		F8209A631FCFA32000D2F549 /* UIButton+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A331FCFA32000D2F549 /* UIButton+SLBlock.m */; };
+		F8209A641FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A351FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.m */; };
+		F8209A651FCFA32000D2F549 /* UIColor+SLHex.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A371FCFA32000D2F549 /* UIColor+SLHex.m */; };
+		F8209A661FCFA32000D2F549 /* UIDevice+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A391FCFA32000D2F549 /* UIDevice+SLKit.m */; };
+		F8209A671FCFA32000D2F549 /* UIImage+SLLuban.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A3B1FCFA32000D2F549 /* UIImage+SLLuban.m */; };
+		F8209A681FCFA32000D2F549 /* UIImagePickerController+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A3D1FCFA32000D2F549 /* UIImagePickerController+SLBlock.m */; };
+		F8209A691FCFA32000D2F549 /* UILabel+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A3F1FCFA32000D2F549 /* UILabel+SLPlaceholder.m */; };
+		F8209A6A1FCFA32000D2F549 /* UINavigationBar+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A411FCFA32000D2F549 /* UINavigationBar+SLKit.m */; };
+		F8209A6B1FCFA32000D2F549 /* UINavigationController+SLPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A431FCFA32000D2F549 /* UINavigationController+SLPopGesture.m */; };
+		F8209A6C1FCFA32000D2F549 /* UINavigationController+SLRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A451FCFA32000D2F549 /* UINavigationController+SLRemoveVC.m */; };
+		F8209A6D1FCFA32000D2F549 /* UINavigationController+SLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A471FCFA32000D2F549 /* UINavigationController+SLTransition.m */; };
+		F8209A6E1FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A491FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.m */; };
+		F8209A6F1FCFA32000D2F549 /* UIScreen+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A4B1FCFA32000D2F549 /* UIScreen+SLKit.m */; };
+		F8209A701FCFA32000D2F549 /* UITextField+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A4D1FCFA32000D2F549 /* UITextField+SLBlock.m */; };
+		F8209A711FCFA32000D2F549 /* UITextView+SLPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A4F1FCFA32000D2F549 /* UITextView+SLPlaceholder.m */; };
+		F8209A721FCFA32000D2F549 /* UIView+SLGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A511FCFA32000D2F549 /* UIView+SLGesture.m */; };
+		F8209A731FCFA32000D2F549 /* UIView+SLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A531FCFA32000D2F549 /* UIView+SLLayer.m */; };
+		F8209A741FCFA32000D2F549 /* UIView+SLRect.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A551FCFA32000D2F549 /* UIView+SLRect.m */; };
+		F8209A751FCFA32000D2F549 /* UIViewController+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A571FCFA32000D2F549 /* UIViewController+SLKit.m */; };
+		F8209A761FCFA32000D2F549 /* UIViewController+SLNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8209A591FCFA32000D2F549 /* UIViewController+SLNavigationItem.m */; };
 		F8682D371F4599A60065DA3E /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8682D361F4599A60065DA3E /* HomeVC.m */; };
+		F86C8D3C1FCFF43C0064508E /* UIWebView+SLGobackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F86C8D3B1FCFF43C0064508E /* UIWebView+SLGobackGesture.m */; };
 		F87662791F78E2180090A17B /* SLMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = F87662781F78E2180090A17B /* SLMediator.m */; };
 		F87662881F79EC850090A17B /* SLAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F87662871F79EC850090A17B /* SLAccount.m */; };
 		F876628B1F79ECC30090A17B /* SLLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F876628A1F79ECC30090A17B /* SLLoginVC.m */; };
@@ -37,78 +61,112 @@
 		F8ABF5BA1F988996002DE5F3 /* YHNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABF5B31F988996002DE5F3 /* YHNetworkConfig.m */; };
 		F8ABF5BB1F988996002DE5F3 /* YHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABF5B61F988996002DE5F3 /* YHRequest.m */; };
 		F8ABF5BC1F988996002DE5F3 /* YHResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABF5B81F988996002DE5F3 /* YHResponse.m */; };
-		F8B9F46C1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9F46B1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m */; };
 		F8CB540D1F0C7CA60032DE46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540C1F0C7CA60032DE46 /* main.m */; };
 		F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB540F1F0C7CA60032DE46 /* AppDelegate.m */; };
 		F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB54121F0C7CA60032DE46 /* ViewController.m */; };
 		F8CB54161F0C7CA60032DE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54141F0C7CA60032DE46 /* Main.storyboard */; };
 		F8CB54181F0C7CA60032DE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54171F0C7CA60032DE46 /* Assets.xcassets */; };
 		F8CB541B1F0C7CA60032DE46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CB54191F0C7CA60032DE46 /* LaunchScreen.storyboard */; };
-		F8D9037F1F346DAF00FF3BC8 /* NSData+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */; };
-		F8D903821F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */; };
-		F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */; };
-		F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */; };
-		F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */; };
-		F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */; };
-		F8FCBEDD1F31BE83000C5DF5 /* UIAlertView+SLBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */; };
-		F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */; };
-		F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */; };
-		F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */; };
-		F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */; };
-		F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */; };
-		F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */; };
-		F8FCBEE81F31BEA9000C5DF5 /* NSString+SLFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		274D6CF61F32CAA100BE3539 /* NSArray+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SLFoundation.h"; sourceTree = "<group>"; };
-		274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SLFoundation.m"; sourceTree = "<group>"; };
 		44125AF57A8CFEB57B353E8E /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		646B9356CD92FBAA7B38C540 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F8046BAC1F394E4D00E5885A /* UIButton+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SLBlock.h"; sourceTree = "<group>"; };
-		F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SLBlock.m"; sourceTree = "<group>"; };
-		F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SLKit.h"; sourceTree = "<group>"; };
-		F8046BB01F39586900E5885A /* UIScreen+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+SLKit.m"; sourceTree = "<group>"; };
-		F8046BB21F395DC300E5885A /* UILabel+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SLPlaceholder.h"; sourceTree = "<group>"; };
-		F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SLPlaceholder.m"; sourceTree = "<group>"; };
-		F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SLPlaceholder.h"; sourceTree = "<group>"; };
-		F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SLPlaceholder.m"; sourceTree = "<group>"; };
-		F8046BBB1F395F9700E5885A /* UITextField+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SLBlock.h"; sourceTree = "<group>"; };
-		F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SLBlock.m"; sourceTree = "<group>"; };
-		F8046BC41F398ECB00E5885A /* UINavigationController+SLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLTransition.h"; sourceTree = "<group>"; };
-		F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLTransition.m"; sourceTree = "<group>"; };
-		F8046BC71F398FDB00E5885A /* UINavigationController+SLRemoveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLRemoveVC.h"; sourceTree = "<group>"; };
-		F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLRemoveVC.m"; sourceTree = "<group>"; };
-		F8046BD01F3AAF6100E5885A /* UIView+SLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLLayer.h"; sourceTree = "<group>"; };
-		F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLLayer.m"; sourceTree = "<group>"; };
-		F8046BD31F3AB9EC00E5885A /* UIImage+SLLuban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SLLuban.h"; sourceTree = "<group>"; };
-		F8046BD41F3AB9EC00E5885A /* UIImage+SLLuban.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SLLuban.m"; sourceTree = "<group>"; };
-		F8046BD61F3AC0F800E5885A /* UIImagePickerController+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+SLBlock.h"; sourceTree = "<group>"; };
-		F8046BD71F3AC0F800E5885A /* UIImagePickerController+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+SLBlock.m"; sourceTree = "<group>"; };
-		F82099831FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRequestToDictionaryPlugin.h; sourceTree = "<group>"; };
-		F82099841FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRequestToDictionaryPlugin.m; sourceTree = "<group>"; };
-		F82099861FC7FD2000D2F549 /* SLRequestLogPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRequestLogPlugin.h; sourceTree = "<group>"; };
-		F82099871FC7FD2000D2F549 /* SLRequestLogPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRequestLogPlugin.m; sourceTree = "<group>"; };
-		F82099B11FC80FEE00D2F549 /* SLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLManager.h; sourceTree = "<group>"; };
-		F82099B21FC80FEE00D2F549 /* SLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLManager.m; sourceTree = "<group>"; };
-		F82099B31FC80FEE00D2F549 /* SLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetwork.h; sourceTree = "<group>"; };
-		F82099B41FC80FEE00D2F549 /* SLNetworkConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetworkConstant.h; sourceTree = "<group>"; };
-		F82099B51FC80FEE00D2F549 /* SLNetworkConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNetworkConstant.m; sourceTree = "<group>"; };
-		F82099B61FC80FEE00D2F549 /* SLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPlugin.h; sourceTree = "<group>"; };
-		F82099B71FC80FEE00D2F549 /* SLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRequest.h; sourceTree = "<group>"; };
-		F82099B81FC80FEE00D2F549 /* SLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRequest.m; sourceTree = "<group>"; };
-		F82099B91FC80FEE00D2F549 /* SLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLResponse.h; sourceTree = "<group>"; };
-		F82099BA1FC80FEE00D2F549 /* SLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLResponse.m; sourceTree = "<group>"; };
-		F82099BB1FC80FEE00D2F549 /* SLTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTarget.h; sourceTree = "<group>"; };
-		F82099BC1FC80FEE00D2F549 /* SLTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTarget.m; sourceTree = "<group>"; };
-		F85E5F391F4D73A6004E4271 /* UIView+SLRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLRect.h"; sourceTree = "<group>"; };
-		F85E5F3A1F4D73A6004E4271 /* UIView+SLRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLRect.m"; sourceTree = "<group>"; };
-		F8682D2C1F4527020065DA3E /* UIViewController+SLNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLNavigationItem.h"; sourceTree = "<group>"; };
-		F8682D2D1F4527020065DA3E /* UIViewController+SLNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLNavigationItem.m"; sourceTree = "<group>"; };
-		F8682D321F456FD60065DA3E /* UINavigationBar+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SLKit.h"; sourceTree = "<group>"; };
-		F8682D331F456FD60065DA3E /* UINavigationBar+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SLKit.m"; sourceTree = "<group>"; };
+		F82099E41FCE568700D2F549 /* SLWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebCache.h; sourceTree = "<group>"; };
+		F82099E51FCE568700D2F549 /* SLWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebCache.m; sourceTree = "<group>"; };
+		F82099E61FCE568700D2F549 /* SLWebCacheCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebCacheCategory.h; sourceTree = "<group>"; };
+		F82099E71FCE568700D2F549 /* SLWebCacheCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebCacheCategory.m; sourceTree = "<group>"; };
+		F82099EC1FCE568700D2F549 /* SLWebRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebRoute.h; sourceTree = "<group>"; };
+		F82099ED1FCE568700D2F549 /* SLWebRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebRoute.m; sourceTree = "<group>"; };
+		F82099EF1FCE568700D2F549 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
+		F82099F01FCE568700D2F549 /* SLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewController.m; sourceTree = "<group>"; };
+		F82099F51FCE5FC500D2F549 /* NSString+SLWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SLWeb.h"; sourceTree = "<group>"; };
+		F82099F61FCE5FC500D2F549 /* NSString+SLWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLWeb.m"; sourceTree = "<group>"; };
+		F82099F81FCEB5AE00D2F549 /* NSDictionary+SLWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SLWeb.h"; sourceTree = "<group>"; };
+		F82099F91FCEB5AE00D2F549 /* NSDictionary+SLWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SLWeb.m"; sourceTree = "<group>"; };
+		F82099FB1FCF942C00D2F549 /* NSBundle+SLWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLWeb.h"; sourceTree = "<group>"; };
+		F82099FC1FCF942C00D2F549 /* NSBundle+SLWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLWeb.m"; sourceTree = "<group>"; };
+		F82099FF1FCF9AD600D2F549 /* SLWeb.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SLWeb.bundle; sourceTree = "<group>"; };
+		F8209A031FCFA30D00D2F549 /* SLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLManager.h; sourceTree = "<group>"; };
+		F8209A041FCFA30D00D2F549 /* SLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLManager.m; sourceTree = "<group>"; };
+		F8209A051FCFA30D00D2F549 /* SLNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetwork.h; sourceTree = "<group>"; };
+		F8209A061FCFA30D00D2F549 /* SLNetworkConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetworkConstant.h; sourceTree = "<group>"; };
+		F8209A071FCFA30D00D2F549 /* SLNetworkConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNetworkConstant.m; sourceTree = "<group>"; };
+		F8209A081FCFA30D00D2F549 /* SLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPlugin.h; sourceTree = "<group>"; };
+		F8209A091FCFA30D00D2F549 /* SLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRequest.h; sourceTree = "<group>"; };
+		F8209A0A1FCFA30D00D2F549 /* SLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRequest.m; sourceTree = "<group>"; };
+		F8209A0B1FCFA30D00D2F549 /* SLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLResponse.h; sourceTree = "<group>"; };
+		F8209A0C1FCFA30D00D2F549 /* SLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLResponse.m; sourceTree = "<group>"; };
+		F8209A0D1FCFA30D00D2F549 /* SLTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTarget.h; sourceTree = "<group>"; };
+		F8209A0E1FCFA30D00D2F549 /* SLTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTarget.m; sourceTree = "<group>"; };
+		F8209A101FCFA30D00D2F549 /* SLRequestLogPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRequestLogPlugin.h; sourceTree = "<group>"; };
+		F8209A111FCFA30D00D2F549 /* SLRequestLogPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRequestLogPlugin.m; sourceTree = "<group>"; };
+		F8209A121FCFA30D00D2F549 /* SLRequestToDictionaryPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRequestToDictionaryPlugin.h; sourceTree = "<group>"; };
+		F8209A131FCFA30D00D2F549 /* SLRequestToDictionaryPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRequestToDictionaryPlugin.m; sourceTree = "<group>"; };
+		F8209A1D1FCFA32000D2F549 /* NSArray+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SLFoundation.h"; sourceTree = "<group>"; };
+		F8209A1E1FCFA32000D2F549 /* NSArray+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SLFoundation.m"; sourceTree = "<group>"; };
+		F8209A1F1FCFA32000D2F549 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
+		F8209A201FCFA32000D2F549 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
+		F8209A211FCFA32000D2F549 /* NSData+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLFoundation.h"; sourceTree = "<group>"; };
+		F8209A221FCFA32000D2F549 /* NSData+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLFoundation.m"; sourceTree = "<group>"; };
+		F8209A231FCFA32000D2F549 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
+		F8209A241FCFA32000D2F549 /* NSFileManager+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SLFoundation.m"; sourceTree = "<group>"; };
+		F8209A251FCFA32000D2F549 /* NSString+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLFoundation.h"; sourceTree = "<group>"; };
+		F8209A261FCFA32000D2F549 /* NSString+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLFoundation.m"; sourceTree = "<group>"; };
+		F8209A271FCFA32000D2F549 /* NSTimer+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A281FCFA32000D2F549 /* NSTimer+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A291FCFA32000D2F549 /* SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFoundation.h; sourceTree = "<group>"; };
+		F8209A2B1FCFA32000D2F549 /* SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKit.h; sourceTree = "<group>"; };
+		F8209A2C1FCFA32000D2F549 /* UIActionSheet+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A2D1FCFA32000D2F549 /* UIActionSheet+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A2E1FCFA32000D2F549 /* UIAlertView+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A2F1FCFA32000D2F549 /* UIAlertView+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A301FCFA32000D2F549 /* UIApplication+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SLKit.h"; sourceTree = "<group>"; };
+		F8209A311FCFA32000D2F549 /* UIApplication+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SLKit.m"; sourceTree = "<group>"; };
+		F8209A321FCFA32000D2F549 /* UIButton+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A331FCFA32000D2F549 /* UIButton+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A341FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+SLHighlighted.h"; sourceTree = "<group>"; };
+		F8209A351FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+SLHighlighted.m"; sourceTree = "<group>"; };
+		F8209A361FCFA32000D2F549 /* UIColor+SLHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SLHex.h"; sourceTree = "<group>"; };
+		F8209A371FCFA32000D2F549 /* UIColor+SLHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SLHex.m"; sourceTree = "<group>"; };
+		F8209A381FCFA32000D2F549 /* UIDevice+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SLKit.h"; sourceTree = "<group>"; };
+		F8209A391FCFA32000D2F549 /* UIDevice+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLKit.m"; sourceTree = "<group>"; };
+		F8209A3A1FCFA32000D2F549 /* UIImage+SLLuban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SLLuban.h"; sourceTree = "<group>"; };
+		F8209A3B1FCFA32000D2F549 /* UIImage+SLLuban.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SLLuban.m"; sourceTree = "<group>"; };
+		F8209A3C1FCFA32000D2F549 /* UIImagePickerController+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A3D1FCFA32000D2F549 /* UIImagePickerController+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A3E1FCFA32000D2F549 /* UILabel+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SLPlaceholder.h"; sourceTree = "<group>"; };
+		F8209A3F1FCFA32000D2F549 /* UILabel+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SLPlaceholder.m"; sourceTree = "<group>"; };
+		F8209A401FCFA32000D2F549 /* UINavigationBar+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SLKit.h"; sourceTree = "<group>"; };
+		F8209A411FCFA32000D2F549 /* UINavigationBar+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SLKit.m"; sourceTree = "<group>"; };
+		F8209A421FCFA32000D2F549 /* UINavigationController+SLPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLPopGesture.h"; sourceTree = "<group>"; };
+		F8209A431FCFA32000D2F549 /* UINavigationController+SLPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLPopGesture.m"; sourceTree = "<group>"; };
+		F8209A441FCFA32000D2F549 /* UINavigationController+SLRemoveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLRemoveVC.h"; sourceTree = "<group>"; };
+		F8209A451FCFA32000D2F549 /* UINavigationController+SLRemoveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLRemoveVC.m"; sourceTree = "<group>"; };
+		F8209A461FCFA32000D2F549 /* UINavigationController+SLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLTransition.h"; sourceTree = "<group>"; };
+		F8209A471FCFA32000D2F549 /* UINavigationController+SLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLTransition.m"; sourceTree = "<group>"; };
+		F8209A481FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+SLNilTitleBackItem.h"; sourceTree = "<group>"; };
+		F8209A491FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+SLNilTitleBackItem.m"; sourceTree = "<group>"; };
+		F8209A4A1FCFA32000D2F549 /* UIScreen+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SLKit.h"; sourceTree = "<group>"; };
+		F8209A4B1FCFA32000D2F549 /* UIScreen+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+SLKit.m"; sourceTree = "<group>"; };
+		F8209A4C1FCFA32000D2F549 /* UITextField+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SLBlock.h"; sourceTree = "<group>"; };
+		F8209A4D1FCFA32000D2F549 /* UITextField+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SLBlock.m"; sourceTree = "<group>"; };
+		F8209A4E1FCFA32000D2F549 /* UITextView+SLPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SLPlaceholder.h"; sourceTree = "<group>"; };
+		F8209A4F1FCFA32000D2F549 /* UITextView+SLPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SLPlaceholder.m"; sourceTree = "<group>"; };
+		F8209A501FCFA32000D2F549 /* UIView+SLGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLGesture.h"; sourceTree = "<group>"; };
+		F8209A511FCFA32000D2F549 /* UIView+SLGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLGesture.m"; sourceTree = "<group>"; };
+		F8209A521FCFA32000D2F549 /* UIView+SLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLLayer.h"; sourceTree = "<group>"; };
+		F8209A531FCFA32000D2F549 /* UIView+SLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLLayer.m"; sourceTree = "<group>"; };
+		F8209A541FCFA32000D2F549 /* UIView+SLRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLRect.h"; sourceTree = "<group>"; };
+		F8209A551FCFA32000D2F549 /* UIView+SLRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLRect.m"; sourceTree = "<group>"; };
+		F8209A561FCFA32000D2F549 /* UIViewController+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLKit.h"; sourceTree = "<group>"; };
+		F8209A571FCFA32000D2F549 /* UIViewController+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLKit.m"; sourceTree = "<group>"; };
+		F8209A581FCFA32000D2F549 /* UIViewController+SLNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLNavigationItem.h"; sourceTree = "<group>"; };
+		F8209A591FCFA32000D2F549 /* UIViewController+SLNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLNavigationItem.m"; sourceTree = "<group>"; };
 		F8682D351F4599A60065DA3E /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		F8682D361F4599A60065DA3E /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		F86C8D3A1FCFF43C0064508E /* UIWebView+SLGobackGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SLGobackGesture.h"; sourceTree = "<group>"; };
+		F86C8D3B1FCFF43C0064508E /* UIWebView+SLGobackGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SLGobackGesture.m"; sourceTree = "<group>"; };
 		F87662771F78E2180090A17B /* SLMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLMediator.h; sourceTree = "<group>"; };
 		F87662781F78E2180090A17B /* SLMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMediator.m; sourceTree = "<group>"; };
 		F87662861F79EC850090A17B /* SLAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAccount.h; sourceTree = "<group>"; };
@@ -124,8 +182,6 @@
 		F8ABF5B61F988996002DE5F3 /* YHRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHRequest.m; sourceTree = "<group>"; };
 		F8ABF5B71F988996002DE5F3 /* YHResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHResponse.h; sourceTree = "<group>"; };
 		F8ABF5B81F988996002DE5F3 /* YHResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHResponse.m; sourceTree = "<group>"; };
-		F8B9F46A1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+SLHighlighted.h"; sourceTree = "<group>"; };
-		F8B9F46B1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+SLHighlighted.m"; sourceTree = "<group>"; };
 		F8B9F46E1F3D3F1F00BE897D /* SLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUtils.h; sourceTree = "<group>"; };
 		F8CB54081F0C7CA60032DE46 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CB540C1F0C7CA60032DE46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,36 +193,6 @@
 		F8CB54171F0C7CA60032DE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8CB541A1F0C7CA60032DE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8CB541C1F0C7CA60032DE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SLFoundation.h"; sourceTree = "<group>"; };
-		F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SLFoundation.m"; sourceTree = "<group>"; };
-		F8D903801F380ACC00FF3BC8 /* UIActionSheet+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+SLBlock.h"; sourceTree = "<group>"; };
-		F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+SLBlock.m"; sourceTree = "<group>"; };
-		F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SLPopGesture.h"; sourceTree = "<group>"; };
-		F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SLPopGesture.m"; sourceTree = "<group>"; };
-		F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SLFoundation.h"; sourceTree = "<group>"; };
-		F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SLFoundation.m"; sourceTree = "<group>"; };
-		F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SLFoundation.h"; sourceTree = "<group>"; };
-		F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SLFoundation.m"; sourceTree = "<group>"; };
-		F8FCBEC01F31BE83000C5DF5 /* NSTimer+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SLBlock.h"; sourceTree = "<group>"; };
-		F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SLBlock.m"; sourceTree = "<group>"; };
-		F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFoundation.h; sourceTree = "<group>"; };
-		F8FCBEC41F31BE83000C5DF5 /* SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKit.h; sourceTree = "<group>"; };
-		F8FCBEC51F31BE83000C5DF5 /* UIAlertView+SLBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+SLBlock.h"; sourceTree = "<group>"; };
-		F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+SLBlock.m"; sourceTree = "<group>"; };
-		F8FCBEC71F31BE83000C5DF5 /* UIApplication+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SLKit.h"; sourceTree = "<group>"; };
-		F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SLKit.m"; sourceTree = "<group>"; };
-		F8FCBECB1F31BE83000C5DF5 /* UIColor+SLHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SLHex.h"; sourceTree = "<group>"; };
-		F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SLHex.m"; sourceTree = "<group>"; };
-		F8FCBECD1F31BE83000C5DF5 /* UIDevice+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SLKit.h"; sourceTree = "<group>"; };
-		F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLKit.m"; sourceTree = "<group>"; };
-		F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+SLNilTitleBackItem.h"; sourceTree = "<group>"; };
-		F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+SLNilTitleBackItem.m"; sourceTree = "<group>"; };
-		F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLGesture.h"; sourceTree = "<group>"; };
-		F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLGesture.m"; sourceTree = "<group>"; };
-		F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLKit.h"; sourceTree = "<group>"; };
-		F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLKit.m"; sourceTree = "<group>"; };
-		F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLFoundation.h"; sourceTree = "<group>"; };
-		F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLFoundation.m"; sourceTree = "<group>"; };
 		F8FCBEEF1F32B804000C5DF5 /* SLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDefine.h; sourceTree = "<group>"; };
 		F8FCBEF01F32B837000C5DF5 /* SLLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLog.h; sourceTree = "<group>"; };
 		F8FCBEF11F32B84B000C5DF5 /* SLSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSingleton.h; sourceTree = "<group>"; };
@@ -203,34 +229,206 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F82099B01FC80FEE00D2F549 /* Base */ = {
+		F82099E21FCE568700D2F549 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				F82099B31FC80FEE00D2F549 /* SLNetwork.h */,
-				F82099B41FC80FEE00D2F549 /* SLNetworkConstant.h */,
-				F82099B51FC80FEE00D2F549 /* SLNetworkConstant.m */,
-				F82099B61FC80FEE00D2F549 /* SLPlugin.h */,
-				F82099BB1FC80FEE00D2F549 /* SLTarget.h */,
-				F82099BC1FC80FEE00D2F549 /* SLTarget.m */,
-				F82099B71FC80FEE00D2F549 /* SLRequest.h */,
-				F82099B81FC80FEE00D2F549 /* SLRequest.m */,
-				F82099B11FC80FEE00D2F549 /* SLManager.h */,
-				F82099B21FC80FEE00D2F549 /* SLManager.m */,
-				F82099B91FC80FEE00D2F549 /* SLResponse.h */,
-				F82099BA1FC80FEE00D2F549 /* SLResponse.m */,
+				F82099FE1FCF9AD600D2F549 /* Resource */,
+				F82099E31FCE568700D2F549 /* Cache */,
+				F82099E81FCE568700D2F549 /* Category */,
+				F82099E91FCE568700D2F549 /* Communication */,
+				F82099EA1FCE568700D2F549 /* Network */,
+				F82099EB1FCE568700D2F549 /* Route */,
+				F82099EE1FCE568700D2F549 /* WebViewController */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		F82099E31FCE568700D2F549 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				F82099E41FCE568700D2F549 /* SLWebCache.h */,
+				F82099E51FCE568700D2F549 /* SLWebCache.m */,
+				F82099E61FCE568700D2F549 /* SLWebCacheCategory.h */,
+				F82099E71FCE568700D2F549 /* SLWebCacheCategory.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		F82099E81FCE568700D2F549 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F82099F51FCE5FC500D2F549 /* NSString+SLWeb.h */,
+				F82099F61FCE5FC500D2F549 /* NSString+SLWeb.m */,
+				F82099F81FCEB5AE00D2F549 /* NSDictionary+SLWeb.h */,
+				F82099F91FCEB5AE00D2F549 /* NSDictionary+SLWeb.m */,
+				F82099FB1FCF942C00D2F549 /* NSBundle+SLWeb.h */,
+				F82099FC1FCF942C00D2F549 /* NSBundle+SLWeb.m */,
+				F86C8D3A1FCFF43C0064508E /* UIWebView+SLGobackGesture.h */,
+				F86C8D3B1FCFF43C0064508E /* UIWebView+SLGobackGesture.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F82099E91FCE568700D2F549 /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		F82099EA1FCE568700D2F549 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F82099EB1FCE568700D2F549 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				F82099EC1FCE568700D2F549 /* SLWebRoute.h */,
+				F82099ED1FCE568700D2F549 /* SLWebRoute.m */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		F82099EE1FCE568700D2F549 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F82099EF1FCE568700D2F549 /* SLWebViewController.h */,
+				F82099F01FCE568700D2F549 /* SLWebViewController.m */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
+		F82099FE1FCF9AD600D2F549 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F82099FF1FCF9AD600D2F549 /* SLWeb.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F8209A011FCFA30D00D2F549 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8209A021FCFA30D00D2F549 /* Base */,
+				F8209A0F1FCFA30D00D2F549 /* Plugins */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F8209A021FCFA30D00D2F549 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F8209A031FCFA30D00D2F549 /* SLManager.h */,
+				F8209A041FCFA30D00D2F549 /* SLManager.m */,
+				F8209A051FCFA30D00D2F549 /* SLNetwork.h */,
+				F8209A061FCFA30D00D2F549 /* SLNetworkConstant.h */,
+				F8209A071FCFA30D00D2F549 /* SLNetworkConstant.m */,
+				F8209A081FCFA30D00D2F549 /* SLPlugin.h */,
+				F8209A091FCFA30D00D2F549 /* SLRequest.h */,
+				F8209A0A1FCFA30D00D2F549 /* SLRequest.m */,
+				F8209A0B1FCFA30D00D2F549 /* SLResponse.h */,
+				F8209A0C1FCFA30D00D2F549 /* SLResponse.m */,
+				F8209A0D1FCFA30D00D2F549 /* SLTarget.h */,
+				F8209A0E1FCFA30D00D2F549 /* SLTarget.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		F8652DB61FC2D553006C8E0E /* Plugins */ = {
+		F8209A0F1FCFA30D00D2F549 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				F82099831FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.h */,
-				F82099841FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.m */,
-				F82099861FC7FD2000D2F549 /* SLRequestLogPlugin.h */,
-				F82099871FC7FD2000D2F549 /* SLRequestLogPlugin.m */,
+				F8209A101FCFA30D00D2F549 /* SLRequestLogPlugin.h */,
+				F8209A111FCFA30D00D2F549 /* SLRequestLogPlugin.m */,
+				F8209A121FCFA30D00D2F549 /* SLRequestToDictionaryPlugin.h */,
+				F8209A131FCFA30D00D2F549 /* SLRequestToDictionaryPlugin.m */,
 			);
 			path = Plugins;
+			sourceTree = "<group>";
+		};
+		F8209A1B1FCFA32000D2F549 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F8209A1C1FCFA32000D2F549 /* NSFoundation */,
+				F8209A2A1FCFA32000D2F549 /* UIKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8209A1C1FCFA32000D2F549 /* NSFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				F8209A1D1FCFA32000D2F549 /* NSArray+SLFoundation.h */,
+				F8209A1E1FCFA32000D2F549 /* NSArray+SLFoundation.m */,
+				F8209A1F1FCFA32000D2F549 /* NSBundle+SLFoundation.h */,
+				F8209A201FCFA32000D2F549 /* NSBundle+SLFoundation.m */,
+				F8209A211FCFA32000D2F549 /* NSData+SLFoundation.h */,
+				F8209A221FCFA32000D2F549 /* NSData+SLFoundation.m */,
+				F8209A231FCFA32000D2F549 /* NSFileManager+SLFoundation.h */,
+				F8209A241FCFA32000D2F549 /* NSFileManager+SLFoundation.m */,
+				F8209A251FCFA32000D2F549 /* NSString+SLFoundation.h */,
+				F8209A261FCFA32000D2F549 /* NSString+SLFoundation.m */,
+				F8209A271FCFA32000D2F549 /* NSTimer+SLBlock.h */,
+				F8209A281FCFA32000D2F549 /* NSTimer+SLBlock.m */,
+				F8209A291FCFA32000D2F549 /* SLFoundation.h */,
+			);
+			path = NSFoundation;
+			sourceTree = "<group>";
+		};
+		F8209A2A1FCFA32000D2F549 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F8209A2B1FCFA32000D2F549 /* SLKit.h */,
+				F8209A2C1FCFA32000D2F549 /* UIActionSheet+SLBlock.h */,
+				F8209A2D1FCFA32000D2F549 /* UIActionSheet+SLBlock.m */,
+				F8209A2E1FCFA32000D2F549 /* UIAlertView+SLBlock.h */,
+				F8209A2F1FCFA32000D2F549 /* UIAlertView+SLBlock.m */,
+				F8209A301FCFA32000D2F549 /* UIApplication+SLKit.h */,
+				F8209A311FCFA32000D2F549 /* UIApplication+SLKit.m */,
+				F8209A321FCFA32000D2F549 /* UIButton+SLBlock.h */,
+				F8209A331FCFA32000D2F549 /* UIButton+SLBlock.m */,
+				F8209A341FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.h */,
+				F8209A351FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.m */,
+				F8209A361FCFA32000D2F549 /* UIColor+SLHex.h */,
+				F8209A371FCFA32000D2F549 /* UIColor+SLHex.m */,
+				F8209A381FCFA32000D2F549 /* UIDevice+SLKit.h */,
+				F8209A391FCFA32000D2F549 /* UIDevice+SLKit.m */,
+				F8209A3A1FCFA32000D2F549 /* UIImage+SLLuban.h */,
+				F8209A3B1FCFA32000D2F549 /* UIImage+SLLuban.m */,
+				F8209A3C1FCFA32000D2F549 /* UIImagePickerController+SLBlock.h */,
+				F8209A3D1FCFA32000D2F549 /* UIImagePickerController+SLBlock.m */,
+				F8209A3E1FCFA32000D2F549 /* UILabel+SLPlaceholder.h */,
+				F8209A3F1FCFA32000D2F549 /* UILabel+SLPlaceholder.m */,
+				F8209A401FCFA32000D2F549 /* UINavigationBar+SLKit.h */,
+				F8209A411FCFA32000D2F549 /* UINavigationBar+SLKit.m */,
+				F8209A421FCFA32000D2F549 /* UINavigationController+SLPopGesture.h */,
+				F8209A431FCFA32000D2F549 /* UINavigationController+SLPopGesture.m */,
+				F8209A441FCFA32000D2F549 /* UINavigationController+SLRemoveVC.h */,
+				F8209A451FCFA32000D2F549 /* UINavigationController+SLRemoveVC.m */,
+				F8209A461FCFA32000D2F549 /* UINavigationController+SLTransition.h */,
+				F8209A471FCFA32000D2F549 /* UINavigationController+SLTransition.m */,
+				F8209A481FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.h */,
+				F8209A491FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.m */,
+				F8209A4A1FCFA32000D2F549 /* UIScreen+SLKit.h */,
+				F8209A4B1FCFA32000D2F549 /* UIScreen+SLKit.m */,
+				F8209A4C1FCFA32000D2F549 /* UITextField+SLBlock.h */,
+				F8209A4D1FCFA32000D2F549 /* UITextField+SLBlock.m */,
+				F8209A4E1FCFA32000D2F549 /* UITextView+SLPlaceholder.h */,
+				F8209A4F1FCFA32000D2F549 /* UITextView+SLPlaceholder.m */,
+				F8209A501FCFA32000D2F549 /* UIView+SLGesture.h */,
+				F8209A511FCFA32000D2F549 /* UIView+SLGesture.m */,
+				F8209A521FCFA32000D2F549 /* UIView+SLLayer.h */,
+				F8209A531FCFA32000D2F549 /* UIView+SLLayer.m */,
+				F8209A541FCFA32000D2F549 /* UIView+SLRect.h */,
+				F8209A551FCFA32000D2F549 /* UIView+SLRect.m */,
+				F8209A561FCFA32000D2F549 /* UIViewController+SLKit.h */,
+				F8209A571FCFA32000D2F549 /* UIViewController+SLKit.m */,
+				F8209A581FCFA32000D2F549 /* UIViewController+SLNavigationItem.h */,
+				F8209A591FCFA32000D2F549 /* UIViewController+SLNavigationItem.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		F87662761F78E2040090A17B /* Mediator */ = {
@@ -336,98 +534,16 @@
 		F8FCBEB71F31BE82000C5DF5 /* SolarKit-OC */ = {
 			isa = PBXGroup;
 			children = (
+				F8209A1B1FCFA32000D2F549 /* Category */,
+				F8209A011FCFA30D00D2F549 /* Network */,
+				F82099E21FCE568700D2F549 /* Web */,
 				F87662761F78E2040090A17B /* Mediator */,
 				F8B9F46D1F3D3F1300BE897D /* Utils */,
 				F8FCBEEE1F32B7ED000C5DF5 /* Define */,
-				F8FCBEB81F31BE82000C5DF5 /* Category */,
 				F8FCBED71F31BE83000C5DF5 /* DB */,
-				F8FCBED81F31BE83000C5DF5 /* Network */,
 			);
 			name = "SolarKit-OC";
 			path = "../SolarKit-OC";
-			sourceTree = "<group>";
-		};
-		F8FCBEB81F31BE82000C5DF5 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */,
-				F8FCBEC31F31BE83000C5DF5 /* UIKit */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F8FCBEBB1F31BE83000C5DF5 /* NSFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				F8FCBEC21F31BE83000C5DF5 /* SLFoundation.h */,
-				F8FCBEBC1F31BE83000C5DF5 /* NSBundle+SLFoundation.h */,
-				F8FCBEBD1F31BE83000C5DF5 /* NSBundle+SLFoundation.m */,
-				F8FCBEBE1F31BE83000C5DF5 /* NSFileManager+SLFoundation.h */,
-				F8FCBEBF1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m */,
-				F8FCBEC01F31BE83000C5DF5 /* NSTimer+SLBlock.h */,
-				F8FCBEC11F31BE83000C5DF5 /* NSTimer+SLBlock.m */,
-				F8FCBEE61F31BEA9000C5DF5 /* NSString+SLFoundation.h */,
-				F8FCBEE71F31BEA9000C5DF5 /* NSString+SLFoundation.m */,
-				F8D9037D1F346DAF00FF3BC8 /* NSData+SLFoundation.h */,
-				F8D9037E1F346DAF00FF3BC8 /* NSData+SLFoundation.m */,
-				274D6CF61F32CAA100BE3539 /* NSArray+SLFoundation.h */,
-				274D6CF71F32CAA100BE3539 /* NSArray+SLFoundation.m */,
-			);
-			path = NSFoundation;
-			sourceTree = "<group>";
-		};
-		F8FCBEC31F31BE83000C5DF5 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				F8FCBEC41F31BE83000C5DF5 /* SLKit.h */,
-				F8D903801F380ACC00FF3BC8 /* UIActionSheet+SLBlock.h */,
-				F8D903811F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m */,
-				F8FCBEC51F31BE83000C5DF5 /* UIAlertView+SLBlock.h */,
-				F8FCBEC61F31BE83000C5DF5 /* UIAlertView+SLBlock.m */,
-				F8FCBEC71F31BE83000C5DF5 /* UIApplication+SLKit.h */,
-				F8FCBEC81F31BE83000C5DF5 /* UIApplication+SLKit.m */,
-				F8046BAC1F394E4D00E5885A /* UIButton+SLBlock.h */,
-				F8046BAD1F394E4D00E5885A /* UIButton+SLBlock.m */,
-				F8B9F46A1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.h */,
-				F8B9F46B1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m */,
-				F8FCBECB1F31BE83000C5DF5 /* UIColor+SLHex.h */,
-				F8FCBECC1F31BE83000C5DF5 /* UIColor+SLHex.m */,
-				F8FCBECD1F31BE83000C5DF5 /* UIDevice+SLKit.h */,
-				F8FCBECE1F31BE83000C5DF5 /* UIDevice+SLKit.m */,
-				F8046BD31F3AB9EC00E5885A /* UIImage+SLLuban.h */,
-				F8046BD41F3AB9EC00E5885A /* UIImage+SLLuban.m */,
-				F8046BD61F3AC0F800E5885A /* UIImagePickerController+SLBlock.h */,
-				F8046BD71F3AC0F800E5885A /* UIImagePickerController+SLBlock.m */,
-				F8046BB21F395DC300E5885A /* UILabel+SLPlaceholder.h */,
-				F8046BB31F395DC300E5885A /* UILabel+SLPlaceholder.m */,
-				F8682D321F456FD60065DA3E /* UINavigationBar+SLKit.h */,
-				F8682D331F456FD60065DA3E /* UINavigationBar+SLKit.m */,
-				F8D903831F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.h */,
-				F8D903841F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m */,
-				F8046BC71F398FDB00E5885A /* UINavigationController+SLRemoveVC.h */,
-				F8046BC81F398FDB00E5885A /* UINavigationController+SLRemoveVC.m */,
-				F8046BC41F398ECB00E5885A /* UINavigationController+SLTransition.h */,
-				F8046BC51F398ECB00E5885A /* UINavigationController+SLTransition.m */,
-				F8FCBED11F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.h */,
-				F8FCBED21F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m */,
-				F8046BAF1F39586900E5885A /* UIScreen+SLKit.h */,
-				F8046BB01F39586900E5885A /* UIScreen+SLKit.m */,
-				F8046BBB1F395F9700E5885A /* UITextField+SLBlock.h */,
-				F8046BBC1F395F9700E5885A /* UITextField+SLBlock.m */,
-				F8046BB81F395E5600E5885A /* UITextView+SLPlaceholder.h */,
-				F8046BB91F395E5600E5885A /* UITextView+SLPlaceholder.m */,
-				F85E5F391F4D73A6004E4271 /* UIView+SLRect.h */,
-				F85E5F3A1F4D73A6004E4271 /* UIView+SLRect.m */,
-				F8046BD01F3AAF6100E5885A /* UIView+SLLayer.h */,
-				F8046BD11F3AAF6100E5885A /* UIView+SLLayer.m */,
-				F8FCBED31F31BE83000C5DF5 /* UIView+SLGesture.h */,
-				F8FCBED41F31BE83000C5DF5 /* UIView+SLGesture.m */,
-				F8FCBED51F31BE83000C5DF5 /* UIViewController+SLKit.h */,
-				F8FCBED61F31BE83000C5DF5 /* UIViewController+SLKit.m */,
-				F8682D2C1F4527020065DA3E /* UIViewController+SLNavigationItem.h */,
-				F8682D2D1F4527020065DA3E /* UIViewController+SLNavigationItem.m */,
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		F8FCBED71F31BE83000C5DF5 /* DB */ = {
@@ -435,15 +551,6 @@
 			children = (
 			);
 			path = DB;
-			sourceTree = "<group>";
-		};
-		F8FCBED81F31BE83000C5DF5 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				F82099B01FC80FEE00D2F549 /* Base */,
-				F8652DB61FC2D553006C8E0E /* Plugins */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		F8FCBEEE1F32B7ED000C5DF5 /* Define */ = {
@@ -521,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CB541B1F0C7CA60032DE46 /* LaunchScreen.storyboard in Resources */,
+				F8209A001FCF9AD600D2F549 /* SLWeb.bundle in Resources */,
 				F8CB54181F0C7CA60032DE46 /* Assets.xcassets in Resources */,
 				F8CB54161F0C7CA60032DE46 /* Main.storyboard in Resources */,
 			);
@@ -595,53 +703,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82099851FC7F74E00D2F549 /* SLRequestToDictionaryPlugin.m in Sources */,
+				F8209A141FCFA30D00D2F549 /* SLManager.m in Sources */,
+				F8209A6A1FCFA32000D2F549 /* UINavigationBar+SLKit.m in Sources */,
+				F8209A6E1FCFA32000D2F549 /* UINavigationItem+SLNilTitleBackItem.m in Sources */,
+				F8209A671FCFA32000D2F549 /* UIImage+SLLuban.m in Sources */,
+				F8209A6B1FCFA32000D2F549 /* UINavigationController+SLPopGesture.m in Sources */,
 				F8682D371F4599A60065DA3E /* HomeVC.m in Sources */,
-				F8046BC91F398FDB00E5885A /* UINavigationController+SLRemoveVC.m in Sources */,
 				F8CB54131F0C7CA60032DE46 /* ViewController.m in Sources */,
 				F8CB54101F0C7CA60032DE46 /* AppDelegate.m in Sources */,
+				F8209A6F1FCFA32000D2F549 /* UIScreen+SLKit.m in Sources */,
+				F8209A691FCFA32000D2F549 /* UILabel+SLPlaceholder.m in Sources */,
 				F876628B1F79ECC30090A17B /* SLLoginVC.m in Sources */,
-				F8FCBEDD1F31BE83000C5DF5 /* UIAlertView+SLBlock.m in Sources */,
-				F8D9037F1F346DAF00FF3BC8 /* NSData+SLFoundation.m in Sources */,
-				F8B9F46C1F3C53CF00BE897D /* UICollectionViewCell+SLHighlighted.m in Sources */,
-				F8FCBEE31F31BE83000C5DF5 /* UINavigationItem+SLNilTitleBackItem.m in Sources */,
-				F8FCBEDA1F31BE83000C5DF5 /* NSBundle+SLFoundation.m in Sources */,
-				F82099881FC7FD2000D2F549 /* SLRequestLogPlugin.m in Sources */,
-				F8FCBEE11F31BE83000C5DF5 /* UIDevice+SLKit.m in Sources */,
-				F82099BF1FC80FEE00D2F549 /* SLRequest.m in Sources */,
-				274D6CF81F32CAA100BE3539 /* NSArray+SLFoundation.m in Sources */,
+				F82099F21FCE568700D2F549 /* SLWebCacheCategory.m in Sources */,
+				F8209A701FCFA32000D2F549 /* UITextField+SLBlock.m in Sources */,
+				F8209A721FCFA32000D2F549 /* UIView+SLGesture.m in Sources */,
+				F82099F11FCE568700D2F549 /* SLWebCache.m in Sources */,
+				F82099F71FCE5FC500D2F549 /* NSString+SLWeb.m in Sources */,
 				F8ABF5BC1F988996002DE5F3 /* YHResponse.m in Sources */,
+				F8209A6C1FCFA32000D2F549 /* UINavigationController+SLRemoveVC.m in Sources */,
+				F8209A5B1FCFA32000D2F549 /* NSBundle+SLFoundation.m in Sources */,
+				F8209A5F1FCFA32000D2F549 /* NSTimer+SLBlock.m in Sources */,
+				F8209A731FCFA32000D2F549 /* UIView+SLLayer.m in Sources */,
 				F8ABF5BA1F988996002DE5F3 /* YHNetworkConfig.m in Sources */,
-				F8682D2E1F4527020065DA3E /* UIViewController+SLNavigationItem.m in Sources */,
-				F8FCBEDE1F31BE83000C5DF5 /* UIApplication+SLKit.m in Sources */,
-				F8046BD21F3AAF6100E5885A /* UIView+SLLayer.m in Sources */,
-				F8D903851F380B3C00FF3BC8 /* UINavigationController+SLPopGesture.m in Sources */,
-				F85E5F3B1F4D73A6004E4271 /* UIView+SLRect.m in Sources */,
-				F8046BD51F3AB9EC00E5885A /* UIImage+SLLuban.m in Sources */,
-				F8046BBA1F395E5600E5885A /* UITextView+SLPlaceholder.m in Sources */,
-				F8682D341F456FD60065DA3E /* UINavigationBar+SLKit.m in Sources */,
-				F8046BBD1F395F9700E5885A /* UITextField+SLBlock.m in Sources */,
-				F8FCBEDB1F31BE83000C5DF5 /* NSFileManager+SLFoundation.m in Sources */,
+				F8209A161FCFA30E00D2F549 /* SLRequest.m in Sources */,
+				F8209A181FCFA30E00D2F549 /* SLTarget.m in Sources */,
+				F8209A191FCFA30E00D2F549 /* SLRequestLogPlugin.m in Sources */,
+				F82099FD1FCF942C00D2F549 /* NSBundle+SLWeb.m in Sources */,
+				F8209A631FCFA32000D2F549 /* UIButton+SLBlock.m in Sources */,
+				F82099FA1FCEB5AE00D2F549 /* NSDictionary+SLWeb.m in Sources */,
+				F8209A711FCFA32000D2F549 /* UITextView+SLPlaceholder.m in Sources */,
+				F8209A151FCFA30D00D2F549 /* SLNetworkConstant.m in Sources */,
 				F8CB540D1F0C7CA60032DE46 /* main.m in Sources */,
-				F82099C11FC80FEE00D2F549 /* SLTarget.m in Sources */,
-				F8FCBEE81F31BEA9000C5DF5 /* NSString+SLFoundation.m in Sources */,
 				F87662791F78E2180090A17B /* SLMediator.m in Sources */,
-				F8046BD81F3AC0F800E5885A /* UIImagePickerController+SLBlock.m in Sources */,
-				F8FCBEE41F31BE83000C5DF5 /* UIView+SLGesture.m in Sources */,
-				F8FCBEE51F31BE83000C5DF5 /* UIViewController+SLKit.m in Sources */,
-				F8046BAE1F394E4D00E5885A /* UIButton+SLBlock.m in Sources */,
-				F82099BE1FC80FEE00D2F549 /* SLNetworkConstant.m in Sources */,
-				F82099C01FC80FEE00D2F549 /* SLResponse.m in Sources */,
-				F8046BC61F398ECB00E5885A /* UINavigationController+SLTransition.m in Sources */,
 				F8ABF5BB1F988996002DE5F3 /* YHRequest.m in Sources */,
 				F87662881F79EC850090A17B /* SLAccount.m in Sources */,
-				F8046BB41F395DC300E5885A /* UILabel+SLPlaceholder.m in Sources */,
-				F82099BD1FC80FEE00D2F549 /* SLManager.m in Sources */,
-				F8FCBEE01F31BE83000C5DF5 /* UIColor+SLHex.m in Sources */,
-				F8D903821F380ACC00FF3BC8 /* UIActionSheet+SLBlock.m in Sources */,
-				F8FCBEDC1F31BE83000C5DF5 /* NSTimer+SLBlock.m in Sources */,
-				F8046BB11F39586900E5885A /* UIScreen+SLKit.m in Sources */,
+				F8209A611FCFA32000D2F549 /* UIAlertView+SLBlock.m in Sources */,
+				F8209A5D1FCFA32000D2F549 /* NSFileManager+SLFoundation.m in Sources */,
+				F8209A6D1FCFA32000D2F549 /* UINavigationController+SLTransition.m in Sources */,
+				F8209A651FCFA32000D2F549 /* UIColor+SLHex.m in Sources */,
+				F82099F31FCE568700D2F549 /* SLWebRoute.m in Sources */,
+				F8209A681FCFA32000D2F549 /* UIImagePickerController+SLBlock.m in Sources */,
+				F8209A171FCFA30E00D2F549 /* SLResponse.m in Sources */,
+				F82099F41FCE568700D2F549 /* SLWebViewController.m in Sources */,
+				F8209A5C1FCFA32000D2F549 /* NSData+SLFoundation.m in Sources */,
+				F8209A621FCFA32000D2F549 /* UIApplication+SLKit.m in Sources */,
+				F8209A1A1FCFA30E00D2F549 /* SLRequestToDictionaryPlugin.m in Sources */,
+				F8209A641FCFA32000D2F549 /* UICollectionViewCell+SLHighlighted.m in Sources */,
+				F8209A601FCFA32000D2F549 /* UIActionSheet+SLBlock.m in Sources */,
+				F86C8D3C1FCFF43C0064508E /* UIWebView+SLGobackGesture.m in Sources */,
+				F8209A5A1FCFA32000D2F549 /* NSArray+SLFoundation.m in Sources */,
+				F8209A761FCFA32000D2F549 /* UIViewController+SLNavigationItem.m in Sources */,
 				F8ABF5B91F988996002DE5F3 /* YHManager.m in Sources */,
+				F8209A5E1FCFA32000D2F549 /* NSString+SLFoundation.m in Sources */,
+				F8209A661FCFA32000D2F549 /* UIDevice+SLKit.m in Sources */,
+				F8209A741FCFA32000D2F549 /* UIView+SLRect.m in Sources */,
+				F8209A751FCFA32000D2F549 /* UIViewController+SLKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "SLManager.h"
 #import "SLTarget.h"
 #import "SLRequest.h"
+#import "SLResponse.h"
 
 @interface SLManager ()
 
@@ -61,16 +62,19 @@
                         downloadProgress:nil
                        completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
                            __strong __typeof(weakSelf)strongSelf = weakSelf;
-                           SLResponse *slResponse = [SLResponse responseWithSessionDataTask:dataTask target:strongSelf.target request:request response:response responseObject:responseObject error:error];
-                           
-                           //didReceiveResponse
-                           [strongSelf.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                               if ([obj respondsToSelector:@selector(didReceiveResponse:)]) {
-                                   [obj didReceiveResponse:slResponse];
-                               }
-                           }];
-                           
-                           
+                           SLResponse *slResponse = [SLResponse responseWithSessionDataTask:dataTask target:strongSelf.target plugins:weakSelf.plugins request:request response:response responseObject:responseObject error:error];
+                           if (success || failure) {
+                               [slResponse dealResponseSuccess:success failure:failure];
+                           }
+                           else {
+                               //didReceiveResponse
+                               [strongSelf.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                                   if ([obj respondsToSelector:@selector(didReceiveResponse:)]) {
+                                       [obj didReceiveResponse:slResponse];
+                                   }
+                               }];
+                               [slResponse dealResponseComplete:complete fail:fail];
+                           }
                        }];
     [dataTask resume];
     return dataTask;

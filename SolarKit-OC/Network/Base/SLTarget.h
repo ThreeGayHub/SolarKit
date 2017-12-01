@@ -22,6 +22,8 @@
 
 @property (nonatomic, assign) SLHTTPMethod httpMethod;
 
+@property (nonatomic, assign) NSJSONReadingOptions jsonReadingOptions;
+
 @property (nonatomic, readonly, nullable) NSString *statusCodeKey;
 
 @property (nonatomic, readonly) NSInteger successStatusCode;

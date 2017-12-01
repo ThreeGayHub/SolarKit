@@ -28,6 +28,7 @@
 - (nullable NSURLSessionDataTask *)send:(nullable SLRequest *)request;
 - (nullable NSURLSessionDataTask *)send:(nullable SLRequest *)request complete:(nullable SLManagerComplete)complete;
 - (nullable NSURLSessionDataTask *)send:(nullable SLRequest *)request complete:(nullable SLManagerComplete)complete fail:(nullable SLManagerFail)fail;
+//original response
 - (nullable NSURLSessionDataTask *)send:(nullable SLRequest *)request success:(nullable SLManagerSuccess)success;
 - (nullable NSURLSessionDataTask *)send:(nullable SLRequest *)request success:(nullable SLManagerSuccess)success failure:(nullable SLManagerFailure)failure;
 

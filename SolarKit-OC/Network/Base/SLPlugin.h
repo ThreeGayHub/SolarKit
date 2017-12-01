@@ -17,8 +17,8 @@
 //5.decryption
 //6.jsonToModel
 
-#import "SLRequest.h"
-#import "SLResponse.h"
+@class SLRequest;
+@class SLResponse;
 
 @protocol SLPlugin <NSObject>
 
