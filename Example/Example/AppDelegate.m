@@ -22,7 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    NSString *URLString = @"http://neptune.xnph66.com/update.json";
     NSString *URLString = @"http://ounl8txt0.bkt.clouddn.com/update.json";
 
     [SLWebCache shared].debug = YES;
