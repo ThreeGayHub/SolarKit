@@ -31,15 +31,12 @@
         
     }];
     
-    
-    
-    SLWebRoute *route = [SLWebRoute routeWithURIString:@"xnph://xnph66.com/rexxar/forgotpwd/sendcode" parameters:@{@":userAccount" : @"caojiba71493847983"} ];
-    
-    NSLog(@"%@", route.URL);
-    
-    
     UIWebView *webPool = [[UIWebView alloc]initWithFrame:CGRectZero];
     [webPool loadHTMLString:@"" baseURL:nil];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:0.1],
+                                                           NSForegroundColorAttributeName: [UIColor clearColor]}
+                                                forState:UIControlStateNormal];
     
     return YES;
 }

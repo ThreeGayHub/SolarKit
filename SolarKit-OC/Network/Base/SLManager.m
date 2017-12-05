@@ -128,8 +128,8 @@
     va_start(args, plugin);
     if (plugin) {
         [self.plugins addObject:plugin];
-        while (va_arg(args, id<SLPlugin>)) {
-            id<SLPlugin> nextPlugin = va_arg(args, id<SLPlugin>);
+        id<SLPlugin> nextPlugin;
+        while ((nextPlugin = va_arg(args, id<SLPlugin>))) {
             [self.plugins addObject:nextPlugin];
         }
     }

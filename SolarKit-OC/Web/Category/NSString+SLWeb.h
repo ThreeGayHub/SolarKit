@@ -12,4 +12,18 @@
 
 @property (nonatomic, readonly) BOOL isHTTP;
 
+/**
+ * url 字符串编码
+ */
+- (NSString *)encodingStringUsingURLEscape;
+
+/**
+ * url 字符串解码
+ */
+- (NSString *)decodingStringUsingURLEscape;
+
+@property (nonatomic, readonly) NSDictionary *dictionary;
+
+@property (nonatomic, readonly) NSDictionary *queryDictionary;
+
 @end
