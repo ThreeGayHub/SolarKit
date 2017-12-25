@@ -118,7 +118,11 @@
     }];
     
     id response = [self.responseObject objectForKey:self.target.responseDataKey];
-    if (complete) complete(response);
+    if (complete) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            complete(response);
+        });
+    }
 }
 
 - (void)dealResponseFail:(SLManagerFail)fail {
@@ -129,7 +133,11 @@
         }
     }];
     
-    if (fail) fail(self.error);
+    if (fail) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            fail(self.error);
+        });
+    }
 }
 
 - (void)jsonToObjectWithFail:(SLManagerFail)fail {
