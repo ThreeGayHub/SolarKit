@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
-#if DEBUG
+#if !RELEASE
 #define SLNLog(format, ...) printf("\n[%s]\n------------------- SLNetwork ------------------ \n%s\n------------------------------------------------\n", __TIME__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 #else
 #define SLNLog(format, ...)

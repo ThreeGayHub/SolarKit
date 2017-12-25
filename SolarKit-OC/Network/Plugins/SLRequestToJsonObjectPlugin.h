@@ -1,5 +1,5 @@
 //
-//  SLRequestToDictionaryPlugin.h
+//  SLRequestToJsonObjectPlugin.h
 //  Example
 //
 //  Created by wyh on 2017/11/24.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "SLNetwork.h"
 
-@interface SLRequestToDictionaryPlugin : NSObject <SLPlugin>
+@interface SLRequestToJsonObjectPlugin : NSObject <SLPlugin>
 
 @end

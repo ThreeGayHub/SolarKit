@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class SLWebRoute;
-@protocol SLWidget;
+@class SLWidget;
 
 @interface SLWebViewController : UIViewController
 
@@ -22,7 +22,7 @@
 
 - (instancetype)initWithURL:(NSURL *)URL paramters:(NSDictionary *)paramters;
 
-- (void)addWidgets:(id<SLWidget>)widget, ...;
+- (void)addWidgets:(SLWidget *)widget, ...;
 
 - (NSString *)callJavaScript:(NSString *)function parameters:(NSDictionary *)parameters;
 

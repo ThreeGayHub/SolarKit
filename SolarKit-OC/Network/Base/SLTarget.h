@@ -52,10 +52,10 @@
  }
 
  As above, we can set
- [statusCodeKey: code]
- [successStatusCode: 200]
- [messageKey: message]
- [responseDataKey: data]
+ statusCodeKey = @"code"
+ successStatusCode = 200
+ messageKey = @"message"
+ responseDataKey = @"data"
  */
 - (void)setStatusCodeKey:(nullable NSString *)statusCodeKey
        successStatusCode:(NSInteger)successStatusCode

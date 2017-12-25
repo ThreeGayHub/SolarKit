@@ -8,16 +8,11 @@
 
 #import "SLWidget.h"
 
-static NSMutableArray *_widgets;
+NSString * const SLNavigationBarWidgetPath = @"/widget/navBar";
+NSString * const SLAlertWidgetPath = @"/widget/alertDialog";
+
+static NSMutableDictionary<NSString *, SLWidget *> *_widgetDictionary;
 static NSString *_widgetScheme;
-
-@interface SLWidget ()
-
-@property (nonatomic, strong) NSMutableArray *widgets;
-
-@property (nonatomic, strong) NSString *widgetScheme;
-
-@end
 
 @implementation SLWidget
 
@@ -26,35 +21,65 @@ static NSString *_widgetScheme;
 }
 
 + (NSString *)widgetScheme {
+    if (_widgetScheme) return _widgetScheme;
+    
+    _widgetScheme = @"slwidget";
     return _widgetScheme;
 }
 
-+ (void)addWidgets:(id<SLWidget>)widget, ... {
++ (void)addWidgets:(SLWidget *)widget, ... {
     va_list args;
     va_start(args, widget);
     if (widget) {
-        [SLWidget.widgets addObject:widget];
-        id<SLWidget> nextWidget;
-        while ((nextWidget = va_arg(args, id<SLWidget>))) {
-            [SLWidget.widgets addObject:nextWidget];
+        [self addWidget:widget];
+        SLWidget* nextWidget;
+        while ((nextWidget = va_arg(args, SLWidget *))) {
+            [self addWidget:nextWidget];
         }
     }
     va_end(args);
 }
 
-+ (NSMutableArray *)widgets {
-    if (_widgets) return _widgets;
-    
-    _widgets = [NSMutableArray arrayWithCapacity:50];
-    return _widgets;    
++ (void)addWidget:(SLWidget *)widget {
+    if (![SLWidget.widgetDictionary.allKeys containsObject:widget.path]) {
+        [SLWidget.widgetDictionary setObject:widget forKey:widget.path];
+    }
 }
 
++ (NSMutableDictionary<NSString *, SLWidget *> *)widgetDictionary {
+    if (_widgetDictionary) return _widgetDictionary;
+    
+    _widgetDictionary = [NSMutableDictionary dictionaryWithCapacity:50];
+    return _widgetDictionary;
+}
+
+#pragma mark - Init
+
++ (instancetype)widgetWithPath:(NSString *)path {
+    return [[self alloc] initWithPath:path];
+}
+
+- (instancetype)initWithPath:(NSString *)path
+{
+    self = [super init];
+    if (self) {
+        _path = path;
+    }
+    return self;
+}
+
+#pragma mark - SLWidget
+
 - (BOOL)canPerformWithURL:(NSURL *)URL {
-    return YES;
+    BOOL isCanPerform = [URL.path isEqualToString:self.path];
+    if (!isCanPerform) {
+        NSLog(@"Widget can't performWithURL:\n%@", URL);
+    }
+    return isCanPerform;
 }
 
 - (void)performWithURL:(NSURL *)URL inController:(SLWebViewController *)controller {
-    
+    NSLog(@"Widget performWithURL:\n%@", URL);
 }
 
 @end

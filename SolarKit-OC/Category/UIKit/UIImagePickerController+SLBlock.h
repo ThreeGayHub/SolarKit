@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, SLImagePickerType) {
     SLImagePickerTypeTakePhoto,     //allowsEditing
     SLImagePickerTypeVideo,         //cameraDevice, videoQuality
@@ -15,9 +17,9 @@ typedef NS_ENUM(NSUInteger, SLImagePickerType) {
     SLImagePickerTypeAlbumTimeline, //allowsEditing
 };
 
-typedef void(^SLImagePickerControllerBlock)(NSData *mediaData);
+typedef void(^SLImagePickerControllerBlock)(NSData * _Nullable mediaData, NSError * _Nullable error);
 
-typedef void(^SLImagePickerControllerVideoBlock)(NSData *mediaData, NSUInteger seconds);
+typedef void(^SLImagePickerControllerVideoBlock)(NSData * _Nullable mediaData, NSUInteger seconds, NSError * _Nullable error);
 
 @interface UIImagePickerController (SLBlock)
 
@@ -25,10 +27,13 @@ typedef void(^SLImagePickerControllerVideoBlock)(NSData *mediaData, NSUInteger s
 
 + (instancetype)pickerWithType:(SLImagePickerType)type;
 
-- (void)selected:(SLImagePickerControllerBlock)block;
+- (void)selected:(nullable SLImagePickerControllerBlock)block;
 
-- (void)selectedVideo:(SLImagePickerControllerVideoBlock)block;
+- (void)selectedVideo:(nullable SLImagePickerControllerVideoBlock)block;
 
-- (void)showInVC:(UIViewController *)vc;
+- (void)showInVC:(nullable UIViewController *)vc;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

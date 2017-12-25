@@ -9,26 +9,26 @@
 #import "SLRequestInterceptor.h"
 #import "SLURLSessionDemux.h"
 
-static NSMutableArray<id<SLDecorator>> *_decorators;
+static NSMutableArray<SLDecorator *> *_decorators;
 
 @implementation SLRequestInterceptor
 
 #pragma mark - Properties
 
-+ (NSMutableArray<id<SLDecorator>> *)decorators {
++ (NSMutableArray<SLDecorator *> *)decorators {
     if (_decorators) return _decorators;
         
     _decorators = [NSMutableArray arrayWithCapacity:50];
     return _decorators;
 }
 
-+ (void)addDecorators:(id<SLDecorator>)decorator, ... {
++ (void)addDecorators:(SLDecorator *)decorator, ... {
     va_list args;
     va_start(args, decorator);
     if (decorator) {
         [SLRequestInterceptor.decorators addObject:decorator];
-        id<SLDecorator> nextDecorator;
-        while ((nextDecorator = va_arg(args, id<SLDecorator>))) {
+        SLDecorator * nextDecorator;
+        while ((nextDecorator = va_arg(args, SLDecorator *))) {
             [SLRequestInterceptor.decorators addObject:nextDecorator];
         }
     }
@@ -48,7 +48,7 @@ static NSMutableArray<id<SLDecorator>> *_decorators;
     return NO;
   }
 
-  for (id<SLDecorator> decorator in _decorators) {
+  for (SLDecorator * decorator in _decorators) {
     if ([decorator shouldInterceptRequest:request]){
       return YES;
     }
@@ -66,8 +66,8 @@ static NSMutableArray<id<SLDecorator>> *_decorators;
     newRequest = [self.request mutableCopy];
   }
 
-  for (id<SLDecorator> decorator in _decorators) {
-    if ([decorator shouldInterceptRequest:self.request]) {
+  for (SLDecorator * decorator in _decorators) {
+    if ([decorator respondsToSelector:@selector(shouldInterceptRequest:)] && [decorator shouldInterceptRequest:self.request]) {
       if ([decorator respondsToSelector:@selector(prepareWithRequest:)]) {
         [decorator prepareWithRequest:self.request];
       }

@@ -30,12 +30,13 @@
 - (NSURLSessionDataTask *)send:(SLRequest *)request complete:(SLManagerComplete)complete fail:(SLManagerFail)fail success:(SLManagerSuccess)success failure:(SLManagerFailure)failure {
     request.target = self.target;
     
-    //prepareRequest:showHUD, RequestToDictionary, RequestLog, Encryption of parameters
     [self.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj respondsToSelector:@selector(prepareRequest:)]) {
             [obj prepareRequest:request];
         }
     }];
+    
+    SLNLog(@"URL:%@ \nParameters:\n %@", request.urlString, request.parameters);
     
     NSError *serializationError = nil;
     SLHTTPMethod httpMethod = request.httpMethod ?: self.target.httpMethod;
@@ -67,12 +68,6 @@
                                [slResponse dealResponseSuccess:success failure:failure];
                            }
                            else {
-                               //didReceiveResponse
-                               [strongSelf.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                                   if ([obj respondsToSelector:@selector(didReceiveResponse:)]) {
-                                       [obj didReceiveResponse:slResponse];
-                                   }
-                               }];
                                [slResponse dealResponseComplete:complete fail:fail];
                            }
                        }];

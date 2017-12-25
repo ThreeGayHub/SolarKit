@@ -20,7 +20,7 @@
 
 + (nullable instancetype)customManager:(nullable SLTarget *)target;
 
-- (void)addPlugin:(nullable id <SLPlugin>)plugin, ...;
+- (void)addPlugin:(nullable id <SLPlugin>)plugin, ... NS_REQUIRES_NIL_TERMINATION;
 
 /**
  *  send

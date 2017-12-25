@@ -18,6 +18,7 @@ typedef void(^SLWebCacheFail)(NSError *error);
 
 + (instancetype)shared;
 
+- (void)updateSuccess:(SLWebCacheSuccess)success fail:(SLWebCacheFail)fail;
 - (void)updateWithURLString:(NSString *)URLString success:(SLWebCacheSuccess)success fail:(SLWebCacheFail)fail;
 
 //debug模式，每次启动都删除本地资源，走下载全量包流程

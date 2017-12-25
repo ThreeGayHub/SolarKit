@@ -13,6 +13,9 @@
 #import "NSDictionary+SLWeb.h"
 #import "NSString+SLWeb.h"
 
+extern NSString * const SLNavigationBarWidgetPath;
+extern NSString * const SLAlertWidgetPath;
+
 /**
  * `SLWidget` 是一个 Widget 协议。
  * 实现 SLWidget 协议的类将完成一个 Web 对 Native 的功能调用。
@@ -38,10 +41,18 @@
 
 @interface SLWidget : NSObject <SLWidget>
 
-@property (class, nonatomic, copy)NSString *widgetScheme;
+@property (class, nonatomic, copy) NSString *widgetScheme;
 
-@property (class, nonatomic, readonly)NSMutableArray *widgets;
+@property (class, nonatomic, readonly)NSMutableDictionary<NSString *, SLWidget *> *widgetDictionary;
 
-+ (void)addWidgets:(id <SLWidget>)widget, ...;
++ (void)addWidgets:(SLWidget *)widget, ...;
+
++ (instancetype)widgetWithPath:(NSString *)path;
+
+@property (nonatomic, readonly) NSString *path;
+
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
+- (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 @end

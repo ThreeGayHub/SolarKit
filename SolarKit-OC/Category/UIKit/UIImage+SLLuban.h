@@ -13,6 +13,8 @@
 
 @property (nonatomic, readonly) UIImage *compressImage;
 
+- (UIImage *)compressImageWithWatermark:(UIImage *)watermarkImage;
+
 - (UIImage *)compressToScale:(float)scale;
 
 - (UIImage *)compressToSize:(CGSize)newSize;

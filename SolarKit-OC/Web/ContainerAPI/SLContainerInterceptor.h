@@ -10,7 +10,7 @@
 
 #import "SLURLProtocol.h"
 
-@protocol SLContainerAPI;
+@class SLContainerAPI;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,9 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  这个侦听器所有的请求模仿器数组，该数组成员是符合 `SLContainerAPI` 协议的对象，即一组请求模仿器。
  */
-@property (class, nonatomic, readonly, nullable) NSMutableArray<id<SLContainerAPI>> *containerAPIs;
+@property (class, nonatomic, readonly, nullable) NSMutableDictionary<NSString *, SLContainerAPI *> *containerAPIDictionary;
 
-+ (void)addContainerAPIs:(id <SLContainerAPI>)containerAPI, ...;
++ (void)addContainerAPIs:(SLContainerAPI *)containerAPI, ...;
 
 @end
 

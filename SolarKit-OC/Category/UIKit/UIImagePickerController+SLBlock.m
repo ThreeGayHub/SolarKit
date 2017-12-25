@@ -20,6 +20,12 @@ typedef NS_ENUM(NSUInteger, SLMediaAuthorizationType) {
 
 typedef void(^SLImagePickerControllerEmptyBlock)(void);
 
+@interface NSError (SLImagePickerController_Private)
+
++ (instancetype)errorWithCode:(NSInteger)code message:(NSString *)message;
+
+@end
+
 @interface UIImagePickerController (SLImagePickerController_Private) <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, assign) SLImagePickerType imagePickerType;
@@ -131,28 +137,42 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
     }
     
     if (self.selectedBlock) {
-        self.selectedBlock(data);
+        NSLog(@"Length:%lu byte", [data length]);
+        self.selectedBlock(data, nil);
     }
     if (self.selectedVideoBlock) {
-        self.selectedVideoBlock(data, seconds);
+        NSLog(@"Length:%lu byte\nSeconds:%lu", [data length], seconds);
+        self.selectedVideoBlock(data, seconds, nil);
     }
-    
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo {
     if (error) {
-        NSLog(@"videoPath = %@, error = %@, contextInfo = %@", videoPath, error, contextInfo);
+        NSLog(@"videoPath:%@ \ncode:%ld \nmessage:%@ \ncontextInfo:%@", videoPath, error.code, error.localizedDescription, contextInfo);
+        if (self.selectedVideoBlock) {
+            self.selectedVideoBlock(nil, 0, error);
+        }
     }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     if (error) {
-        NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+        NSLog(@"image:%@ \ncode:%ld \nmessage:%@ \ncontextInfo:%@", image, error.code, error.localizedDescription, contextInfo);
+        if (self.selectedBlock) {
+            self.selectedBlock(nil, error);
+        }
     }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    NSError *error = [NSError errorWithCode:-1 message:@"Cancel"];
+    if (self.selectedBlock) {
+        self.selectedBlock(nil, error);
+    }
+    if (self.selectedVideoBlock) {
+        self.selectedVideoBlock(nil, 0, error);
+    }
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -201,7 +221,7 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
             if (block) block();
         }
             break;
-
+            
         default:
             break;
     }
@@ -221,7 +241,7 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
                     }
                 });
             }];
-
+            
         }
             break;
             
@@ -255,7 +275,7 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
 
 - (void)showErrorWithType:(SLMediaAuthorizationType)type {
     NSString *title = [self.authorizationNameDictionary[@(type)] stringByAppendingString:@"被禁用"];
-    NSString *message = [NSString stringWithFormat:@"请到[设置]-[隐私]-[%@]中允许[%@]使用相机", self.authorizationNameDictionary[@(type)], [self appName]];
+    NSString *message = [NSString stringWithFormat:@"请到[设置]-[隐私]-[%@]中允许[%@]使用%@", self.authorizationNameDictionary[@(type)], [self appName], self.authorizationNameDictionary[@(type)]];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
     [alertView show];
 }
@@ -296,7 +316,6 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
     
     self.sourceType = [UIImagePickerController getSourceTypeWithType:imagePickerType];
     self.delegate = self;
-    
     switch (imagePickerType) {
         case SLImagePickerTypeTakePhoto: {
             self.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
@@ -344,3 +363,16 @@ typedef void(^SLImagePickerControllerEmptyBlock)(void);
 }
 
 @end
+
+@implementation NSError (SLImagePickerController_Private)
+
++ (instancetype)errorWithCode:(NSInteger)code message:(NSString *)message {
+    return [NSError errorWithDomain:[self bundleID] code:code userInfo:@{NSLocalizedDescriptionKey : message ?:@""}];
+}
+
++ (NSString *)bundleID {
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+}
+
+@end
+

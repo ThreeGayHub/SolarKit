@@ -14,7 +14,6 @@
 
 @interface SLResponse : NSObject
 
-
 + (nullable instancetype)responseWithSessionDataTask:(nullable NSURLSessionDataTask *)dataTask
                                               target:(nullable SLTarget *)target
                                              plugins:(nullable NSMutableArray<id<SLPlugin>> *)plugins

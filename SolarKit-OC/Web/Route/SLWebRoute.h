@@ -26,6 +26,6 @@
 
 @property (nonatomic, readonly) NSURL *URL;
 
-@property (nonatomic, readonly) NSMutableURLRequest *mutableURLRequest;
+@property (nonatomic, strong) NSMutableURLRequest *mutableURLRequest;
 
 @end

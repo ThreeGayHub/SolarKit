@@ -32,6 +32,12 @@
 //  埋点给Plugin注入，根据BaseUrl进行不同的拦截配置
 //  成功失败bodyKey如何处理？
 
+
+//AFSecurityPolicy*policy=[AFSecurityPolicypolicyWithPinningMode:AFSSLPinningModePublicKey];policy.validatesDomainName=YES;AFHTTPSessionManager*manager=[AFHTTPSessionManagermanager];manager.securityPolicy=policy;manager.requestSerializer.cachePolicy=NSURLRequestReloadIgnoringLocalCacheData;
+//CA 防中间人攻击
+
+
+
 #ifndef SLNetwork_h
 #define SLNetwork_h
 

@@ -75,14 +75,14 @@ static NSDictionary *sRegisteredClassCounter;
   __block BOOL result;
   dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
   dispatch_barrier_sync(globalQueue, ^{
-    NSInteger countForClass = [self _frd_countForRegisteredClass:clazz];
+    NSInteger countForClass = [self _sl_countForRegisteredClass:clazz];
     if (countForClass <= 0) {
       result = [NSURLProtocol registerClass:clazz];
       if (result) {
-        [self _frd_setCount:1 forRegisteredClass:clazz];
+        [self _sl_setCount:1 forRegisteredClass:clazz];
       }
     } else {
-      [self _frd_setCount:countForClass + 1 forRegisteredClass:clazz];
+      [self _sl_setCount:countForClass + 1 forRegisteredClass:clazz];
       result = YES;
     }
   });
@@ -97,20 +97,20 @@ static NSDictionary *sRegisteredClassCounter;
   dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
   dispatch_barrier_async(globalQueue, ^{
 
-    NSInteger countForClass = [self _frd_countForRegisteredClass:clazz] - 1;
+    NSInteger countForClass = [self _sl_countForRegisteredClass:clazz] - 1;
     if (countForClass < 0) {
       return;
     }
     if (countForClass == 0) {
       [NSURLProtocol unregisterClass:clazz];
     }
-    [self _frd_setCount:countForClass forRegisteredClass:clazz];
+    [self _sl_setCount:countForClass forRegisteredClass:clazz];
   });
 }
 
 #pragma mark - Private methods
 
-+ (NSInteger)_frd_countForRegisteredClass:(Class)clazz
++ (NSInteger)_sl_countForRegisteredClass:(Class)clazz
 {
   NSString *key = NSStringFromClass(clazz);
   if (key && sRegisteredClassCounter && sRegisteredClassCounter[key]) {
@@ -121,7 +121,7 @@ static NSDictionary *sRegisteredClassCounter;
   }
 }
 
-+ (void)_frd_setCount:(NSInteger)count forRegisteredClass:(Class)clazz
++ (void)_sl_setCount:(NSInteger)count forRegisteredClass:(Class)clazz
 {
   NSString *key = NSStringFromClass(clazz);
   NSMutableDictionary *mutDict = [sRegisteredClassCounter mutableCopy];

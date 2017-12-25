@@ -12,6 +12,10 @@
 #import "SLWidget.h"
 #import "SLContainerInterceptor.h"
 #import "SLRequestInterceptor.h"
+#import "SLWebCache.h"
+
+#import "SLLogContainerAPI.h"
+#import "SLOpenWebVCContainerAPI.h"
 
 #import "SLRequestDecorator.h"
 
@@ -21,6 +25,7 @@
 #import "UIWebView+SLGobackGesture.h"
 #import "NSBundle+SLWeb.h"
 #import "NSDictionary+SLWeb.h"
+#import "UIView+SLWebFailView.h"
 
 @interface SLWebViewController () <UIWebViewDelegate>
 
@@ -30,7 +35,7 @@
 
 @property (nonatomic, strong) SLWebRoute *route;
 
-@property (nonatomic, strong) NSMutableArray *widgets;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, SLWidget *> *widgetDictionary;
 
 @end
 
@@ -65,7 +70,13 @@
     
     [self registerInterceptor];
 
-    [self.webView loadRequest:self.route.mutableURLRequest];
+    [self reloadWebView];
+}
+
+- (void)reloadWebView {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.webView loadRequest:self.route.mutableURLRequest];
+    });
 }
 
 - (void)setUI {
@@ -79,20 +90,29 @@
 }
 
 - (void)registerInterceptor {
-    SLNavigationBarWidget *naviWidget = [[SLNavigationBarWidget alloc] init];
-    SLAlertWidget *alertWidget = [[SLAlertWidget alloc] init];
-    [SLWidget addWidgets:naviWidget, alertWidget];
+    SLNavigationBarWidget *naviWidget = [SLNavigationBarWidget widgetWithPath:SLNavigationBarWidgetPath];
+    SLAlertWidget *alertWidget = [SLAlertWidget widgetWithPath:SLAlertWidgetPath];
+    [SLWidget addWidgets:naviWidget, alertWidget, nil];
     
     SLRequestDecorator *requestDecorator = [[SLRequestDecorator alloc] init];
-    [SLRequestInterceptor addDecorators:requestDecorator];
+    [SLRequestInterceptor addDecorators:requestDecorator, nil];
     [SLURLProtocol registerSLProtocolClass:[SLRequestInterceptor class]];
+    [SLRequestInterceptor.decorators enumerateObjectsUsingBlock:^(SLDecorator * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.controller = self;
+    }];
     
+    SLLogContainerAPI *logContainerAPI = [SLLogContainerAPI containerAPIWithPath:SLLogContainerAPIPath];
+    SLOpenWebVCContainerAPI *openWebVCContainerAPI = [SLOpenWebVCContainerAPI containerAPIWithPath:SLOpenWebVCContainerAPIPath];
+    [SLContainerInterceptor addContainerAPIs:logContainerAPI, openWebVCContainerAPI, nil];
     [SLURLProtocol registerSLProtocolClass:[SLContainerInterceptor class]];
+    [SLContainerInterceptor.containerAPIDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, SLContainerAPI * _Nonnull obj, BOOL * _Nonnull stop) {
+        obj.controller = self;
+    }];
 }
 
 - (void)updateNavigation {
     self.navigationItem.leftBarButtonItem.customView.hidden = self.navigationController.viewControllers.count == 1 && !self.webView.canGoBack;
-    self.navigationController.interactivePopGestureRecognizer.enabled = self.webView.snapShots.count == 1;
+    self.navigationController.interactivePopGestureRecognizer.enabled = self.webView.snapShots.count <= 1;
 }
 
 #pragma mark - UIWebViewDelegate
@@ -100,6 +120,13 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     //navigation & gobackGesture
     NSLog(@"\nURL:%@\nParameters:%@", request.URL.absoluteString, webView.request.HTTPBody);
+    
+    if (request.URL.isFileURL && ![request.URL.absoluteString isEqualToString:self.route.mutableURLRequest.URL.absoluteString]) {
+        self.route.mutableURLRequest = request.mutableCopy;//切换一下，方便reload
+    }
+    
+    [self updateNavigation];
+    
     switch (navigationType) {
         case UIWebViewNavigationTypeLinkClicked:
         case UIWebViewNavigationTypeFormSubmitted:
@@ -110,18 +137,17 @@
 
         default: break;
     }
-    [self updateNavigation];
     
     //widget
     if ([request.URL.scheme isEqualToString:[SLWidget widgetScheme]]) {
-        for (id<SLWidget> widget in self.widgets) {
-            if ([widget canPerformWithURL:request.URL]) {
-                [widget performWithURL:request.URL inController:self];
-                NSLog(@"Rexxar callback handle: %@", request.URL);
-                return NO;
-            }
+        SLWidget *widget = SLWidget.widgetDictionary[request.URL.path];
+        if ([widget canPerformWithURL:request.URL]) {
+            [widget performWithURL:request.URL inController:self];
         }
-        NSLog(@"Rexxar callback can not handle: %@", request.URL);
+        else {
+            NSLog(@"NO Widget:\n%@", request.URL);
+        }
+        return NO;
     }
     return YES;
 }
@@ -132,14 +158,30 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self updateNavigation];
-//    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [webView removeFailView];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [self updateNavigation];
+    self.title = @"加载失败";
     
+    [self showErrorView];
 }
 
 #pragma mark - Action
+
+- (void)showErrorView {
+    __weak typeof(self) weakSelf = self;
+    [self.webView addFailViewWithImageName:@"SLWebFailView" text:@"点击重新加载" click:^{
+        [[SLWebCache shared] updateSuccess:^{
+            __weak typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf reloadWebView];
+        } fail:^(NSError *error) {
+            __weak typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf reloadWebView];
+        }];
+    }];
+}
 
 - (void)backBarButtonItemAction:(UIButton *)backBarButton {
     if (self.webView.canGoBack) {
@@ -156,17 +198,23 @@
     }
 }
 
-- (void)addWidgets:(id<SLWidget>)widget, ... {
+- (void)addWidgets:(SLWidget *)widget, ... {
     va_list args;
     va_start(args, widget);
     if (widget) {
-        [self.widgets addObject:widget];
-        while (va_arg(args, id<SLWidget>)) {
-            id<SLWidget> nextWidget = va_arg(args, id<SLWidget>);
-            [self.widgets addObject:nextWidget];
+        [self addWidget:widget];
+        SLWidget *nextWidget;
+        while ((nextWidget = va_arg(args, SLWidget *))) {
+            [self addWidget:nextWidget];
         }
     }
     va_end(args);
+}
+
+- (void)addWidget:(SLWidget *)widget {
+    if (![self.widgetDictionary.allKeys containsObject:widget.path]) {
+        [self.widgetDictionary setObject:widget forKey:widget.path];
+    }
 }
 
 - (NSString *)callJavaScript:(NSString *)function parameters:(NSDictionary *)parameters {
@@ -221,11 +269,11 @@
     return _webView;
 }
 
-- (NSMutableArray *)widgets {
-    if (_widgets) return _widgets;
+- (NSMutableDictionary<NSString *, SLWidget *> *)widgetDictionary {
+    if (_widgetDictionary) return _widgetDictionary;
     
-    _widgets = [NSMutableArray arrayWithArray:SLWidget.widgets];
-    return _widgets;
+    _widgetDictionary = [NSMutableDictionary dictionaryWithDictionary:SLWidget.widgetDictionary];
+    return _widgetDictionary;
 }
 
 #pragma mark - Memory

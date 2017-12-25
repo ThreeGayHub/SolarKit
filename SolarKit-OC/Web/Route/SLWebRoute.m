@@ -24,8 +24,6 @@
 
 @property (nonatomic, strong) NSURL *URL;
 
-@property (nonatomic, strong) NSMutableURLRequest *mutableURLRequest;
-
 @end
 
 @implementation SLWebRoute

@@ -23,10 +23,28 @@
 @protocol SLPlugin <NSObject>
 
 @optional
+
+/**
+ prepareRequest
+ 
+ RequestToDictionary, Encryption
+ */
 - (void)prepareRequest:(SLRequest *)request;
 
+
+/**
+ willSendRequest
+ 
+ Custom Request
+ */
 - (void)willSendRequest:(NSMutableURLRequest *)request;
 
+
+/**
+ didReceiveResponse
+
+ Decryption
+ */
 - (void)didReceiveResponse:(SLResponse *)response;
 
 - (void)responseSuccess:(SLResponse *)response;

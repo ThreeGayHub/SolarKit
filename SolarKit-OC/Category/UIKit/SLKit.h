@@ -29,6 +29,8 @@
 
 #import "UIDevice+SLKit.h"
 
+#import "UIImage+SLKit.h"
+
 #import "UIImage+SLLuban.h"
 
 #import "UIImagePickerController+SLBlock.h"

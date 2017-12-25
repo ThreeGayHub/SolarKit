@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface SLRequestInterceptor : SLURLProtocol
 
-@property (class, nonatomic, readonly, nullable) NSMutableArray<id<SLDecorator>> *decorators;
+@property (class, nonatomic, readonly, nullable) NSMutableArray<SLDecorator *> *decorators;
 
-+ (void)addDecorators:(id <SLDecorator>)decorator, ...;
++ (void)addDecorators:(SLDecorator *)decorator, ...;
 
 @end
 

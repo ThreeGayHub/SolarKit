@@ -10,7 +10,23 @@
 #import "NSData+SLWeb.h"
 #import "NSString+SLWeb.h"
 
+NSString * const SLLogContainerAPIPath = @"/api/log";
+NSString * const SLOpenWebVCContainerAPIPath = @"/api/openWebview";
+
 @implementation SLContainerAPI
+
++ (instancetype)containerAPIWithPath:(NSString *)path {
+    return [[self alloc] initWithPath:path];
+}
+
+- (instancetype)initWithPath:(NSString *)path
+{
+    self = [super init];
+    if (self) {
+        _path = path;
+    }
+    return self;
+}
 
 - (nullable NSData *)responseData {
     return [NSData data];
@@ -25,7 +41,7 @@
 }
 
 - (BOOL)shouldInterceptRequest:(nonnull NSURLRequest *)request {
-    return YES;
+    return [request.URL.path isEqualToString:self.path];
 }
 
 - (void)prepareWithRequest:(NSURLRequest *)request {

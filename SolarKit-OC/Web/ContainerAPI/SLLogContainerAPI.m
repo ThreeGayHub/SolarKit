@@ -10,10 +10,6 @@
 
 @implementation SLLogContainerAPI
 
-- (BOOL)shouldInterceptRequest:(NSURLRequest *)request {
-    return [request.URL.path isEqualToString:@"/api/log"];
-}
-
 - (void)performWithRequest:(NSURLRequest *)request {
     [super performWithRequest:request];
     

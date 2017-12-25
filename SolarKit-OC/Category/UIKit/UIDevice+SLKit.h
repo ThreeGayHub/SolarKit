@@ -14,14 +14,14 @@
 
 @interface UIDevice (SLKit)
 
-+ (float)systemVersion;
+@property (class, nonatomic, readonly) float systemVersion;
 
 // Whether the device is iPad/iPad mini.
-+ (BOOL)isPad;
+@property (class, nonatomic, readonly) BOOL isPad;
 
 // Whether the device is a simulator.
-+ (BOOL)isSimulator;
+@property (class, nonatomic, readonly) BOOL isSimulator;
 
-+ (NSString *)deviceName;
+@property (class, nonatomic, readonly) NSString *deviceName;
 
 @end

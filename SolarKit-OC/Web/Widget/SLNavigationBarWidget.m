@@ -19,11 +19,9 @@
 
 @implementation SLNavigationBarWidget
 
-- (BOOL)canPerformWithURL:(NSURL *)URL {
-    return [URL.path isEqualToString:@"/widget/navBar"];
-}
-
 - (void)performWithURL:(NSURL *)URL inController:(SLWebViewController *)controller {
+    [super performWithURL:URL inController:controller];
+
     NSString *dataString = [URL.queryDictionary itemForKey:@"data"];
     NSDictionary *dataDict = dataString.dictionary;
     
@@ -69,7 +67,7 @@
 
 - (void)barButtonItemAction:(UIBarButtonItem *)barButtonItem {
     NSDictionary *dict = self.buttons[barButtonItem.tag];
-    [self.controller.webView stringByEvaluatingJavaScriptFromString:dict[@"action"]];
+    [self.controller callJavaScript:dict[@"action"] parameters:nil];
 }
 
 @end

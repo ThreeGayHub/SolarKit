@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) NSURLSession *session;
 
+@property (nonatomic, copy) NSString *URLString;
+
 @end
 
 @implementation SLWebCache
@@ -43,10 +45,15 @@
 }
 
 - (void)updateWithURLString:(NSString *)URLString success:(SLWebCacheSuccess)success fail:(SLWebCacheFail)fail {
+    _URLString = URLString;
+    [self updateSuccess:success fail:fail];
+}
+
+- (void)updateSuccess:(SLWebCacheSuccess)success fail:(SLWebCacheFail)fail {
+    if (!self.URLString.length) return;
+    
     _success = success;
     _fail = fail;
-    if (!URLString.length) return;
-    
     if ([NSUserDefaults isNewAppVerson]) {
         //把bundle资源移动到document
         [[NSFileManager defaultManager] copyItemAtPath:SLWebUpdateJsonBundlePath toPath:SLWebUpdateJsonDocumentPath error:nil];
@@ -65,10 +72,10 @@
         [NSFileManager removeFileAtPath:SLWebResourceDocumentPath];
     }
     
-    URLString = [NSString stringWithFormat:@"%@?t=%@", URLString, [NSDate date].timestamp];
+    _URLString = [NSString stringWithFormat:@"%@?t=%@", self.URLString, [NSDate date].timestamp];
     
     //0 下载updateJson
-    [self downloadUpdateJsonWithURLString:URLString complete:^(NSDictionary *updateJsonDict) {
+    [self downloadUpdateJsonComplete:^(NSDictionary *updateJsonDict) {
         //下载updateJson成功
         if (updateJsonDict) {
             //1 本地updateJson是否有效
@@ -109,8 +116,8 @@
     }];
 }
 
-- (void)downloadUpdateJsonWithURLString:(NSString *)URLString complete:(void(^)(NSDictionary *updateJsonDict))complete {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]
+- (void)downloadUpdateJsonComplete:(void(^)(NSDictionary *updateJsonDict))complete {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.URLString]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                                        timeoutInterval:60];
     NSURLSessionDownloadTask *task = [self.session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {

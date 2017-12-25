@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSDictionary+SLWeb.h"
+#import "SLWebViewController.h"
+
+extern NSString * const SLLogContainerAPIPath;
+extern NSString * const SLOpenWebVCContainerAPIPath;
 
 @class SLWebViewController;
 
@@ -16,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * `SLContainerAPI` 是一个请求模拟器协议。请求模拟器代表了一个可用于模拟 http 请求的类的协议。
  * 符合该协议的类可以用于模拟 Rexxar-Container 内发出的 Http 请求。
+ * 它是同步的
  */
 @protocol SLContainerAPI <NSObject>
 
@@ -57,6 +61,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) SLWebViewController *controller;
 
 @property (nonatomic, readonly) NSDictionary *bodyDictionary;
+
++ (instancetype)containerAPIWithPath:(NSString *)path;
+@property (nonatomic, readonly) NSString *path;
+
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
+- (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 @end
 

@@ -10,69 +10,63 @@
 #import "NSHTTPURLResponse+Rexxar.h"
 #import "SLContainerAPI.h"
 
-static NSMutableArray<id<SLContainerAPI>> *_containerAPIs;
+static NSMutableDictionary<NSString *, SLContainerAPI *> *_containerAPIDictionary;
 
 @implementation SLContainerInterceptor
 
-+ (void)addContainerAPIs:(id<SLContainerAPI>)containerAPI, ... {
++ (void)addContainerAPIs:(SLContainerAPI *)containerAPI, ... {
     va_list args;
     va_start(args, containerAPI);
     if (containerAPI) {
-        [SLContainerInterceptor.containerAPIs addObject:containerAPI];
-        id<SLContainerAPI> nextContainerAPI;
-        while ((nextContainerAPI = va_arg(args, id<SLContainerAPI>))) {
-            [SLContainerInterceptor.containerAPIs addObject:nextContainerAPI];
+        [self addContainerAPI:containerAPI];
+        SLContainerAPI * nextContainerAPI;
+        while ((nextContainerAPI = va_arg(args, SLContainerAPI *))) {
+            [self addContainerAPI:nextContainerAPI];
         }
     }
     va_end(args);
 }
 
-+ (NSMutableArray<id<SLContainerAPI>> *)containerAPIs {
-    if (_containerAPIs) return _containerAPIs;
++ (void)addContainerAPI:(SLContainerAPI *)containerAPI {
+    if (![SLContainerInterceptor.containerAPIDictionary.allKeys containsObject:containerAPI.path]) {
+        [SLContainerInterceptor.containerAPIDictionary setObject:containerAPI forKey:containerAPI.path];
+    }
+}
+
++ (NSMutableDictionary<NSString *,SLContainerAPI *> *)containerAPIDictionary {
+    if (_containerAPIDictionary) return _containerAPIDictionary;
     
-    _containerAPIs = [NSMutableArray arrayWithCapacity:50];
-    return _containerAPIs;
+    _containerAPIDictionary = [NSMutableDictionary dictionaryWithCapacity:50];
+    return _containerAPIDictionary;
 }
 
 #pragma mark - Implement NSURLProtocol methods
 
-+ (BOOL)canInitWithRequest:(NSURLRequest *)request
-{
-  // 请求不是来自浏览器，不处理
-  if (![request.allHTTPHeaderFields[@"User-Agent"] hasPrefix:@"Mozilla"]) {
-    return NO;
-  }
-
-  for (id<SLContainerAPI> containerAPI in _containerAPIs) {
-    if ([containerAPI shouldInterceptRequest:request]) {
-      return YES;
++ (BOOL)canInitWithRequest:(NSURLRequest *)request {
+    // 请求不是来自浏览器，不处理
+    if (![request.allHTTPHeaderFields[@"User-Agent"] hasPrefix:@"Mozilla"]) {
+        return NO;
     }
-  }
-
-  return NO;
+    
+    SLContainerAPI *containerAPI = _containerAPIDictionary[request.URL.path];
+    return [containerAPI shouldInterceptRequest:request];
 }
 
-- (void)startLoading
-{
-  for (id<SLContainerAPI> containerAPI in _containerAPIs) {
-    if ([containerAPI shouldInterceptRequest:self.request]) {
-
-      if ([containerAPI respondsToSelector:@selector(prepareWithRequest:)]) {
-        [containerAPI prepareWithRequest:self.request];
-      }
-
-      if ([containerAPI respondsToSelector:@selector(performWithRequest:)]) {
-        [containerAPI performWithRequest:self.request];
-      }
-
-      NSData *data = [containerAPI responseData];
-      NSURLResponse *response = [containerAPI responseWithRequest:self.request];
-      [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-      [self.client URLProtocol:self didLoadData:data];
-      [self.client URLProtocolDidFinishLoading:self];
-      break;
+- (void)startLoading {
+    SLContainerAPI *containerAPI = _containerAPIDictionary[self.request.URL.path];
+    if ([containerAPI respondsToSelector:@selector(shouldInterceptRequest:)] && [containerAPI shouldInterceptRequest:self.request]) {
+        if ([containerAPI respondsToSelector:@selector(prepareWithRequest:)]) {
+            [containerAPI prepareWithRequest:self.request];
+        }
+        if ([containerAPI respondsToSelector:@selector(performWithRequest:)]) {
+            [containerAPI performWithRequest:self.request];
+        }
+        NSData *data = [containerAPI responseData];
+        NSURLResponse *response = [containerAPI responseWithRequest:self.request];
+        [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+        [self.client URLProtocol:self didLoadData:data];
+        [self.client URLProtocolDidFinishLoading:self];
     }
-  }
 }
 
 @end

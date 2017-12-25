@@ -10,6 +10,12 @@
 #import "SLTarget.h"
 #import "SLRequest.h"
 
+@interface NSError (SLResponse_Private)
+
++ (instancetype)errorWithCode:(NSInteger)code message:(NSString *)message;
+
+@end
+
 @interface SLResponse ()
 
 
@@ -76,16 +82,43 @@
         [self dealResponseFail:fail];
     }
     else {
-        [self jsonSerializationWithFail:fail];
+        //didReceiveResponse
+        [self.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj respondsToSelector:@selector(didReceiveResponse:)]) {
+                [obj didReceiveResponse:self];
+            }
+        }];
         
-
+        //responseObjectToJsonObject
+        [self jsonToObjectWithFail:fail];
+        SLNLog(@"URL:%@ \nResponse:\n %@", self.request.urlString, self.responseObject);
+        
+        if ([self.responseObject isKindOfClass:[NSDictionary class]]) {
+            NSInteger code = [[self.responseObject objectForKey:self.target.statusCodeKey] integerValue];
+            if (code == self.target.successStatusCode) {
+                [self dealResponseComplete:complete];
+            }
+            else {
+                NSString *message = [self.responseObject objectForKey:self.target.messageKey];
+                if (!self.error) {
+                    self.error = [NSError errorWithCode:code message:message];
+                }
+                [self dealResponseFail:fail];
+            }
+        }
     }
 }
 
 - (void)dealResponseComplete:(SLManagerComplete)complete {
+    //responseSuccess
+    [self.plugins enumerateObjectsUsingBlock:^(id<SLPlugin>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj respondsToSelector:@selector(responseSuccess:)]) {
+            [obj responseSuccess:self];
+        }
+    }];
     
-    
-    
+    id response = [self.responseObject objectForKey:self.target.responseDataKey];
+    if (complete) complete(response);
 }
 
 - (void)dealResponseFail:(SLManagerFail)fail {
@@ -99,7 +132,7 @@
     if (fail) fail(self.error);
 }
 
-- (void)jsonSerializationWithFail:(SLManagerFail)fail {
+- (void)jsonToObjectWithFail:(SLManagerFail)fail {
     if (![self.responseObject isKindOfClass:[NSDictionary class]]) {
         NSError *jsonSerializationError = nil;
         self.responseObject = [NSJSONSerialization JSONObjectWithData:self.responseObject options:self.target.jsonReadingOptions error:&jsonSerializationError];
@@ -108,6 +141,18 @@
             [self dealResponseFail:fail];
         }
     }
+}
+
+@end
+
+@implementation NSError (SLResponse_Private)
+
++ (instancetype)errorWithCode:(NSInteger)code message:(NSString *)message {
+    return [NSError errorWithDomain:[self bundleID] code:code userInfo:@{NSLocalizedDescriptionKey : message ?: @""}];
+}
+
++ (NSString *)bundleID {
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
 }
 
 @end

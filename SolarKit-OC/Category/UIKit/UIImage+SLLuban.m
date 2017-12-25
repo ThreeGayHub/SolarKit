@@ -10,18 +10,17 @@
 
 @implementation UIImage (SLLuban)
 
-- (UIImage *)compressImage {
-    
+- (UIImage *)compressImageWithWatermark:(UIImage *)watermarkImage {
     double size;
     NSData *data = UIImageJPEGRepresentation(self, 1);
-
+    
     NSLog(@"Original Image Size: %f kb", data.length / 1024.0);
     
     int fixelW = (int)self.size.width;
     int fixelH = (int)self.size.height;
     int thumbW = fixelW % 2  == 1 ? fixelW + 1 : fixelW;
     int thumbH = fixelH % 2  == 1 ? fixelH + 1 : fixelH;
-
+    
     double scale = ((double)fixelW/fixelH);
     
     if (scale <= 1 && scale > 0.5625) {
@@ -72,13 +71,17 @@
         size = ((thumbW * thumbH) / (1280.0 * (1280 / scale))) * 500;
         size = size < 100 ? 100 : size;
     }
-
-    return [self _compressWithThumbW:thumbW thumbH:thumbH size:size];
+    
+    return [self _compressWithThumbW:thumbW thumbH:thumbH size:size watermark:watermarkImage];
 }
 
-- (UIImage *)_compressWithThumbW:(int)width thumbH:(int)height size:(double)size {
+- (UIImage *)compressImage {
+    return [self compressImageWithWatermark:nil];
+}
+
+- (UIImage *)_compressWithThumbW:(int)width thumbH:(int)height size:(double)size watermark:(UIImage *)watermarkImage {
     UIImage *thumbImage = [self _fixOrientation];
-    thumbImage = [thumbImage _resizeWithThumbWidth:width thumbHeight:height];
+    thumbImage = [thumbImage _resizeWithThumbWidth:width thumbHeight:height watermark:watermarkImage];
     
     int qualityCompress = 1.0;
     
@@ -95,7 +98,7 @@
     return thumbImage;
 }
 
-- (UIImage *)_resizeWithThumbWidth:(int)width thumbHeight:(int)height {
+- (UIImage *)_resizeWithThumbWidth:(int)width thumbHeight:(int)height watermark:(UIImage *)watermarkImage {
     
     int outW = (int)self.size.width;
     int outH = (int)self.size.height;
@@ -122,6 +125,12 @@
     UIGraphicsBeginImageContext(thumbSize);
     
     [self drawInRect:CGRectMake(0, 0, thumbSize.width, thumbSize.height)];
+    
+    if (watermarkImage) {
+        CGFloat imageMaskWidth = watermarkImage.size.width;
+        CGFloat imageMaskHeight = watermarkImage.size.height;
+        [watermarkImage drawInRect:CGRectMake(thumbSize.width - imageMaskWidth, thumbSize.height - imageMaskHeight, imageMaskWidth, imageMaskHeight)];
+    }
     
     UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

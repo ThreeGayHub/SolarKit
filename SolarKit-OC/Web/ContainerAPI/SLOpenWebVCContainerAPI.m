@@ -10,19 +10,19 @@
 
 @implementation SLOpenWebVCContainerAPI
 
-- (BOOL)shouldInterceptRequest:(NSURLRequest *)request {
-    return [request.URL.path isEqualToString:@"/api/openWebview"];
-}
-
 - (void)performWithRequest:(NSURLRequest *)request {
     [super performWithRequest:request];
 
-    NSString *uri = self.bodyDictionary[@"uri"];
-    NSString *url = self.bodyDictionary[@"url"];
-    NSDictionary *parameters = self.bodyDictionary[@"params"];
-    
-//    NSData *params = [[form rxr_itemForKey:@"params"] dataUsingEncoding:NSUTF8StringEncoding];
-    
+    NSString *URIString = self.bodyDictionary[@"uri"] ? : self.bodyDictionary[@"url"];
+    NSDictionary *params = self.bodyDictionary[@"params"];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    if (params) {
+        [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            [parameters setObject:obj forKey:[@":" stringByAppendingString:key]];
+        }];
+    }
+    SLWebViewController * webVC = [[SLWebViewController alloc] initWithURIString:URIString paramters:parameters];
+    [self.controller.navigationController pushViewController:webVC animated:YES];
 }
 
 @end

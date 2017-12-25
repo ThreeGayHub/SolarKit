@@ -14,7 +14,7 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-#import "SLWebViewController.h"
+#import "SLWeb.h"
 
 @interface ViewController ()
 
@@ -88,7 +88,7 @@
         [actionSheet addDestructiveButton:@"录像" action:^{
             @strongify(self);
             UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeVideo];
-            [picker selectedVideo:^(NSData *mediaData, NSUInteger seconds) {
+            [picker selectedVideo:^(NSData *mediaData, NSUInteger seconds, NSError *error) {
                 NSLog(@"Length:%lu\nSeconds:%lu", [mediaData length], seconds);
             }];
             [picker showInVC:self];
@@ -96,16 +96,16 @@
         [actionSheet addButton:@"照相" action:^{
             @strongify(self);
             UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeTakePhoto];
-            [picker selected:^(NSData *mediaData) {
-                imageView.image = [UIImage imageWithData:mediaData].compressImage;
+            [picker selected:^(NSData *mediaData, NSError *error) {
                 NSLog(@"Length:%lu", [mediaData length]);
+                imageView.image = [[UIImage imageWithData:mediaData] compressImageWithWatermark:[UIImage imageNamed:@"Solar"]];
             }];
             [picker showInVC:self];
         }];
         [actionSheet addButton:@"相册列表" action:^{
             @strongify(self);
             UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeAlbumList];
-            [picker selected:^(NSData *mediaData) {
+            [picker selected:^(NSData *mediaData, NSError *error) {
                 imageView.image = [UIImage imageWithData:mediaData];
                 NSLog(@"Length:%lu", [mediaData length]);
             }];
@@ -114,7 +114,7 @@
         [actionSheet addButton:@"相册时间线" action:^{
             @strongify(self);
             UIImagePickerController *picker = [UIImagePickerController pickerWithType:SLImagePickerTypeAlbumTimeline];
-            [picker selected:^(NSData *mediaData) {
+            [picker selected:^(NSData *mediaData, NSError *error) {
                 imageView.image = [UIImage imageWithData:mediaData];
                 NSLog(@"Length:%lu", [mediaData length]);
             }];
@@ -134,10 +134,12 @@
     [button touchUpInside:^(UIButton *button) {
         NSLog(@"touchUpInside");
         
+        
+        SLWidget.widgetScheme = @"xnph";
         NSString *URI = @"xnph://xnph66.com/rexxar/forgotpwd";
 //        NSString *URI = @"https:www.baidu.com";
         SLWebViewController *webVC = [[SLWebViewController alloc] initWithURIString:URI];
-        [self.navigationController pushVCWithFadeAnimation:webVC];
+        [self.navigationController pushViewController:webVC animated:YES];
         
     }];
     

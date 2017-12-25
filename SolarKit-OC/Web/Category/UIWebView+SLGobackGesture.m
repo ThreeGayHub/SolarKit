@@ -108,7 +108,7 @@
     if (request && ![request.URL.absoluteString isEqualToString:@"about:blank"] && ![request.URL.absoluteString isEqualToString:lastRequest.URL.absoluteString] && request.URL.isFileURL) {
         UIView* snapShotView = [self snapshotViewAfterScreenUpdates:YES];
         [self.snapShots addObject:@{@"request":request, @"snapShotView":snapShotView}];
-        NSLog(@"\nsnapShots:%@", self.snapShots);
+//        NSLog(@"\nsnapShots:%@", self.snapShots);
     }
 }
 

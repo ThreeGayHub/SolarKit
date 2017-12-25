@@ -10,11 +10,9 @@
 
 @implementation SLAlertWidget
 
-- (BOOL)canPerformWithURL:(NSURL *)URL {
-    return [URL.path isEqualToString:@"/widget/alertDialog"];
-}
-
 - (void)performWithURL:(NSURL *)URL inController:(SLWebViewController *)controller {
+    [super performWithURL:URL inController:controller];
+    
     NSString *dataString = [URL.queryDictionary itemForKey:@"data"];
     NSDictionary *dataDict = dataString.dictionary;
     
@@ -27,7 +25,7 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
             [buttons enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 UIAlertAction *action = [UIAlertAction actionWithTitle:obj[@"text"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [controller.webView stringByEvaluatingJavaScriptFromString:obj[@"action"]];
+                    [controller callJavaScript:obj[@"action"] parameters:nil];
                 }];
                 [alert addAction:action];
             }];
