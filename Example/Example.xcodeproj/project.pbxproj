@@ -428,9 +428,9 @@
 		F8209A021FCFA30D00D2F549 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F8209A051FCFA30D00D2F549 /* SLNetwork.h */,
 				F8209A031FCFA30D00D2F549 /* SLManager.h */,
 				F8209A041FCFA30D00D2F549 /* SLManager.m */,
-				F8209A051FCFA30D00D2F549 /* SLNetwork.h */,
 				F8209A061FCFA30D00D2F549 /* SLNetworkConstant.h */,
 				F8209A071FCFA30D00D2F549 /* SLNetworkConstant.m */,
 				F8209A081FCFA30D00D2F549 /* SLPlugin.h */,
