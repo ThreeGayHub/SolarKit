@@ -52,14 +52,12 @@
 #pragma mark - Set
 
 - (void)setTarget:(SLTarget *)target {
-    _target = target;
-    
     if (self.httpMethod == SLHTTPMethodNONE) {
-        self.httpMethod = _target.httpMethod;
+        self.httpMethod = target.httpMethod;
     }
     
     if (!self.urlString && self.path) {
-        self.urlString = [_target.baseURLString stringByAppendingString:self.path];
+        self.urlString = [target.baseURLString stringByAppendingString:self.path];
     }
 }
 

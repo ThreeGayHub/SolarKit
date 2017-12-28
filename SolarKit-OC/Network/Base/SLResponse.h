@@ -39,7 +39,6 @@
 - (void)dealResponseSuccess:(nullable SLManagerSuccess)success failure:(nullable SLManagerFailure)failure;
 - (void)dealResponseComplete:(nullable SLManagerComplete)complete fail:(nullable SLManagerFail)fail;
 
-
 - (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
 - (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
 

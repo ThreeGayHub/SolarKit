@@ -20,6 +20,16 @@
 
 + (nullable instancetype)customManager:(nullable SLTarget *)target;
 
+
+/**
+ HTTPS
+
+ @param pinningMode AFSSLPinningMode
+ @param certificateNames if AFSSLPinningMode is AFSSLPinningModePublicKey or AFSSLPinningModeCertificate, you need to add certificate of host to project
+ use the command "openssl s_client -connect www.apple.com:443 </dev/null 2>/dev/null | openssl x509 -outform DER > https.cer" to get the certificate, don't forget to replace the host.
+ */
+- (void)configHTTPS:(AFSSLPinningMode)pinningMode certificateNames:(nullable NSArray<NSString *> *)certificateNames;
+
 - (void)addPlugin:(nullable id <SLPlugin>)plugin, ... NS_REQUIRES_NIL_TERMINATION;
 
 /**

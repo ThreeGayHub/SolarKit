@@ -38,13 +38,19 @@
     
     SLNLog(@"URL:%@ \nParameters:\n %@", request.urlString, request.parameters);
     
-    NSError *serializationError = nil;
     SLHTTPMethod httpMethod = request.httpMethod ?: self.target.httpMethod;
     NSDictionary *methodDict = SLHTTPMethodDictionary();
+    NSError *serializationError = nil;
     NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:methodDict[@(httpMethod)] URLString:request.urlString parameters:request.parameters error:&serializationError];
-//    if ([YHResponse responseSerializationError:serializationError failure:failure]) {//这是不对的，还有一个failblock没回调
-//        return nil;
-//    }
+    if (serializationError) {
+        if (fail) {
+            fail(serializationError);
+        }
+        else if (failure) {
+            failure(nil, serializationError);
+        }
+        return nil;
+    }
     [request.headerField enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         [mutableRequest setValue:obj forHTTPHeaderField:key];
     }];
@@ -75,6 +81,20 @@
     return dataTask;
 }
 
+#pragma mark - HTTPS
+
+- (void)configHTTPS:(AFSSLPinningMode)pinningMode certificateNames:(NSArray<NSString *> *)certificateNames {
+    self.securityPolicy = [AFSecurityPolicy policyWithPinningMode:pinningMode];
+    if (certificateNames) {
+        NSMutableSet *mSet = [NSMutableSet setWithCapacity:[certificateNames count]];
+        [certificateNames enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *certificatePath = [[NSBundle mainBundle] pathForResource:obj ofType:@"cer"];
+            NSData *certificateData = [NSData dataWithContentsOfFile:certificatePath];
+            [mSet addObject:certificateData];
+        }];
+        self.securityPolicy.pinnedCertificates = [mSet copy];
+    }
+}
 
 #pragma mark - Reachability
 
