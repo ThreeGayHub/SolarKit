@@ -21,7 +21,7 @@
 @class SLResponse;
 
 @protocol SLPlugin <NSObject>
-
+@required
 @optional
 
 /**

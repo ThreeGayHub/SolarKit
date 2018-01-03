@@ -115,22 +115,44 @@
 
 @end
 
+@interface SLFormData ()
+
+@property (nonatomic, copy) NSString *mimeType;
+
+@end
+
 @implementation SLFormData
 
-+ (instancetype)formData:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType {
-    return [[self alloc] initWithData:data name:name fileName:fileName mimeType:mimeType];
++ (instancetype)formDataWithFilePath:(NSString *)filePath name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType {
+    return [[self alloc] initWithFilePath:filePath inputStream:nil data:nil name:name fileName:fileName mimeType:mimeType];
 }
 
-- (instancetype)initWithData:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType
-{
++ (instancetype)formDataWithInputStream:(NSInputStream *)inputStream name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType {
+    return [[self alloc] initWithFilePath:nil inputStream:inputStream data:nil name:name fileName:fileName mimeType:mimeType];
+}
+
++ (instancetype)formDataWithData:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType {
+    return [[self alloc] initWithFilePath:nil inputStream:nil data:data name:name fileName:fileName mimeType:mimeType];
+}
+
+- (instancetype)initWithFilePath:(NSString *)filePath inputStream:(NSInputStream *)inputStream data:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType {
     self = [super init];
     if (self) {
+        _FileURL = [NSURL URLWithString:filePath];
+        _inputStream = inputStream;
         _data = data;
         _name = name;
         _fileName = fileName;
         _mimeType = mimeType;
     }
     return self;
+}
+
+- (NSString *)mimeType {
+    if (_mimeType) return _mimeType;
+    
+    _mimeType = @"multipart/form-data";
+    return _mimeType;
 }
 
 @end

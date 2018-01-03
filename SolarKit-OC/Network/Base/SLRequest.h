@@ -123,6 +123,13 @@
  */
 @property (nonatomic, copy, nullable) NSMutableArray <SLFormData *> *formDataArray;
 
+
+- (void)appendPartWithFilePath:(nullable NSString *)filePath name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
+- (void)appendPartWithInputStream:(nullable NSInputStream *)inputStream name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
+- (void)appendPartWithData:(nullable NSString *)data name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
 /**
  *  规范限制:这个类不要用这两个个创建方法
  */
@@ -134,7 +141,16 @@
 
 @interface SLFormData : NSObject
 
-+ (nullable instancetype)formData:(nullable NSData *)data name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
++ (nullable instancetype)formDataWithFilePath:(nullable NSString *)filePath name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
++ (nullable instancetype)formDataWithInputStream:(nullable NSInputStream *)inputStream name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
++ (nullable instancetype)formDataWithData:(nullable NSData *)data name:(nullable NSString *)name fileName:(nullable NSString *)fileName mimeType:(nullable NSString *)mimeType;
+
+
+@property (nonatomic, readonly, nullable) NSURL *FileURL;
+
+@property (nonatomic, readonly, nullable) NSInputStream *inputStream;
 
 @property (nonatomic, readonly, nullable) NSData *data;
 

@@ -14,8 +14,40 @@
 
 + (nullable instancetype)targetWithBaseURLString:(nullable NSString *)baseURLString;
 
+//required
 @property (nonatomic, readonly, nullable) NSString *baseURLString;
 
+/**
+ Set the format of response
+ 
+ e.g.:
+ {
+ "code" : 0,
+ "message" : "login Success",
+ "data" : {
+          "userId" : "0001",
+          "userName" : "Simon"
+          }
+ }
+ 
+ {
+ "code" : -1,
+ "message" : "Wrong password",
+ "data" : null
+ }
+ 
+ As above, we can set
+ statusCodeKey = @"code"
+ successStatusCode = 0
+ messageKey = @"message"
+ responseDataKey = @"data"
+ */
+- (void)setStatusCodeKey:(nullable NSString *)statusCodeKey
+       successStatusCode:(NSInteger)successStatusCode
+              messageKey:(nullable NSString *)messageKey
+         responseDataKey:(nullable NSString *)responseDataKey;
+
+//optional
 @property (nonatomic, strong, nullable) NSURLSessionConfiguration *configuration;
 
 @property (nonatomic, copy, nullable) NSDictionary *headerField;
@@ -23,6 +55,7 @@
 @property (nonatomic, assign) SLHTTPMethod httpMethod;
 
 @property (nonatomic, assign) NSJSONReadingOptions jsonReadingOptions;
+
 
 @property (nonatomic, readonly, nullable) NSString *statusCodeKey;
 
@@ -32,35 +65,6 @@
 
 @property (nonatomic, readonly, nullable) NSString *responseDataKey;
 
-/**
- Set the format of response
- 
- e.g.:
- {
- "code" : 200,
- "message" : "login Success",
- "data" : {
- "userId" : "0001",
- "userName" : "Simon"
- }
- }
- 
- {
- "code" : -1,
- "message" : "Wrong password",
- "data" : null
- }
-
- As above, we can set
- statusCodeKey = @"code"
- successStatusCode = 200
- messageKey = @"message"
- responseDataKey = @"data"
- */
-- (void)setStatusCodeKey:(nullable NSString *)statusCodeKey
-       successStatusCode:(NSInteger)successStatusCode
-              messageKey:(nullable NSString *)messageKey
-         responseDataKey:(nullable NSString *)responseDataKey;
 
 - (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
 - (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
