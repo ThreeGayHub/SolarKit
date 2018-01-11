@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "35a-Fy-wil"; */
+"35a-Fy-wil.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "5fE-jy-Q81"; */
+"5fE-jy-Q81.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Push"; ObjectID = "psb-HT-3KD"; */
+"psb-HT-3KD.normalTitle" = "Push";

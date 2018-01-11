@@ -32,6 +32,7 @@
 //  👌埋点给Plugin注入，根据BaseUrl进行不同的拦截配置
 //  👌成功失败bodyKey如何处理？
 //  CA 防中间人攻击 https://www.jianshu.com/p/4102b817ff2f
+//  Manager(target, plugins).request(model).block(response)
 
 
 #ifndef SLNetwork_h

@@ -14,13 +14,6 @@
 
 /**
  Remote Call Method
-
- @param url scheme://[target]/[action]?[parameters]
- @param completion completion
- */
-
-/**
- Remote Call Method
  
  @param url scheme://[target]/[action]?[parameters]
  @param completion completion
